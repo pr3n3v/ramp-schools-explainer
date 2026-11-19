@@ -1,225 +1,986 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" class="no-js">
 <head>
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
-<title>Ramp Schools</title>
-<meta name="description" content="Ramp Schools for Vietnamese schools, grades 6 to 12: every subject in Vietnamese and English, a full English course in three levels, teacher tools in the official formats and a safe corner to talk.">
-<meta property="og:title" content="Ramp Schools: where every subject meets English">
-<meta property="og:description" content="Every subject in two languages, Ramp English as a full course in three levels, teacher tools in the official formats and a safe corner to talk.">
-<meta property="og:type" content="website">
-<meta property="og:image" content="https://pr3n3v.github.io/ramp-schools-explainer/og.png">
-<meta name="twitter:card" content="summary_large_image">
 <meta name="color-scheme" content="light">
 <meta name="theme-color" content="#FFC248">
-<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<title>Ramp Schools</title>
+<meta name="description" content="One study platform for Vietnamese schools, grades 6 to 12: every subject in Vietnamese and English, a full English course in three levels, teacher tools in the official formats and a safe corner to talk.">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Ramp Schools: where every subject meets English">
+<meta property="og:description" content="Every subject in Vietnamese and English, Ramp English from the first sound to the first essay, teacher tools in the official formats and a safe corner to talk. Grades 6 to 12.">
+<meta property="og:image" content="https://pr3n3v.github.io/ramp-schools-explainer/assets/og-cover.jpg">
+<meta property="og:url" content="https://pr3n3v.github.io/ramp-schools-explainer/">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="Ramp Schools: where every subject meets English, with three phones on a road that climbs to a flag.">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<style>
-:root{--sun:#FFC248;--coral:#FF6D3F;--green:#0D8558;--forest:#1B4332;--ink:#1A2B24;--soft:#4A5A53;--page:#FAFAF8;--line:#E8E0D2;--white:#fff}
-*{box-sizing:border-box}
-html{scroll-behavior:smooth;color-scheme:light}
-@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-body{margin:0;background:var(--page);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
-a{color:inherit}
-.bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:rgba(250,250,248,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
-.brand{display:flex;align-items:center;gap:8px;font:700 20px/1 "Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.02em;text-decoration:none;color:var(--forest)}
-.brand img{width:26px;height:26px}
-.brand b{font-weight:600;color:var(--ink)}
-.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
-.btn:hover{transform:translateY(-1px)}
-.btn.dark{background:var(--forest);color:#fff;box-shadow:0 6px 18px rgba(27,67,50,.25)}
-.btn.light{background:#fff;color:var(--forest);border:1.5px solid var(--forest)}
-.btn:focus-visible,.chips a:focus-visible,.sheet:focus-visible,summary:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
-.hero{background:var(--sun);padding:56px 16px 64px;overflow:hidden;position:relative}
-.wrap{max-width:980px;margin:0 auto}
-.kicker{font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--forest)}
-h1{font:800 clamp(44px,9vw,96px)/.95 "Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.035em;margin:14px 0 18px;color:var(--ink);max-width:12ch}
-.lead{font-size:clamp(17px,2.2vw,21px);max-width:44ch;margin:0 0 26px;color:var(--ink)}
-.pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
-.pills li{background:#fff;border-radius:999px;padding:8px 14px;font-weight:600;font-size:15px;box-shadow:0 2px 0 rgba(26,43,36,.08)}
-.pills li i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:1px}
-.cta{display:flex;flex-wrap:wrap;gap:10px}
-.road{position:absolute;right:-40px;bottom:-10px;width:min(560px,80vw);opacity:.95;pointer-events:none}
-.road path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.2s .3s cubic-bezier(.6,.1,.2,1) forwards}
-@keyframes draw{to{stroke-dashoffset:0}}
-@media (prefers-reduced-motion:reduce){.road path{animation:none;stroke-dashoffset:0}}
-.note{margin:26px 0 0;font-size:14px;color:var(--forest);display:flex;gap:8px;align-items:center}
-.chipsbar{position:sticky;top:65px;z-index:9;background:var(--page);border-bottom:1px solid var(--line)}
-.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;scrollbar-width:none;max-width:1012px;margin:0 auto}
-.chips::-webkit-scrollbar{display:none}
-.chips a{flex:none;text-decoration:none;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);min-height:36px;display:flex;align-items:center}
-.chips a.on{background:var(--forest);color:#fff;border-color:var(--forest)}
-main{padding:32px 16px 16px}
-.page{max-width:900px;margin:0 auto 56px;scroll-margin-top:130px}
-.cap{display:flex;align-items:baseline;gap:12px;margin:0 0 14px}
-.num{font:800 15px/1 "Bricolage Grotesque",Inter,sans-serif;color:var(--coral)}
-h2{font:700 clamp(22px,3.2vw,30px)/1.15 "Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.02em;margin:0}
-.sheet{display:block;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(26,43,36,.06),0 18px 50px rgba(26,43,36,.12);transition:transform .25s ease,box-shadow .25s ease}
-.sheet:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(26,43,36,.08),0 26px 60px rgba(26,43,36,.16)}
-.sheet img{display:block;width:100%;height:auto}
-.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
-.reveal.in{opacity:1;transform:none}
-@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
-details.text{margin:12px 2px 0;font-size:15px;color:var(--soft)}
-summary{cursor:pointer;font-weight:600;color:var(--forest);min-height:44px;display:flex;align-items:center}
-details.text div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px 16px;margin-top:6px}
-details.text p{margin:10px 0}
-.closing{background:var(--forest);color:#fff;padding:64px 16px;margin-top:24px}
-.closing h2{font-size:clamp(30px,5vw,52px);color:#fff;max-width:16ch}
-.closing p{max-width:52ch;font-size:18px;color:#E5F1EA}
-.closing .btn.dark{background:var(--sun);color:var(--ink);box-shadow:none}
-.closing .btn.light{background:transparent;color:#fff;border-color:#fff}
-footer{padding:24px 16px 40px;font-size:13px;color:var(--soft)}
-footer p{max-width:980px;margin:6px auto}
-@media (max-width:520px){.bar .btn{padding:8px 14px;font-size:14px}.hero{padding-top:40px}.chipsbar{top:61px}}
-</style>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap">
+<link rel="stylesheet" href="assets/css/site.css">
+<link rel="preload" as="image" href="assets/img/cycle-word.webp" type="image/webp">
+<script>document.documentElement.className='js';</script>
 </head>
 <body>
-<header class="bar">
-  <a class="brand" href="#top" aria-label="Ramp Schools, back to top"><img src="favicon.svg" alt="" width="26" height="26">ramp <b>Schools</b></a>
-  <a class="btn dark" href="Ramp-Schools-explainer.pdf" download>Download PDF</a>
+<a class="skip" href="#main">Skip to the content</a>
+
+<header class="nav" id="nav">
+  <div class="nav-in">
+    <a class="brand" href="#top" aria-label="Ramp Schools, back to the top">
+      <svg class="mark" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="3" y="26" width="7" height="11" rx="2" fill="#1B4332" fill-opacity="1"/><rect x="12" y="19" width="7" height="18" rx="2" fill="#1B4332" fill-opacity="0.8"/><rect x="21" y="11" width="7" height="26" rx="2" fill="#1B4332" fill-opacity="0.75"/><rect x="30" y="3" width="7" height="34" rx="2" fill="#1B4332" fill-opacity="1"/></svg><span class="word">ramp<span>Schools</span></span>
+    </a>
+    <nav class="nav-links" id="menu" aria-label="Sections">
+      <a href="#minute">In a minute</a>
+      <a href="#different">Why different</a>
+      <a href="#english">Ramp English</a>
+      <a href="#subjects">Subjects</a>
+      <a href="#teachers">Teachers</a>
+      <a href="#giup">Giúp</a>
+      <a href="#safety">Safety</a>
+      <a href="#parents">Parents and schools</a>
+    </nav>
+    <a class="btn btn-ink btn-sm nav-pdf" href="Ramp-Schools-explainer-v2.pdf" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M12 18v-6"/> <path d="m9 15 3 3 3-3"/></svg><span>PDF</span></a>
+    <button class="menu-btn" type="button" aria-expanded="false" aria-controls="menu" aria-label="Sections" hidden><span class="mi-open"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 5h10"/> <path d="M11 12h10"/> <path d="M11 19h10"/> <path d="M4 4h1v5"/> <path d="M4 9h2"/> <path d="M6.5 20H3.4c0-1 2.6-1.925 2.6-3.5a1.5 1.5 0 0 0-2.6-1.02"/></svg></span><span class="mi-close"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M18 6 6 18"/> <path d="m6 6 12 12"/></svg></span><span class="mt">Sections</span></button>
+  </div>
+  <div class="trail" aria-hidden="true">
+    <div class="trail-road"><span class="trail-walk"></span><span class="trail-mask"></span></div>
+    <a class="stop" tabindex="-1" href="#minute" style="left:4%" data-c="c"><span>In a minute</span></a>
+    <a class="stop" tabindex="-1" href="#different" style="left:17%" data-c="c"><span>Why different</span></a>
+    <a class="stop" tabindex="-1" href="#english" style="left:31%" data-c="s"><span>Ramp English</span></a>
+    <a class="stop" tabindex="-1" href="#subjects" style="left:47%" data-c="s"><span>Subjects</span></a>
+    <a class="stop" tabindex="-1" href="#teachers" style="left:61%" data-c="g"><span>Teachers</span></a>
+    <a class="stop" tabindex="-1" href="#safety" style="left:75%" data-c="g"><span>Safety</span></a>
+    <a class="stop" tabindex="-1" href="#parents" style="left:87%" data-c="g"><span>Parents and schools</span></a>
+    <a class="stop flag" tabindex="-1" href="#close" style="left:95%"><span>The end</span><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22V3" stroke="#1A2B24" stroke-width="2.6" stroke-linecap="round"/><path d="M6 3 L20 8 L6 13 Z" fill="#0D8558" stroke="#1A2B24" stroke-width="2" stroke-linejoin="round"/></svg></a>
+    <span class="trail-pin" aria-hidden="true"></span>
+  </div>
 </header>
-<div class="hero" id="top">
-  <svg class="road" viewBox="0 0 560 260" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#FF6D3F"/><stop offset=".55" stop-color="#FFE29A"/><stop offset="1" stop-color="#0D8558"/></linearGradient></defs><path d="M10 250 C 160 240, 210 170, 300 150 S 440 90, 540 30" fill="none" stroke="url(#g)" stroke-width="26" stroke-linecap="round"/><path d="M10 250 C 160 240, 210 170, 300 150 S 440 90, 540 30" fill="none" stroke="#1A2B24" stroke-width="2" stroke-dasharray="10 12" stroke-linecap="round" opacity=".35"/></svg>
-  <div class="wrap">
-    <div class="kicker">For school leaders, teachers and partners</div>
-    <h1>Where every subject meets English.</h1>
-    <p class="lead">One study platform for Vietnamese schools, grades 6 to 12. Every subject in Vietnamese and English, a full English course in three levels, teacher tools in the official formats and a safe corner to talk.</p>
-    <ul class="pills">
-      <li><i style="background:#FF6D3F"></i>Ramp Start</li>
-      <li><i style="background:#FFC248;box-shadow:inset 0 0 0 1.5px #1A2B24"></i>Ramp Climb</li>
-      <li><i style="background:#0D8558"></i>Ramp Summit</li>
-    </ul>
-    <div class="cta">
-      <a class="btn dark" href="#minute">Read the explainer</a>
-      <a class="btn light" href="Ramp-Schools-explainer.pdf" download>Download the PDF, 13 pages</a>
+
+<main id="main">
+
+<section class="hero" id="top" aria-labelledby="h-top">
+  <svg class="hero-road wide" viewBox="0 0 1440 900" preserveAspectRatio="xMidYMax slice" aria-hidden="true">
+    <path class="hill" d="M -40 900 L -40 700 C 80 610, 300 600, 470 690 L 520 900 Z" fill="#FFE8DE"/>
+    <path class="hill" d="M 380 900 L 420 610 C 560 470, 840 450, 1000 560 L 1060 900 Z" fill="#FFF3D6"/>
+    <path class="hill" d="M 880 900 L 1268 300 Q 1292 268 1316 300 L 1520 640 L 1520 900 Z" fill="#DFF2E9"/>
+    <path class="hill" d="M 1268 300 Q 1292 268 1316 300 L 1333 326 L 1312 317 L 1298 336 L 1284 318 L 1264 332 Z" fill="#FFFFFF"/>
+    <g fill="none" stroke-linecap="round">
+      <path class="edge" d="M -40 690 C 120 684, 300 650, 460 600 C 600 556, 760 520, 900 470 C 1020 428, 1140 360, 1290 290" stroke="#1A2B24" stroke-width="40"/>
+      <path class="seg seg-c" pathLength="100" d="M -40 690 C 120 684, 300 650, 460 600" stroke="#FF6D3F" stroke-width="28"/>
+      <path class="seg seg-s" pathLength="100" d="M 460 600 C 600 556, 760 520, 900 470" stroke="#FFDE96" stroke-width="28"/>
+      <path class="seg seg-g" pathLength="100" d="M 900 470 C 1020 428, 1140 360, 1290 290" stroke="#0D8558" stroke-width="28"/>
+      <path class="dash" d="M -40 690 C 120 684, 300 650, 460 600 C 600 556, 760 520, 900 470 C 1020 428, 1140 360, 1290 290" stroke="#1A2B24" stroke-opacity=".4" stroke-width="3" stroke-dasharray="10 12"/>
+    </g>
+    <g class="flagpole"><path d="M 1290 290 L 1290 236" stroke="#1A2B24" stroke-width="6" stroke-linecap="round"/><path d="M 1290 236 L 1326 249 L 1290 262 Z" fill="#0D8558" stroke="#1A2B24" stroke-width="3.5" stroke-linejoin="round"/></g>
+  </svg>
+
+  <div class="hero-in wrap">
+    <h1 id="h-top" class="display">Where every subject <span class="nw">meets English.</span></h1>
+    <div class="hero-copy">
+      <p class="promise">One study platform for Vietnamese schools, grades 6 to 12. Every subject in Vietnamese and English, a full English course in three levels, teacher tools in the official formats and a safe corner to talk.</p>
+      <div class="cta-row">
+        <a class="btn btn-ink btn-lg magnetic" href="#minute"><span>See how it works</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></svg></a>
+        <a class="btn btn-line btn-lg" href="#sounds"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg><span>Hear the 44 sounds</span></a>
+      </div>
+      <ul class="pillars" aria-label="Jump to a part">
+        <li><a href="#subjects"><span class="dot" style="background:#0D8558"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7v14"/> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></span>Subjects in two languages</a></li>
+        <li><a href="#english"><span class="dot dot-w"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="2.5" y="18" width="8" height="11.5" rx="2" fill="#FF6D3F" stroke="#1A2B24" stroke-width="2"/><rect x="12" y="11" width="8" height="18.5" rx="2" fill="#FFC248" stroke="#1A2B24" stroke-width="2"/><rect x="21.5" y="3" width="8" height="26.5" rx="2" fill="#0D8558" stroke="#1A2B24" stroke-width="2"/></svg></span>Ramp English</a></li>
+        <li><a href="#teachers"><span class="dot" style="background:#1B4332"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M10 9H8"/> <path d="M16 13H8"/> <path d="M16 17H8"/></svg></span>Plans and tests</a></li>
+        <li><a href="#safety"><span class="dot" style="background:#C2410C"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg></span>Góc tâm sự, careers</a></li>
+      </ul>
+      <p class="aud">For school leaders, teachers and partners. In testing with adult testers; no results claimed yet.</p>
+      <p class="hero-note">Real screens. Student screens come from the simpler student app&nbsp;<span class="st built">Built</span></p>
     </div>
-    <p class="note">Ramp is in testing with adult testers and claims no results yet.</p>
-  </div>
-</div>
-<nav class="chipsbar" aria-label="Sections"><div class="chips"><a href="#cover">Cover</a><a href="#minute">In a minute</a><a href="#different">Why it is different</a><a href="#road">The Ramp English road</a><a href="#grammar">Grammar</a><a href="#sounds">Sounds</a><a href="#kept">Words that stay</a><a href="#subjects">Subjects</a><a href="#teachers">Teachers</a><a href="#giup">Giúp, the helper</a><a href="#safe">Safe corner and careers</a><a href="#parents">Parents and schools</a><a href="#close">Closing</a></div></nav>
-<main>
-<section class="page" id="cover" aria-labelledby="h-cover">
-  <div class="cap"><span class="num">01</span><h2 id="h-cover">Where every subject meets English.</h2></div>
-  <a class="sheet" href="pages/page-01.webp" aria-label="Open page 1 full size">
-    <img src="pages/page-01.webp" width="1405" height="1988" loading="eager" decoding="async" alt="Page 1 of the Ramp Schools explainer: Where every subject meets English.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>ramp Schools</p><p>For school leaders, teachers and partners</p><p>Where every subject meets English. One study platform for Vietnamese schools, grades 6 to 12. Every subject in Vietnamese and English, a full English course in three levels, teacher tools in the official formats and a safe corner to talk.</p><p>Subjects in two languages</p><p>Ramp English</p><p>Plans and tests</p><p>Góc tâm sự, careers</p><p>3 2</p><p>1</p></div></details>
-</section>
-<section class="page" id="minute" aria-labelledby="h-minute">
-  <div class="cap"><span class="num">02</span><h2 id="h-minute">Ramp Schools in a minute.</h2></div>
-  <a class="sheet" href="pages/page-02.webp" aria-label="Open page 2 full size">
-    <img src="pages/page-02.webp" width="1405" height="1988" loading="eager" decoding="async" alt="Page 2 of the Ramp Schools explainer: Ramp Schools in a minute.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>Ramp Schools in a minute. One study platform for Vietnamese schools, grades 6 to 12, built on Chương trình GDPT 2018. Every subject in two languages, a full English course, teacher tools in the official formats and a safe corner to talk. Live</p><p>working today for adult testers</p><p>Built</p><p>built and tested, not released</p><p>Student screens in this guide show the simpler student app</p><p>Giáo án · Đề kiểm tra</p><p>Ask about any subject</p><p>Lesson plans · Tests</p><p>Every subject, in two languages A study chat for every subject of the grade, with the key English terms to save. Homework photos are checked step by step. English</p><p>Vietnamese</p><p>planned</p><p>Built</p><p>Hỏi bài các môn</p><p>Tiếng Việt</p><p>Coming</p><p>Song ngữ</p><p>English</p><p>Bilingual</p><p>Teacher tools in the official formats Draft a plan or a test from where the class is stuck, edit it and download it for Word. KHBD</p><p>Live</p><p>Công văn 7991</p><p>Live</p><p>Ba cấp độ</p><p>The three levels</p><p>Ramp English, a full course Sounds</p><p>Words</p><p>Grammar</p><p>Reading</p><p>A safe corner and a careers guide Writing</p><p>Ramp Start</p><p>Sounds, words and first sentences</p><p>Ramp Climb</p><p>Grammar, sounds and short texts</p><p>road, sounds, daily words, first lessons</p><p>courses, level-end tests</p><p>Coming</p><p>Built</p><p>Start&#x27;s grammar units</p><p>Why it is different Asks before it tells Hướng dẫn tôi (Guide me) goes one question at a time.</p><p>A corner to talk</p><p>Every message is checked, and the right adult at school is alerted if one suggests danger. Hướng nghiệp Careers</p><p>Ramp Summit Read, understand and write</p><p>Live</p><p>Góc tâm sự</p><p>Exam, fee and deadline answers come only from reviewed facts or official sites, with the source, the link and the date. Live</p><p>Four design choices, all working today</p><p>A word counts only when kept</p><p>No streaks, points or leaderboards</p><p>Recalled a day later, then again a week later.</p><p>Nothing compares one child with another.</p><p>Live</p><p>Safety reaches the right adult A risky message alerts the school&#x27;s own people.</p><p>Ramp is in testing with adult testers and claims no results yet. Data is stored in Singapore. Ramp Schools in a minute</p></div></details>
-</section>
-<section class="page" id="different" aria-labelledby="h-different">
-  <div class="cap"><span class="num">03</span><h2 id="h-different">Not one more app. A new kind of school tool.</h2></div>
-  <a class="sheet" href="pages/page-03.webp" aria-label="Open page 3 full size">
-    <img src="pages/page-03.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 3 of the Ramp Schools explainer: Not one more app. A new kind of school tool.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>Not one more app. A new kind of school tool. Schools already know these four kinds of tools. Here is what Ramp does instead, by design, with the status of each line. Follows the grade and the national programme.</p><p>A general AI chat</p><p>A textbook app</p><p>Asks before it tells in Hướng dẫn tôi</p><p>Live</p><p>(Guide me).</p><p>Live</p><p>The teacher can see subject chats, Live and the student is told.</p><p>Every Góc tâm sự message is Live checked for risk.</p><p>Answers the student&#x27;s own question, even from a homework Live photo.</p><p>Stores only chapter titles, never</p><p>A full course in three levels, with grammar, reading and writing.</p><p>A word counts only when recalled a</p><p>textbook text.</p><p>Live</p><p>day and a week later.</p><p>Live</p><p>Built</p><p>An English app</p><p>Ramp&#x27;s server decides the marks, not the phone.</p><p>Never records the student&#x27;s voice.</p><p>Live</p><p>Live</p><p>Helps the class teacher and does not replace them.</p><p>A tutoring centre</p><p>The teacher confirms every essay mark and sends every parent Live message.</p><p>Live</p><p>No streaks. No points. No leaderboards.</p><p>Hôm nay của bạn Your day</p><p>Honest from the first test</p><p>Live</p><p>At Start, the test slips in made-up words, so a student who taps &quot;I know it&quot; for a word that does not exist is noticed.</p><p>How Ramp is different</p><p>Two languages, one chat</p><p>20 phút</p><p>14 phút</p><p>20 minutes, 6 words</p><p>14 working minutes, 4 checked words</p><p>Ramp saw</p><p>6 từ</p><p>score, nothing compares one child with another, and the plan Live</p><p>Ramp thấy</p><p>You said</p><p>On purpose. Games show a student only their own last and best runs every day with no streak to lose.</p><p>Bạn nói</p><p>4 từ</p><p>Side by side, kindly. Drawing with sample numbers, not a real report.</p><p>Live</p><p>Every subject in Tiếng Việt, English or Song ngữ (both), with the key English terms of the subject to save.</p><p>Safety before features</p><p>Live</p><p>Live</p><p>Only adult testers sign in today, and student data is stored in Singapore.</p></div></details>
-</section>
-<section class="page" id="road" aria-labelledby="h-road">
-  <div class="cap"><span class="num">04</span><h2 id="h-road">From the first sound to the first essay.</h2></div>
-  <a class="sheet" href="pages/page-04.webp" aria-label="Open page 4 full size">
-    <img src="pages/page-04.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 4 of the Ramp Schools explainer: From the first sound to the first essay.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>From the first sound to the first essay.</p><p>Ramp English</p><p>A full English course, not a word app. Three levels, each with courses for sounds, words, grammar, Live reading and writing, and a test at the end. The whole road shows from day one. 3 2 1</p><p>Ramp Start</p><p>Ramp Climb</p><p>Ramp Summit</p><p>Âm, từ và những câu đầu tiên</p><p>Ngữ pháp, âm và đoạn văn ngắn</p><p>Đọc hiểu và viết bài</p><p>4 courses, 12 lessons live, 62 more planned</p><p>5 courses, 14 units, 56 lessons</p><p>5 courses, 10 units, 50 lessons</p><p>About A1 to A2</p><p>About A2 to B1</p><p>Sounds, words and first sentences</p><p>Grammar, sounds and short texts</p><p>About A0 to A1 Live</p><p>Read, understand and write</p><p>Built</p><p>Built</p><p>Coming</p><p>1</p><p>The IPA alphabet with sound Read the 44 British IPA symbols</p><p>2</p><p>Names of things: the 8 noun types Use a, an, some and plural -s</p><p>3</p><p>Actions: verbs and the present simple Talk about your day</p><p>4</p><p>First reading and writing Write 4 to 6 sentences about yourself</p><p>Level-end test</p><p>Built</p><p>After Ramp Summit Grade 10 entrance English</p><p>1</p><p>Who does what: subject, object, pronouns Ask with what, where, when, who and why</p><p>1</p><p>Phonetics: linking and weak forms Hear can and can&#x27;t in a sentence</p><p>2</p><p>Grammar and rules Talk about the past with -ed, was and were</p><p>2</p><p>Exceptions: irregular verbs and spelling Use the past of irregular verbs</p><p>3</p><p>Sounds 2: stress and endings Hear θ and ð, new to Vietnamese</p><p>3</p><p>Word-building Make words with -er, -ful and -ness</p><p>4</p><p>Read and understand Tell a fact from an opinion</p><p>5</p><p>Write emails and short essays Write an essay of 80 to 120 words</p><p>4</p><p>Reading short texts Answer questions on about 120 words</p><p>5</p><p>Writing short paragraphs Write 50 to 80 words about yourself</p><p>Level-end test</p><p>Built</p><p>Built</p><p>Level-end test</p><p>Built</p><p>A final check of the student&#x27;s Ramp level, then readiness estimates for five exams (reading, listening and writing; IELTS only as a range).</p><p>THPT graduation English</p><p>A2 Key for Schools</p><p>B1 Preliminary for Schools</p><p>IELTS starter range</p><p>13 next courses</p><p>Built</p><p>5 for exams, 6 for school subjects in English and 2 for everyday English.</p><p>Levels and readiness are Ramp&#x27;s own estimates, not official certificates or exam results. Speaking is not tested. Ramp English: the road</p></div></details>
-</section>
-<section class="page" id="grammar" aria-labelledby="h-grammar">
-  <div class="cap"><span class="num">05</span><h2 id="h-grammar">Grammar in every level. One idea at a time.</h2></div>
-  <a class="sheet" href="pages/page-05.webp" aria-label="Open page 5 full size">
-    <img src="pages/page-05.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 5 of the Ramp Schools explainer: Grammar in every level. One idea at a time.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>Grammar in every level. One idea at a time. Words only become sentences with grammar, so Ramp English teaches it on purpose: one idea per lesson, practised by producing it, then checked. Every Ramp Start lesson, in four steps</p><p>Xem cảnh</p><p>Hiểu bài</p><p>Luyện tập</p><p>Kiểm tra bài</p><p>Look</p><p>Understand</p><p>Practise</p><p>Lesson check</p><p>Ramp Start</p><p>Live</p><p>Ramp Climb</p><p>Built</p><p>Ramp Summit</p><p>Live</p><p>Built</p><p>a london → L ondon</p><p>walk → walk ed</p><p>help → help ful</p><p>A name takes a capital and no &quot;a&quot;: London, Monday, July.</p><p>Talk about the past with -ed, was and were.</p><p>Build new words with -er, -ist, -ful and -ness.</p><p>Ramp Start Live</p><p>Ramp Climb</p><p>in the lessons today</p><p>Common and proper nouns, with capital letters Coming</p><p>9 more units; the full map is 11 units, 74 lessons a and an</p><p>this and that</p><p>plural -s, -es countable, uncountable</p><p>collective nouns am, is, are</p><p>abstract nouns</p><p>have, has</p><p>Ramp Summit</p><p>Built</p><p>14 units, 56 lessons, 126 words</p><p>10 units, 50 lessons, 120 words</p><p>subject and object pronouns</p><p>word stress</p><p>my, your and &#x27;s</p><p>weak forms and linking</p><p>wh-questions and because</p><p>irregular verbs</p><p>a, an, the or nothing</p><p>spelling rules</p><p>there is and there are</p><p>suffixes and prefixes</p><p>the present continuous</p><p>word families</p><p>the past simple: -ed, was and were</p><p>B1 grammar for reading</p><p>comparing: -er, more, the most</p><p>compound nouns</p><p>Built</p><p>linking words emails and short essays</p><p>joining ideas order words and plans</p><p>everyday verbs the present simple</p><p>Stuck on a grammar point today? Giải thích (Explain) takes one grammar or word idea at the student&#x27;s level, with examples, then Live checks they understood. Grammar from the first test. The starting test checks grammar at Climb and Summit, built so a student can start at the right Live level. Real screen: Grammar and rules on the road, locked. Real screen: Hỏi gia sư (Ask the tutor), Giải thích (Explain) mode.</p><p>Ramp English: grammar</p><p>Built</p></div></details>
-</section>
-<section class="page" id="sounds" aria-labelledby="h-sounds">
-  <div class="cap"><span class="num">06</span><h2 id="h-sounds">The 44 sounds of British English.</h2></div>
-  <a class="sheet" href="pages/page-06.webp" aria-label="Open page 6 full size">
-    <img src="pages/page-06.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 6 of the Ramp Schools explainer: The 44 sounds of British English.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>The 44 sounds of British English. In the symbols Vietnamese textbooks print: 12 single vowels, 8 diphthongs and 24 consonants. Every word in Ramp carries its British IPA, and every sound has its own example word. Live</p><p>see</p><p>iː</p><p>sit</p><p>bed</p><p>e</p><p>æ</p><p>ɑː car</p><p>hot</p><p>ɒ</p><p>ɔː ball</p><p>book</p><p>eɪ</p><p>aɪ</p><p>ɔɪ</p><p>aʊ</p><p>əʊ</p><p>ɪə</p><p>eə</p><p>ʊə</p><p>day</p><p>p</p><p>pen</p><p>ʃ</p><p>she</p><p>ɪ</p><p>five</p><p>b</p><p>big</p><p>ʒ</p><p>usually</p><p>cat</p><p>boy</p><p>now</p><p>t</p><p>go</p><p>d</p><p>ten</p><p>h</p><p>hat</p><p>k</p><p>hair</p><p>g</p><p>dog</p><p>cat</p><p>tʃ</p><p>dʒ</p><p>chair</p><p>here</p><p>f</p><p>girl</p><p>jam</p><p>fish</p><p>m</p><p>n</p><p>man</p><p>name</p><p>30 listening lessons, 648 exercises RAMP START · 16</p><p>Final /t/ and /d/</p><p>9</p><p>/e/ and /æ/</p><p>2</p><p>Final /p/ and /k/</p><p>10</p><p>/æ/, /ʌ/ and /ɑː/</p><p>3</p><p>Final /s/ and /z/</p><p>11</p><p>/ɜː/</p><p>4</p><p>-s endings: /s/, /z/, /ɪz/</p><p>12</p><p>/ʊ/, /uː/, /ɒ/ and /ɔː/</p><p>5</p><p>-ed endings: /t/, /d/, /ɪd/</p><p>13</p><p>/eɪ/, /aɪ/ and /ɔɪ/</p><p>6</p><p>Final consonant clusters</p><p>14</p><p>/əʊ/, /aʊ/ and /ɔː/</p><p>/l/ and /n/</p><p>8</p><p>/iː/ and /ɪ/</p><p>white</p><p>uː</p><p>food</p><p>tour</p><p>v</p><p>van</p><p>ŋ</p><p>sing</p><p>15 16</p><p>not</p><p>/ɪə/, /eə/ and /ʊə/ /ə/ and syllables</p><p>ʌ</p><p>cup</p><p>ɜː girl</p><p>ə</p><p>about</p><p>5 long vowels</p><p>7 short vowels</p><p>8 diphthongs</p><p>24 consonants</p><p>θ</p><p>three</p><p>l</p><p>look</p><p>ð</p><p>this</p><p>r</p><p>red</p><p>s</p><p>sun</p><p>w</p><p>water</p><p>z</p><p>zoo</p><p>j</p><p>yes</p><p>Live</p><p>RAMP CLIMB · 8</p><p>1</p><p>7</p><p>ʊ</p><p>RAMP SUMMIT · 6</p><p>17</p><p>Puffed /p t k/ and /b d g/</p><p>25</p><p>Stress in twosyllable words</p><p>18</p><p>Starting clusters</p><p>26</p><p>19</p><p>/s/ and /ʃ/</p><p>Stress and word endings</p><p>20</p><p>/tʃ/, /dʒ/ and /ʃ/</p><p>27</p><p>21</p><p>/z/ and /ʒ/</p><p>Weak forms and can, can&#x27;t</p><p>22</p><p>/f/, /v/ and /w/</p><p>28</p><p>Linking and short forms</p><p>23</p><p>/r/, /j/ and /h/</p><p>29</p><p>When spelling and sound differ</p><p>24</p><p>/θ/ and /ð/</p><p>30</p><p>Stress in sentences</p><p>why</p><p>Lesson one starts where Vietnamese speakers most often lose English: the</p><p>Listen only</p><p>sound at the end of a word. Drop the final t, and white becomes why.</p><p>Ramp plays sound and never records the student&#x27;s voice. A student sees the lessons up to their own level.</p><p>Real screen: lesson one. Vietnamese marked * is a draft. Ramp English: sounds</p></div></details>
-</section>
-<section class="page" id="kept" aria-labelledby="h-kept">
-  <div class="cap"><span class="num">07</span><h2 id="h-kept">A word counts only when it is kept.</h2></div>
-  <a class="sheet" href="pages/page-07.webp" aria-label="Open page 7 full size">
-    <img src="pages/page-07.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 7 of the Ramp Schools explainer: A word counts only when it is kept.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>A word counts only when it is kept. Seeing a word is not knowing it. Ramp counts a word as kept only when the student brings it back from memory a day later, and again a week later. Ramp&#x27;s server decides every mark and every wait, not the phone. Live c một tuần</p><p>Đã giữ đượ</p><p>Kept. Meet it</p><p>A day later</p><p>A word card with a British voice, the IPA, an example, a draft Vietnamese meaning and, for most words, a picture.</p><p>At least 20 hours on, recall it from its picture or meaning. No firstletter help.</p><p>k</p><p>wee Kept for a</p><p>About a week later Recall it again, with no peek in between.</p><p>Then it keeps coming back, at growing gaps</p><p>so a kept word stays kept 120 days</p><p>1 day</p><p>Look again and the wait starts over.</p><p>6 days</p><p>14 days</p><p>30 days</p><p>Miss a recall and the word goes back to learning.</p><p>60 days</p><p>Say &quot;I know it&quot; and write the word next time.</p><p>Answer too fast and it does not count.</p><p>A day in Ramp English Làm quen, about 2 minutes</p><p>Live</p><p>Two questions, then a short test of at most 8 questions places the student at Start, Climb or Summit. At Start, made-up words catch a guess, and a retake can only move a student up.</p><p>New words, 3 at a time</p><p>Live</p><p>3 new words a day; each time they pass their check, 3 more open, up to 15. Practice means producing the word, such as building it from letter tiles. Daily words run for Ramp Start today.</p><p>Four word games</p><p>Live</p><p>Spell it, Hear and write, Fill the gap and Mini crossword. Games never count toward kept and show only the student&#x27;s own last and best score.</p><p>Hỏi gia sư, the English tutor</p><p>Live</p><p>Two modes, Hướng dẫn tôi (Guide me) and Giải thích (Explain). It stays on English and never says a word the student is tested on today. In Hướng dẫn tôi, the answer appears only after three real tries. Ramp English: words that stay</p></div></details>
-</section>
-<section class="page" id="subjects" aria-labelledby="h-subjects">
-  <div class="cap"><span class="num">08</span><h2 id="h-subjects">Every subject, in Vietnamese, English or both.</h2></div>
-  <a class="sheet" href="pages/page-08.webp" aria-label="Open page 8 full size">
-    <img src="pages/page-08.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 8 of the Ramp Schools explainer: Every subject, in Vietnamese, English or both.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>Every subject, in Vietnamese, English or both. A study chat for every subject of the student&#x27;s grade, built on Chương trình GDPT 2018 and the Kết nối tri thức với cuộc sống books. The subject and its English words arrive together. Live</p><p>1</p><p>Pick the subject</p><p>2</p><p>Every subject of the grade opens a study chat.</p><p>Type it, or snap it</p><p>Ramp checks each step of the student&#x27;s own working and never stores the photo.</p><p>3</p><p>Ramp asks first</p><p>4</p><p>In Hướng dẫn tôi (Guide me), one short question at a time.</p><p>See why, in steps</p><p>The rule, numbered steps, an example and the key English terms.</p><p>How Hướng dẫn tôi (Guide me) teaches Checks the base. If the topic builds on an idea students of that grade often miss, the first question checks it.</p><p>One question at a time. Short questions that move the student&#x27;s own thinking forward.</p><p>Live</p><p>Answer last.</p><p>Never trapped.</p><p>After three stuck replies in a row, Hiện đáp án (Show me the answer) appears.</p><p>Kết thúc (End) always gives the full answer.</p><p>Seen by the teacher. A common wrong idea is noted for the teacher, and the student is told.</p><p>Tạo hoạt hình</p><p>Đố tôi</p><p>Chapter titles only</p><p>(Animate this) in maths, the sciences and Tin học, plus diagrams in maths and the sciences.</p><p>(Quiz me) turns a topic into practice questions.</p><p>Six books have full chapter lists, from Toán 6 to Sinh học 10. Ramp stores the titles, never textbook text.</p><p>Live</p><p>Subjects</p><p>Live</p><p>Live</p></div></details>
-</section>
-<section class="page" id="teachers" aria-labelledby="h-teachers">
-  <div class="cap"><span class="num">09</span><h2 id="h-teachers">Plan tomorrow from what the class got stuck on.</h2></div>
-  <a class="sheet" href="pages/page-09.webp" aria-label="Open page 9 full size">
-    <img src="pages/page-09.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 9 of the Ramp Schools explainer: Plan tomorrow from what the class got stuck on.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>Plan tomorrow from what the class got stuck on. Two weeks of real questions become one picture of where the class is stuck, and one press drafts the next lesson or a test from it. The AI drafts. The teacher decides. Students get stuck</p><p>In Guide me, on a chapter or on an idea.</p><p>1</p><p>The teacher confirms The AI only suggests essay marks. No total exists until the teacher confirms each one.</p><p>Live</p><p>5</p><p>The class page sees it</p><p>2</p><p>Chỗ lớp đang kẹt groups 14 days by chapter, with wrong ideas 3 or more students share.</p><p>Your class the same loop, every week</p><p>The server marks</p><p>4</p><p>3</p><p>Students sit it in the app. Ramp&#x27;s server marks choice, true or false and short answers.</p><p>Ramp drafts the plan or the test A KHBD plan (Công văn 5512) or a 7991 test out of 10, with no student names.</p><p>Chỗ lớp đang kẹt · Where the class is stuck</p><p>One press drafts the next lesson or a test from this card. Real screen, the teacher&#x27;s class page, with sample class data and made-up names.</p><p>Ready for Word or print</p><p>A page for every student</p><p>Marks for vnEdu or SMAS</p><p>Parent drafts and an assistant</p><p>The Ramp English digest</p><p>Each draft is labelled Bản nháp AI (AI draft) and downloads for Word or PDF.</p><p>Strengths, weak topics, saved terms, tests, and subject chats to read.</p><p>A marks file for either system, still to check against a school&#x27;s template.</p><p>Drafts the teacher sends, and an assistant with no student names.</p><p>At most three students who need help, or &quot;The class is fine today; nothing to do.&quot;</p><p>Live Built</p><p>Teachers</p><p>Live</p><p>Live</p><p>Live</p><p>Live</p><p>English level-end tests: confirm writing marks, see milestones and the class&#x27;s exam readiness. 09 / 13</p></div></details>
-</section>
-<section class="page" id="giup" aria-labelledby="h-giup">
-  <div class="cap"><span class="num">10</span><h2 id="h-giup">Help that points at the button.</h2></div>
-  <a class="sheet" href="pages/page-10.webp" aria-label="Open page 10 full size">
-    <img src="pages/page-10.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 10 of the Ramp Schools explainer: Help that points at the button.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>Help that points at the button. Built so a class 6 child knows what to do next on every screen, without asking an adult. The simpler student app puts one clear next step on every screen, and a Giúp (Help) button in the top row that teaches the app where it is used. Built</p><p>1</p><p>Giúp explains the screen</p><p>What this page is for, in numbered steps, and plainly that Ramp is an AI, not a person.</p><p>2</p><p>Chỉ cho mình points to it</p><p>Show me dims the page and rings the real button: Bấm vào đây (Press here), step 2 of 3.</p><p>3</p><p>A first-day tour</p><p>Three short stops on day one, such as Hỏi bài mọi môn ở đây (Ask about any subject here).</p><p>One clear next step Việc của bạn bây giờ (Your next step): one action and one button at the top of the home page.</p><p>Built</p><p>Hôm nay (Today): today&#x27;s words, a progress line and one Học ngay (Learn now) button, above the drawn road.</p><p>Built</p><p>Giúp answers questions about the app, points at buttons and gives the tour.</p><p>Built</p><p>In today&#x27;s app, Hỏi Ramp (Ask Ramp) has 14 ready answers about the app that use no AI.</p><p>Live</p><p>Real screen: the next-step card before a student joins a class.</p><p>The Giúp helper</p></div></details>
-</section>
-<section class="page" id="safe" aria-labelledby="h-safe">
-  <div class="cap"><span class="num">11</span><h2 id="h-safe">A safe corner that reaches the right adult.</h2></div>
-  <a class="sheet" href="pages/page-11.webp" aria-label="Open page 11 full size">
-    <img src="pages/page-11.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 11 of the Ramp Schools explainer: A safe corner that reaches the right adult.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>A safe corner that reaches the right adult. In Góc tâm sự (a corner to talk) a student can write about a worry. Every message is checked before Ramp replies, and if one suggests danger, the school&#x27;s own people know at once. Live A student writes</p><p>Warning words check</p><p>Risk read in context</p><p>Ramp replies</p><p>Risk</p><p>The student sees</p><p>Who is told</p><p>High</p><p>A warm reply that asks if they are safe and urges them to talk to an adult today, with help lines 111, 115 and 113, the Ngày Mai hotline and the school&#x27;s team.</p><p>The homeroom teacher and counsellors, at once, in the app. By</p><p>Medium</p><p>Ramp keeps listening and gently moves toward talking to a trusted adult.</p><p>The same people, in the app</p><p>Low or none</p><p>A normal reply.</p><p>No one</p><p>email too:</p><p>Built</p><p>The notice comes first. Ramp is an AI, not a person, and does not promise to keep secrets.</p><p>No chat text in alerts. To read a flagged chat, staff press Open, and Ramp records who and when.</p><p>Counts only for the admin. The school admin sees how many alerts, never a name or a word.</p><p>Gone in 30 days. A chat with no alert is deleted 30 days after its last message.</p><p>Careers facts, with the source on the page. Hướng nghiệp Careers</p><p>Exams, fees, scholarships and deadlines are answered only from reviewed facts or official sites, always with the source, the link and the date. Shown right: a general question gets a short answer and a question back. Only the student can read their careers chats.</p><p>Live</p><p>Every fact shows where it comes from and when. 219 more career facts drafted, waiting for approval. Facts taken from newspapers carry a press label.</p><p>Safety and careers</p><p>Live Built Built</p></div></details>
-</section>
-<section class="page" id="parents" aria-labelledby="h-parents">
-  <div class="cap"><span class="num">12</span><h2 id="h-parents">Parents see the effort. Never the private words.</h2></div>
-  <a class="sheet" href="pages/page-12.webp" aria-label="Open page 12 full size">
-    <img src="pages/page-12.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 12 of the Ramp Schools explainer: Parents see the effort. Never the private words.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>Parents see the effort. Never the private words. A parent who links to their child gets a short daily English report: plain numbers and one thing to do tonight. It starts only after the parent agrees, one tap stops it at once, and the child is told what the parent sees. Live What a parent never sees</p><p>Daily English report</p><p>Answers</p><p>Opened today</p><p>Messages</p><p>Góc tâm sự</p><p>Days this week</p><p>Conversations with Ramp</p><p>Words through their check</p><p>Location</p><p>Words kept</p><p>Comparisons with other children</p><p>Minutes working</p><p>Keystrokes</p><p>The child&#x27;s voice</p><p>Linked by the school or the child. A school invite, or a family code the child opens on their own account.</p><p>One thing to do tonight A single, plain suggestion for the parent.</p><p>Live</p><p>An evening email that holds only a link: no name and no numbers.</p><p>Drawing of the report&#x27;s parts, not a real report.</p><p>Built</p><p>Finished courses, certificates and the exam estimate, for parents.</p><p>Built</p><p>Who sets up what</p><p>School admin Invites staff and parents; each invite lasts 14 days. Names each class&#x27;s homeroom teacher and invites counsellors for safety alerts. Sets four English report switches; one turned off is off for every parent.</p><p>Coming</p><p>Built with your school</p><p>Live</p><p>Teacher</p><p>Student and parent</p><p>Makes the class, its grade and its answer language. Students join by QR code, link or a 6-character code. Sets each plan and test, and when a test opens and closes.</p><p>The student picks the help style and the answer language in each chat. The parent agrees to start the daily report and stops it with one tap.</p><p>Confirms essay marks and can accept or refuse any short answer.</p><p>Ideas we can build with a school, on top of what Ramp does today. None is built yet.</p><p>Chapter lists for more books and grades</p><p>More ready-made animations</p><p>A province&#x27;s own grade 10 English exam format</p><p>The school&#x27;s logo, colours or own web address</p><p>The school&#x27;s counselling number on the help card</p><p>The school&#x27;s own vnEdu or SMAS marks template</p><p>A summary for school leaders, with no rankings</p><p>Teachers sharing plans and tests</p><p>A public page to check a Ramp certificate</p><p>Menus and buttons in another language</p><p>Parents and school leaders</p></div></details>
-</section>
-<section class="page" id="close" aria-labelledby="h-close">
-  <div class="cap"><span class="num">13</span><h2 id="h-close">Where every subject meets English.</h2></div>
-  <a class="sheet" href="pages/page-13.webp" aria-label="Open page 13 full size">
-    <img src="pages/page-13.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 13 of the Ramp Schools explainer: Where every subject meets English.">
-  </a>
-  <details class="text"><summary>Read this page as text</summary><div><p>Where every subject meets English. Ramp Schools for grades 6 to 12: every subject in Vietnamese and English, Ramp English from the first sound to the first essay, teacher tools in the official formats, and a safe corner to talk.</p><p>See it on a phone. Ask for a live walk-through of the app.</p><p>3 2</p><p>Ramp Summit</p><p>Ramp Climb</p><p>1 Ramp Start</p><p>Live</p><p>ramp Schools</p><p>working today for adult testers</p><p>Built</p><p>built and tested, not released Coming</p><p>planned, not built</p><p>Ramp is in testing with adult testers and claims no results yet. Data is stored in Singapore.</p></div></details>
-</section></main>
-<section class="closing" aria-labelledby="h-talk">
-  <div class="wrap">
-    <h2 id="h-talk">See it on a phone.</h2>
-    <p>Ask the Ramp team for a live walk-through of the app.</p>
-    <div class="cta">
-      <a class="btn dark" href="mailto:pr3n3v@gmail.com?subject=Ramp%20Schools%20walk-through">Email pr3n3v@gmail.com</a>
-      <a class="btn light" href="Ramp-Schools-explainer.pdf" download>Download the PDF</a>
+    <div class="stage" id="stage">
+      <svg class="hero-road narrow" viewBox="0 0 400 520" preserveAspectRatio="xMidYMid slice" aria-hidden="true">
+        <path class="hill" d="M -20 520 L -20 250 C 40 200, 120 196, 180 240 L 200 520 Z" fill="#FFE8DE"/>
+        <path class="hill" d="M 150 520 L 160 190 C 210 140, 290 136, 330 180 L 340 520 Z" fill="#FFF3D6"/>
+        <path class="hill" d="M 250 520 L 330 66 Q 340 52 350 66 L 440 300 L 440 520 Z" fill="#DFF2E9"/>
+        <g fill="none" stroke-linecap="round">
+          <path class="edge" d="M -20 236 C 40 230, 100 210, 160 186 C 220 162, 270 140, 300 116 C 316 102, 328 88, 340 70" stroke="#1A2B24" stroke-width="22"/>
+          <path class="seg seg-c" pathLength="100" d="M -20 236 C 40 230, 100 210, 160 186" stroke="#FF6D3F" stroke-width="15"/>
+          <path class="seg seg-s" pathLength="100" d="M 160 186 C 220 162, 270 140, 300 116" stroke="#FFDE96" stroke-width="15"/>
+          <path class="seg seg-g" pathLength="100" d="M 300 116 C 316 102, 328 88, 340 70" stroke="#0D8558" stroke-width="15"/>
+        </g>
+        <g class="flagpole"><path d="M 340 70 L 340 40" stroke="#1A2B24" stroke-width="3.5" stroke-linecap="round"/><path d="M 340 40 L 360 47 L 340 54 Z" fill="#0D8558" stroke="#1A2B24" stroke-width="2" stroke-linejoin="round"/></g>
+      </svg>
+      <figure class="phone ph-l" data-depth="-1"><div class="scr"><img src="assets/img/hero-vocab.webp" width="640" height="1386" alt="A maths answer's English words, integer, absolute value and number line, each with a Save button" fetchpriority="low"></div></figure>
+      <figure class="phone ph-r" data-depth="1"><div class="scr"><img src="assets/img/hero-sounds.webp" width="640" height="1386" alt="Âm tiếng Anh, the English sound chart with IPA symbols" fetchpriority="low"></div></figure>
+      <figure class="phone ph-c" data-depth="0" id="cycle">
+        <div class="scr">
+          <img class="on" src="assets/img/cycle-word.webp" width="640" height="1386" alt="A word card: a taxi picture, taxi, its British IPA and the draft meaning xe tắc xi" data-cap="A word card" data-st="live" data-id="word" data-hot="8.9 75.8 82.2 8.3" data-go="tiles" data-tip="Mình nhớ rồi, tiếp (Got it, next)">
+          <img src="assets/img/cycle-sound.webp" width="640" height="1386" alt="Sound lesson one: Âm cuối /t/ và /d/, final t and d, with Listen buttons" data-cap="Sound lesson one" data-st="live" data-id="sound" loading="lazy">
+          <img src="assets/img/subj-4.webp" width="640" height="1386" alt="A maths answer with the rule, numbered steps, an example and key English terms" data-cap="A maths answer, in steps" data-st="live" data-id="maths" loading="lazy">
+          <img src="assets/img/hero-english.webp" width="640" height="1386" alt="The Ramp English home: today's three new words, the Học ngay (Learn now) button and the drawn road" data-cap="Ramp English home" data-st="built" data-id="home" data-hot="9.2 32.3 81.6 8.3" data-go="word" data-tip="Học ngay (Learn now)" loading="lazy">
+          <img src="assets/img/tiles.webp" width="640" height="1386" alt="Practice: build the word taxi from letter tiles under its picture" data-cap="Build the word" data-st="live" data-id="tiles" data-hot="8.9 65.3 72.5 12.5" data-go="end" data-tip="the letter tiles" data-solo loading="lazy">
+        </div>
+        <div class="tap-end" hidden>
+          <p><b>Practised, not kept yet.</b> Building taxi is practice. Ramp counts it as kept only after a recall a day later and another about a week later.</p>
+          <a href="#kept">See how a word is kept</a>
+          <button type="button" class="tap-again">Start again</button>
+        </div>
+      </figure>
+      <div class="cycle-bar">
+        <p class="cycle-cap" aria-live="polite"><span class="cc-t">A word card</span> <span class="st live">Live</span></p>
+        <button class="cycle-btn" type="button" aria-pressed="false" aria-label="Pause the screens" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect x="14" y="3" width="5" height="18" rx="1"/><rect x="5" y="3" width="5" height="18" rx="1"/></svg><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg></button>
+      </div>
+      <p class="tap-hint" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M22 14a8 8 0 0 1-8 8"/><path d="M18 11v-1a2 2 0 0 0-2-2a2 2 0 0 0-2 2"/><path d="M14 10V9a2 2 0 0 0-2-2a2 2 0 0 0-2 2v1"/><path d="M10 9.5V4a2 2 0 0 0-2-2a2 2 0 0 0-2 2v10"/><path d="M18 11a2 2 0 1 1 4 0v3a8 8 0 0 1-8 8h-2c-2.8 0-4.5-.86-5.99-2.34l-3.6-3.6a2 2 0 0 1 2.83-2.82L7 15"/></svg>Try it: tap the glowing button on the phone.</p>
     </div>
   </div>
 </section>
-<footer>
-  <p>Ramp is in testing with adult testers and claims no results yet. Data is stored in Singapore.</p>
-  <p>Fonts: Bricolage Grotesque and Inter (SIL Open Font License). Icons in the explainer: Lucide (ISC License).</p>
-</footer>
-<script>
-(function(){
-  var io='IntersectionObserver' in window;
-  var secs=[].slice.call(document.querySelectorAll('.page'));
-  var links={};[].slice.call(document.querySelectorAll('.chips a')).forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
-  if(!io) return;
-  secs.forEach(function(s){s.querySelector('.sheet').classList.add('reveal')});
-  var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px'});
-  secs.forEach(function(s){rv.observe(s.querySelector('.sheet'))});
-  var cur=null;
-  var sp=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var a=links[e.target.id];if(!a||a===cur)return;if(cur)cur.classList.remove('on');a.classList.add('on');cur=a;var bar=a.parentNode;bar.scrollTo({left:a.offsetLeft-16,behavior:'smooth'})}})},{rootMargin:'-45% 0px -50% 0px'});
-  secs.forEach(function(s){sp.observe(s)});
-})();
-</script>
+
+<section class="sec minute" id="minute" aria-labelledby="h-minute">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-minute" class="h2">Ramp Schools in a minute.</h2>
+      <p class="lead">One platform, four people served at once, on <b>Chương trình GDPT 2018</b> for grades 6 to 12. The student gets help in every subject and a full English course. The teacher gets plans and tests from where the class got stuck. The parent gets plain numbers. The school gets a safe corner that reaches the right adult.</p>
+    </div>
+
+    <div class="legend reveal" role="group" aria-label="Show features by status">
+      <span class="legend-t">Every feature carries its status. Tap one to show only that.</span>
+      <button class="lg-btn" type="button" data-filter="live" aria-pressed="false"><span class="st live">Live</span><span>working today for adult testers</span></button>
+      <button class="lg-btn" type="button" data-filter="built" aria-pressed="false"><span class="st built">Built</span><span>built and tested, not released</span></button>
+      <button class="lg-btn" type="button" data-filter="coming" aria-pressed="false"><span class="st coming">Coming</span><span>planned, not built</span></button>
+    </div>
+
+    <div class="mosaic">
+      <article class="tile t-sub reveal" data-st="live">
+        <div class="thd"><span class="tico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7v14"/> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></span><span class="bil"><span class="vi">Hỏi bài các môn</span><span class="en">Ask about any subject</span></span></div>
+        <h3 class="h3x">Every subject, in two languages</h3>
+        <p>A study chat for every subject of the grade, with the key English terms to save. Homework photos are checked step by step.</p>
+        <p class="langs"><span class="langs-l">Answers in</span><span>Tiếng Việt</span><span>English</span><span>Song ngữ <small>(both)</small></span></p>
+        <p class="chips"><span class="st live">Live</span></p>
+      </article>
+      <article class="tile t-tea reveal" data-st="live">
+        <div class="thd"><span class="tico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M10 9H8"/> <path d="M16 13H8"/> <path d="M16 17H8"/></svg></span><span class="bil"><span class="vi">Giáo án · Đề kiểm tra</span><span class="en">Lesson plans · Tests</span></span></div>
+        <h3 class="h3x">Teacher tools in the official formats</h3>
+        <p>Draft a plan or a test from where the class is stuck, edit it and download it for Word.</p>
+        <div class="docs"><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M10 9H8"/> <path d="M16 13H8"/> <path d="M16 17H8"/></svg>KHBD</span><span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/> <path d="m9 14 2 2 4-4"/></svg>Công văn 7991</span></div>
+        <p class="chips"><span class="st live">Live</span></p>
+      </article>
+      <article class="tile t-eng reveal" data-st="live built coming">
+        <div class="thd"><span class="tico"><svg viewBox="0 0 32 32" aria-hidden="true" focusable="false"><rect x="2.5" y="18" width="8" height="11.5" rx="2" fill="#FF6D3F" stroke="#1A2B24" stroke-width="2"/><rect x="12" y="11" width="8" height="18.5" rx="2" fill="#FFC248" stroke="#1A2B24" stroke-width="2"/><rect x="21.5" y="3" width="8" height="26.5" rx="2" fill="#0D8558" stroke="#1A2B24" stroke-width="2"/></svg></span><span class="bil"><span class="vi">Ba cấp độ</span><span class="en">The three levels</span></span></div>
+        <h3 class="h3x">Ramp English, a full course</h3>
+        <nav class="five" aria-label="Jump to a skill"><a href="#sounds"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/></svg>Sounds</a><a href="#kept"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="7" cy="12" r="3"/> <path d="M10 9v6"/> <circle cx="17" cy="12" r="3"/> <path d="M14 7v8"/> <path d="M22 17v1c0 .5-.5 1-1 1H3c-.5 0-1-.5-1-1v-1"/></svg>Words</a><a href="#grammar" class="hot"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></svg>Grammar</a><a href="#english" data-open="lv-climb"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7v14"/> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>Reading</a><a href="#english" data-open="lv-summit"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 21h8"/> <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg>Writing</a></nav>
+        <div class="lv3">
+          <div><i style="background:#FF6D3F"></i><b>Ramp Start</b><span>Sounds, words and first sentences</span></div>
+          <div><i style="background:#FFC248"></i><b>Ramp Climb</b><span>Grammar, sounds and short texts</span></div>
+          <div><i style="background:#0D8558"></i><b>Ramp Summit</b><span>Read, understand and write</span></div>
+        </div>
+        <ul class="strows"><li><span class="st live">Live</span><span>the road, sounds, daily words, first lessons</span></li><li><span class="st built">Built</span><span>the courses, level-end tests</span></li><li><span class="st coming">Coming</span><span>Start's grammar units</span></li></ul>
+      </article>
+      <article class="tile t-care reveal" data-st="live">
+        <div class="thd"><span class="tico"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M19.414 14.414C21 12.828 22 11.5 22 9.5a5.5 5.5 0 0 0-9.591-3.676.6.6 0 0 1-.818.001A5.5 5.5 0 0 0 2 9.5c0 2.3 1.5 4 3 5.5l5.535 5.362a2 2 0 0 0 2.879.052 2.12 2.12 0 0 0-.004-3 2.124 2.124 0 1 0 3-3 2.124 2.124 0 0 0 3.004 0 2 2 0 0 0 0-2.828l-1.881-1.882a2.41 2.41 0 0 0-3.409 0l-1.71 1.71a2 2 0 0 1-2.828 0 2 2 0 0 1 0-2.828l2.823-2.762"/></svg></span><span class="tico t2"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/> <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg></span></div>
+        <h3 class="h3x">A safe corner and a careers guide</h3>
+        <div class="stack">
+          <div><span class="bil"><span class="vi">Góc tâm sự</span><span class="en">A corner to talk</span></span><p>Every message is checked, and the right adult at school is alerted if one suggests danger.</p></div>
+          <div><span class="bil"><span class="vi">Hướng nghiệp</span><span class="en">Careers</span></span><p>Exam, fee and deadline answers come only from reviewed facts or official sites, with the source, the link and the date.</p></div>
+        </div>
+        <p class="chips"><span class="st live">Live</span></p>
+      </article>
+    </div>
+
+    <div class="seeas reveal" data-switch id="seeas">
+      <div class="seeas-head">
+        <h3 class="h3l">See it as</h3>
+        <div class="segs" role="group" aria-label="Choose whose screen to see" hidden>
+          <button type="button" data-for="as-student" aria-pressed="true">Student</button>
+          <button type="button" data-for="as-teacher" aria-pressed="false">Teacher</button>
+          <button type="button" data-for="as-parent" aria-pressed="false">Parent</button>
+          <button type="button" data-for="as-leader" aria-pressed="false">School leader</button>
+        </div>
+      </div>
+      <div class="seeas-body">
+        <div class="as" id="as-student" data-panel data-st="live">
+          <h4 class="as-who">Student</h4>
+          <figure class="phone as-phone"><div class="scr"><img src="assets/img/x4.webp" width="640" height="1408" alt="Hỏi bài Khoa học tự nhiên, ask about Natural science: Cách trả lời (How to answer) with Trả lời ngay (Direct answer) and Hướng dẫn tôi (Guide me), and Ngôn ngữ trả lời (Answer language): Tiếng Việt, English or Song ngữ" loading="lazy"></div></figure>
+          <div class="as-text">
+            <p class="as-st"><span class="st live">Live</span></p>
+            <ul class="as-lines">
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 8 6 6"/> <path d="m4 14 6-6 2-3"/> <path d="M2 5h12"/> <path d="M7 2h1"/> <path d="m22 22-5-10-5 10"/> <path d="M14 18h6"/></svg><span>Every subject of their grade opens a study chat, in Tiếng Việt, English or Song ngữ (both).</span></li>
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/> <path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg><span>The student picks Trả lời ngay (Direct answer) or Hướng dẫn tôi (Guide me), which asks one short question at a time.</span></li>
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="19" r="3"/> <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/> <circle cx="18" cy="5" r="3"/></svg><span>Ramp English shows the whole road, from the 44 sounds to short essays.</span></li>
+            </ul>
+            <p class="cap-s">Real screen from the simpler student app, with Giúp in the top row <span class="st built">Built</span></p>
+          </div>
+        </div>
+        <div class="as" id="as-teacher" data-panel data-st="live">
+          <h4 class="as-who">Teacher</h4>
+          <figure class="browser as-browser" data-zoom><div class="bar"><i></i><i></i><i></i><span>Chỗ lớp đang kẹt · Where the class is stuck</span></div><img src="assets/img/z-stuck.webp" width="718" height="322" alt="Where the class is stuck: Natural science, Chapter V, Cells, 3 students, with what they were stuck on" loading="lazy"><img class="btns" src="assets/img/z-stuck-btns.webp" width="504" height="74" alt="Two buttons: Plan the next lesson from this, and Make a test from this" loading="lazy"></figure>
+          <div class="as-text">
+            <p class="as-st"><span class="st live">Live</span></p>
+            <ul class="as-lines">
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg><span>Chỗ lớp đang kẹt (Where the class is stuck) groups the last 14 days of questions by chapter.</span></li>
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M10 9H8"/> <path d="M16 13H8"/> <path d="M16 17H8"/></svg><span>One press drafts a KHBD lesson plan or a Công văn 7991 test, out of 10, ready for Word.</span></li>
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/> <path d="m9 14 2 2 4-4"/></svg><span>The AI only suggests essay marks; no total exists until the teacher confirms each one.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="as" id="as-parent" data-panel data-st="live">
+          <h4 class="as-who">Parent</h4>
+          <figure class="phone as-phone short"><div class="scr"><img src="assets/img/parent-report.webp" width="640" height="1198" alt="The parent's daily English report: opened today, minutes Ramp saw working, words through their check, words kept for a week, days opened this week, a kind note that many answers were too fast to count, and one thing to do tonight" loading="lazy"></div></figure>
+          <div class="as-text">
+            <p class="as-st"><span class="st live">Live</span></p>
+            <ul class="as-lines">
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/> <rect x="2" y="4" width="20" height="16" rx="2"/></svg><span>A daily English report with plain numbers and one thing the parent can do tonight.</span></li>
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/> <path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95"/> <path d="m2 15 6 6"/> <path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91"/></svg><span>It starts only after the parent agrees, and one tap withdraws, at once.</span></li>
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg><span>Never answers, messages, Góc tâm sự, the child's voice or comparisons with other children.</span></li>
+            </ul>
+          </div>
+        </div>
+        <div class="as" id="as-leader" data-panel data-st="live">
+          <h4 class="as-who">School leader</h4>
+          <div class="as-pair">
+            <figure class="snip" data-zoom><img src="assets/img/admin-invite.webp" width="644" height="268" alt="Mời nhân sự (Invite staff): a role, the number of uses and Tạo lời mời (Create invitation)" loading="lazy"></figure>
+            <figure class="snip" data-zoom><img src="assets/img/admin-care.webp" width="644" height="181" alt="Góc tâm sự on the school admin page: counts only, with no student names and nothing that was said; for support, not discipline" loading="lazy"></figure>
+            <p class="cap-s">Two parts of the school admin page.</p>
+          </div>
+          <div class="as-text">
+            <p class="as-st"><span class="st live">Live</span></p>
+            <ul class="as-lines">
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 12h4"/> <path d="M10 8h4"/> <path d="M14 21v-3a2 2 0 0 0-4 0v3"/> <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/> <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg><span>The school admin invites staff and parents, and each invite lasts 14 days.</span></li>
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 5H3"/> <path d="M12 19H3"/> <path d="M14 3v4"/> <path d="M16 17v4"/> <path d="M21 12h-9"/> <path d="M21 19h-5"/> <path d="M21 5h-7"/> <path d="M8 10v4"/> <path d="M8 12H3"/></svg><span>Four English report switches; a switch turned off is off for every parent.</span></li>
+              <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/> <path d="m9 12 2 2 4-4"/></svg><span>The school admin sees safety alerts as counts only, never a name or anything a student wrote.</span></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+      <p class="cap-s">Real screens. Numbers in them are test data, not results.</p>
+    </div>
+  </div>
+</section>
+
+<section class="sec different" id="different" aria-labelledby="h-diff">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-diff" class="h2">Not one more app.<br>A new kind of school tool.</h2>
+      <p class="lead">Schools already know these four kinds of tools. Flip each card to see what Ramp does instead, by design. Live unless marked. <span class="st live">Live</span></p>
+    </div>
+    <p class="swipe-hint" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></svg>Swipe to see all four</p>
+    <div class="flips" id="flips">
+      <div class="flip reveal" data-st="live">
+        <button class="flip-btn" type="button" aria-pressed="false" hidden><span class="fb-them">Show Ramp</span><span class="fb-ramp">Show the usual tool</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m17 2 4 4-4 4"/> <path d="M3 11v-1a4 4 0 0 1 4-4h14"/> <path d="m7 22-4-4 4-4"/> <path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></button>
+        <div class="flip-card">
+          <div class="face them"><span class="cat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 8V4H8"/> <rect width="16" height="12" x="4" y="8" rx="2"/> <path d="M2 14h2"/> <path d="M20 14h2"/> <path d="M15 13v2"/> <path d="M9 13v2"/></svg>A general AI chat</span><p class="was">One chat for every age, every subject and every country.</p></div>
+          <div class="face ramp"><span class="cat"><span class="mini"><svg class="mk" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="3" y="26" width="7" height="11" rx="2" fill="#FFFFFF" fill-opacity="1"/><rect x="12" y="19" width="7" height="18" rx="2" fill="#FFFFFF" fill-opacity="0.85"/><rect x="21" y="11" width="7" height="26" rx="2" fill="#FFFFFF" fill-opacity="0.8"/><rect x="30" y="3" width="7" height="34" rx="2" fill="#FFFFFF" fill-opacity="1"/></svg></span><span>Ramp, instead of a general AI chat</span></span>
+            <p class="was" aria-hidden="true">One chat for every age, every subject and every country.</p>
+            <ul><li><b>Follows the grade</b> and the national programme.</li><li><b>Asks before it tells</b> in Hướng dẫn tôi (Guide me).</li><li><b>The teacher can see</b> subject chats, and the student is told.</li><li><b>Every Góc tâm sự message</b> is checked for risk.</li></ul></div>
+        </div>
+      </div>
+      <div class="flip reveal" data-st="live">
+        <button class="flip-btn" type="button" aria-pressed="false" hidden><span class="fb-them">Show Ramp</span><span class="fb-ramp">Show the usual tool</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m17 2 4 4-4 4"/> <path d="M3 11v-1a4 4 0 0 1 4-4h14"/> <path d="m7 22-4-4 4-4"/> <path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></button>
+        <div class="flip-card">
+          <div class="face them"><span class="cat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7v14"/> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>A textbook app</span><p class="was">The book's pages, on a screen.</p></div>
+          <div class="face ramp"><span class="cat"><span class="mini"><svg class="mk" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="3" y="26" width="7" height="11" rx="2" fill="#FFFFFF" fill-opacity="1"/><rect x="12" y="19" width="7" height="18" rx="2" fill="#FFFFFF" fill-opacity="0.85"/><rect x="21" y="11" width="7" height="26" rx="2" fill="#FFFFFF" fill-opacity="0.8"/><rect x="30" y="3" width="7" height="34" rx="2" fill="#FFFFFF" fill-opacity="1"/></svg></span><span>Ramp, instead of a textbook app</span></span>
+            <p class="was" aria-hidden="true">The book's pages, on a screen.</p>
+            <ul><li><b>Answers the student's own question,</b> even from a homework photo.</li><li><b>Stores only chapter titles,</b> never textbook text.</li></ul></div>
+        </div>
+      </div>
+      <div class="flip reveal" data-st="live built coming">
+        <button class="flip-btn" type="button" aria-pressed="false" hidden><span class="fb-them">Show Ramp</span><span class="fb-ramp">Show the usual tool</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m17 2 4 4-4 4"/> <path d="M3 11v-1a4 4 0 0 1 4-4h14"/> <path d="m7 22-4-4 4-4"/> <path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></button>
+        <div class="flip-card">
+          <div class="face them"><span class="cat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 8 6 6"/> <path d="m4 14 6-6 2-3"/> <path d="M2 5h12"/> <path d="M7 2h1"/> <path d="m22 22-5-10-5 10"/> <path d="M14 18h6"/></svg>An English app</span><p class="was">Words and games, apart from the school day.</p></div>
+          <div class="face ramp"><span class="cat"><span class="mini"><svg class="mk" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="3" y="26" width="7" height="11" rx="2" fill="#FFFFFF" fill-opacity="1"/><rect x="12" y="19" width="7" height="18" rx="2" fill="#FFFFFF" fill-opacity="0.85"/><rect x="21" y="11" width="7" height="26" rx="2" fill="#FFFFFF" fill-opacity="0.8"/><rect x="30" y="3" width="7" height="34" rx="2" fill="#FFFFFF" fill-opacity="1"/></svg></span><span>Ramp, instead of an English app <span class="st live">Live</span></span></span>
+            <p class="was" aria-hidden="true">Words and games, apart from the school day.</p>
+            <ul><li><b>A full course in three levels:</b> Climb and Summit grammar built <span class="st built">Built</span>, Start's grammar units coming <span class="st coming">Coming</span></li><li><b>A word counts</b> only when recalled a day and a week later.</li><li><b>Ramp's server decides</b> the marks, not the phone.</li><li><b>Never records</b> the student's voice.</li></ul></div>
+        </div>
+      </div>
+      <div class="flip reveal" data-st="live">
+        <button class="flip-btn" type="button" aria-pressed="false" hidden><span class="fb-them">Show Ramp</span><span class="fb-ramp">Show the usual tool</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m17 2 4 4-4 4"/> <path d="M3 11v-1a4 4 0 0 1 4-4h14"/> <path d="m7 22-4-4 4-4"/> <path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg></button>
+        <div class="flip-card">
+          <div class="face them"><span class="cat"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 21v-3a2 2 0 0 0-4 0v3"/> <path d="M18 4.933V21"/> <path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6"/> <path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11"/> <path d="M6 4.933V21"/> <circle cx="12" cy="9" r="2"/></svg>A tutoring centre</span><p class="was">Help after school, away from the class teacher.</p></div>
+          <div class="face ramp"><span class="cat"><span class="mini"><svg class="mk" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="3" y="26" width="7" height="11" rx="2" fill="#FFFFFF" fill-opacity="1"/><rect x="12" y="19" width="7" height="18" rx="2" fill="#FFFFFF" fill-opacity="0.85"/><rect x="21" y="11" width="7" height="26" rx="2" fill="#FFFFFF" fill-opacity="0.8"/><rect x="30" y="3" width="7" height="34" rx="2" fill="#FFFFFF" fill-opacity="1"/></svg></span><span>Ramp, instead of a tutoring centre</span></span>
+            <p class="was" aria-hidden="true">Help after school, away from the class teacher.</p>
+            <ul><li><b>Plans tomorrow's lesson</b> from where the class got stuck.</li><li><b>The teacher confirms</b> every essay mark, and sends each parent message Ramp drafts.</li></ul></div>
+        </div>
+      </div>
+    </div>
+
+    <div class="nosp reveal" data-st="live">
+      <div class="nosp-big">
+        <p class="kick">In Ramp English</p>
+        <p class="big">No streaks.<br>No points.<br><span>No leaderboards.</span></p>
+        <p>On purpose. Ramp English games show a student only their own last and best score, nothing compares one child with another, and the plan runs every day with no streak to lose.</p>
+      </div>
+      <div class="said">
+        <p class="said-h"><span class="vi">Hôm nay của bạn</span><span class="en">Your day</span></p>
+        <div class="said-cols">
+          <div class="col y"><span class="bil"><span class="vi">Bạn nói</span><span class="en">You said</span></span><p class="snum">20 <small>phút</small></p><p class="snum n2">6 <small>từ</small></p><p class="en2">20 minutes, 6 words</p></div>
+          <div class="col r"><span class="bil"><span class="vi">Ramp thấy</span><span class="en">Ramp saw</span></span><p class="snum">14 <small>phút</small></p><p class="snum n2">4 <small>từ</small></p><p class="en2">14 working minutes, 4 checked words</p></div>
+        </div>
+        <p class="said-f">What the student reports, beside what Ramp recorded. Kindly.</p>
+        <p class="cap-s">Illustration with sample numbers, not a real report.</p>
+      </div>
+    </div>
+
+    <div class="also3">
+      <div class="reveal" data-st="live"><h3 class="h3">Honest from the first test</h3><p>At Start, the test slips in made-up words, so a student who taps "I know it" for a word that does not exist is noticed.</p></div>
+      <div class="reveal" data-st="live"><h3 class="h3">Two languages, one chat</h3><p>Every subject in Tiếng Việt, English or Song ngữ (both), with the key English terms of the subject to save.</p></div>
+      <div class="reveal" data-st="live"><h3 class="h3">Safety before features</h3><p>Only adult testers sign in today, and student data is stored in Singapore.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec english" id="english" aria-labelledby="h-eng">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-eng" class="h2">From the first sound to the first essay.</h2>
+      <p class="lead"><b>A full English course, not a word app.</b> Three levels, each with courses for sounds, words, grammar, reading and writing, and a test at the end <span class="st built">Built</span>, with Start's grammar units still to come <span class="st coming">Coming</span>. The whole road shows on the student's home from day one <span class="st live">Live</span>.</p>
+    </div>
+
+    <div class="counts reveal" aria-label="What is in the course">
+      <div data-st="built"><p class="cn"><span class="count" data-to="14">14</span></p><p>courses across the three levels <span class="st built">Built</span></p></div>
+      <div data-st="built"><p class="cn"><span class="count" data-to="106">106</span></p><p>lessons in Ramp Climb and Ramp Summit <span class="st built">Built</span></p></div>
+      <div data-st="live"><p class="cn"><span class="count" data-to="44">44</span></p><p>sounds of British English <span class="st live">Live</span></p></div>
+      <div data-st="live"><p class="cn"><span class="count" data-to="30">30</span></p><p>listening lessons on those sounds <span class="st live">Live</span></p></div>
+      <p class="cap-s counts-note">What is in the product, counted. Not results.</p>
+    </div>
+
+    <div class="road-switch reveal" data-switch id="road">
+      <div class="roadart-wrap">
+        <svg class="roadart" viewBox="0 -34 694 190" aria-hidden="true">
+          <path d="M0 156 L0 128 C 30 104, 80 92, 130 100 C 175 108, 205 122, 223.33 132 L223.33 156 Z" fill="#FFE8DE"/>
+          <path d="M235.33 156 L235.33 104 C 270 72, 320 56, 365 58 C 410 60, 440 80, 458.67 96 L458.67 156 Z" fill="#FFF3D6"/>
+          <path d="M470.67 156 L470.67 66 C 505 34, 560 14, 600 16 C 640 18, 675 36, 694 56 L694 156 Z" fill="#DFF2E9"/>
+          <g fill="none" stroke-linecap="round">
+            <path d="M -20 132 C 20 130, 70 118, 112 94 C 170 62, 260 56, 347 56 C 430 56, 500 34, 582 26 C 620 22, 645 18, 662 6" stroke="#1A2B24" stroke-width="15"/>
+            <path class="rs rs-c" d="M -20 132 C 20 130, 70 118, 112 94 C 170 62, 260 56, 347 56" stroke="#FF6D3F" stroke-width="10.5"/>
+            <path class="rs rs-s" d="M 347 56 C 430 56, 500 34, 582 26" stroke="#FFC248" stroke-width="10.5"/>
+            <path class="rs rs-g" d="M 582 26 C 620 22, 645 18, 662 6" stroke="#0D8558" stroke-width="10.5"/>
+            <path d="M -20 132 C 20 130, 70 118, 112 94 C 170 62, 260 56, 347 56 C 430 56, 500 34, 582 26 C 620 22, 645 18, 662 6" stroke="#1A2B24" stroke-opacity=".35" stroke-width="1.4" stroke-dasharray="4 5"/>
+          </g>
+          <path d="M 662 6 L 662 -18" stroke="#1A2B24" stroke-width="2.5" stroke-linecap="round"/>
+          <path d="M 662 -18 L 677 -12.5 L 662 -7 Z" fill="#0D8558" stroke="#1A2B24" stroke-width="1.5" stroke-linejoin="round"/>
+        </svg>
+        <div class="road-stops" role="group" aria-label="Choose a level" hidden>
+          <button type="button" class="rstop c" style="left:16.1%;top:67.4%" data-for="lv-start" aria-pressed="true"><span class="n">1</span><span class="l">Ramp Start</span></button>
+          <button type="button" class="rstop s" style="left:50%;top:47.4%" data-for="lv-climb" aria-pressed="false"><span class="n">2</span><span class="l">Ramp Climb</span></button>
+          <button type="button" class="rstop g" style="left:83.9%;top:31.6%" data-for="lv-summit" aria-pressed="false"><span class="n">3</span><span class="l">Ramp Summit</span></button>
+          <button type="button" class="rstop f" style="left:96.6%;top:7%" data-for="lv-after" aria-pressed="false"><span class="n"><svg viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22V3" stroke="#1A2B24" stroke-width="2.6" stroke-linecap="round"/><path d="M6 3 L20 8 L6 13 Z" fill="#0D8558" stroke="#1A2B24" stroke-width="2" stroke-linejoin="round"/></svg></span><span class="l">After Summit</span></button>
+        </div>
+      </div>
+
+      <div class="levels">
+        <article class="lvl c" id="lv-start" data-panel data-st="live built coming">
+          <header class="lvl-h"><h3 class="lvl-nm">Ramp Start</h3><p class="tag"><span class="vi">Âm, từ và những câu đầu tiên</span><span class="en">Sounds, words and first sentences</span></p><p class="scale">About A0 to A1 · 4 courses · 12 lessons live today, 62 more planned</p></header>
+          <p class="live-now" data-st="live"><span class="st live">Live</span> 12 lessons today: letters, spelling aloud, phonetic symbols, syllables and the stress mark, then capital letters and common versus proper nouns.</p>
+          <ol class="courses">
+            <li data-st="built"><span class="n">1</span><div><b>The IPA alphabet with sound</b><em>Read the 44 British IPA symbols. Use the IPA in a dictionary to see how a word sounds.</em></div><span class="st built">Built</span></li>
+            <li data-st="coming"><span class="n">2</span><div><b>Names of things: the 8 noun types</b><em>Name things, places and people around you. Use a, an, some and plural <span class="nw">-s</span> correctly.</em></div><span class="st coming">Coming</span></li>
+            <li data-st="coming"><span class="n">3</span><div><b>Actions: verbs and the present simple</b><em>Say how you are and where you are with am, is and are. Talk about your day in the present simple.</em></div><span class="st coming">Coming</span></li>
+            <li data-st="built"><span class="n">4</span><div><b>First reading and writing</b><em>Read a short text about a student and answer questions. Write 4 to 6 sentences about yourself.</em></div><span class="st built">Built</span></li>
+          </ol>
+          <p class="end" data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/></svg><span>Level-end test: reading, listening and writing <span class="st built">Built</span></span></p>
+        </article>
+        <article class="lvl s" id="lv-climb" data-panel data-st="built">
+          <header class="lvl-h"><h3 class="lvl-nm">Ramp Climb <span class="st built">Built</span></h3><p class="tag"><span class="vi">Ngữ pháp, âm và đoạn văn ngắn</span><span class="en">Grammar, sounds and short texts</span></p><p class="scale">About A1 to A2 · 5 courses · 14 units · 56 lessons · 126 words</p></header>
+          <ol class="courses">
+            <li data-st="built"><span class="n">1</span><div><b>Who does what: subject, object, pronouns</b><em>Use me, him, her, us and them after a verb. Ask questions with what, where, when, who and why.</em></div></li>
+            <li data-st="built"><span class="n">2</span><div><b>Grammar and rules</b><em>Choose a, an or the. Talk about the past with <span class="nw">-ed</span>, was and were.</em></div></li>
+            <li data-st="built"><span class="n">3</span><div><b>Sounds 2: stress and endings</b><em>Hear sounds that Vietnamese does not have, such as θ and ð. Hear which part of a word is strong.</em></div></li>
+            <li data-st="built"><span class="n">4</span><div><b>Reading short texts</b><em>Follow the order of events in a short story. Answer questions about a text of about 120 words.</em></div></li>
+            <li data-st="built"><span class="n">5</span><div><b>Writing short paragraphs</b><em>Give a reason with because. Write a paragraph of 50 to 80 words about yourself.</em></div></li>
+          </ol>
+          <p class="end" data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/></svg><span>Level-end test: reading, listening and writing</span></p>
+        </article>
+        <article class="lvl g" id="lv-summit" data-panel data-st="built">
+          <header class="lvl-h"><h3 class="lvl-nm">Ramp Summit <span class="st built">Built</span></h3><p class="tag"><span class="vi">Đọc hiểu và viết bài</span><span class="en">Read, understand and write</span></p><p class="scale">About A2 to B1 · 5 courses · 10 units · 50 lessons · 120 words</p></header>
+          <ol class="courses">
+            <li data-st="built"><span class="n">1</span><div><b>Phonetics: linking and weak forms</b><em>Hear weak forms such as can and can't in a sentence. Hear which words in a sentence are strong.</em></div></li>
+            <li data-st="built"><span class="n">2</span><div><b>Exceptions: irregular verbs and spelling</b><em>Use the past and the third form of irregular verbs. Use British spellings.</em></div></li>
+            <li data-st="built"><span class="n">3</span><div><b>Word-building</b><em>Make new words with endings such as <span class="nw">-er</span>, <span class="nw">-ist</span>, <span class="nw">-ful</span> and <span class="nw">-ness</span>. Guess a new word from its parts.</em></div></li>
+            <li data-st="built"><span class="n">4</span><div><b>Read and understand</b><em>Find the main idea of an article. Tell a fact from an opinion.</em></div></li>
+            <li data-st="built"><span class="n">5</span><div><b>Write emails and short essays</b><em>Write a short, polite email. Write a short essay of 80 to 120 words.</em></div></li>
+          </ol>
+          <p class="end" data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M4 22V4a1 1 0 0 1 .4-.8A6 6 0 0 1 8 2c3 0 5 2 7.333 2q2 0 3.067-.8A1 1 0 0 1 20 4v10a1 1 0 0 1-.4.8A6 6 0 0 1 16 16c-3 0-5-2-8-2a6 6 0 0 0-4 1.528"/></svg><span>Level-end test: reading, listening and writing</span></p>
+        </article>
+        <article class="lvl a" id="lv-after" data-panel data-st="built">
+          <header class="lvl-h"><h3 class="lvl-nm">After Ramp Summit <span class="st built">Built</span></h3><p class="scale">A final check of the student's Ramp level, then readiness estimates and next courses</p></header>
+          <div class="after-b" data-st="built">
+            <h4 class="h4">Readiness estimates for five exams</h4>
+            <p>For reading, listening and writing. Speaking is not covered. IELTS is shown only as a range, never a single band, and a practice exam shows no pass line.</p>
+            <ul class="exams"><li>Grade 10 entrance English</li><li>THPT graduation English</li><li>A2 Key for Schools</li><li>B1 Preliminary for Schools</li><li>IELTS starter range</li></ul>
+          </div>
+          <div class="after-b" data-st="built">
+            <h4 class="h4">13 next courses</h4>
+            <p>5 for exams, 6 for school subjects in English and 2 for everyday English, shown locked on the road today.</p>
+          </div>
+          <p class="cap-s">Levels and readiness are Ramp's own estimates, not official certificates or exam results.</p>
+        </article>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec grammar" id="grammar" aria-labelledby="h-gram">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-gram" class="h2">Grammar in every level. One idea at a time.</h2>
+      <p class="lead">Words only become sentences with grammar, so Ramp English teaches it on purpose: one idea per lesson, practised by producing it, then checked.</p>
+    </div>
+
+    <p class="swipe-hint" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></svg>Swipe for all three levels</p>
+    <div class="play3" id="morphs">
+      <article class="mcard c reveal" data-st="live" data-task="cap">
+        <header><span class="lvn">Ramp Start</span><span class="st live">Live</span></header>
+        <p class="before" aria-hidden="true">a london</p>
+        <p class="mq" hidden>Fix the city's name: tap the <b>a</b>, then the <b>l</b>.</p>
+        <p class="morph m-cap" aria-label="a london becomes London"><span class="m-a" aria-hidden="true">a&nbsp;</span><span class="m-rest" aria-hidden="true"><span class="m-flip"><span class="lo">l</span><span class="up">L</span></span>ondon</span></p>
+        <p class="mrule">A name takes a capital and no "a": London, Monday, July.</p>
+        <button class="mplay" type="button" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg><span>Show me</span></button>
+      </article>
+      <article class="mcard s reveal" data-st="built" data-task="add" data-right="ed">
+        <header><span class="lvn">Ramp Climb</span><span class="st built">Built</span></header>
+        <p class="before" aria-hidden="true">walk</p>
+        <p class="mq" hidden>Yesterday I ___ home. Pick the ending.</p>
+        <p class="morph m-add" aria-label="walk becomes walked"><span aria-hidden="true">walk<span class="m-new"><span>e</span><span>d</span></span></span></p>
+        <div class="mpick" role="group" aria-label="Endings" hidden><button type="button" data-end="s">-s</button><button type="button" data-end="ed">-ed</button><button type="button" data-end="ing">-ing</button></div>
+        <p class="mrule">Talk about the past with <span class="nw">-ed</span>, was and were.</p>
+        <button class="mplay" type="button" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg><span>Show me</span></button>
+      </article>
+      <article class="mcard g reveal" data-st="built" data-task="add" data-right="ful">
+        <header><span class="lvn">Ramp Summit</span><span class="st built">Built</span></header>
+        <p class="before" aria-hidden="true">help</p>
+        <p class="mq" hidden>A ___ friend. Pick the ending.</p>
+        <p class="morph m-add" aria-label="help becomes helpful"><span aria-hidden="true">help<span class="m-new"><span>f</span><span>u</span><span>l</span></span></span></p>
+        <div class="mpick" role="group" aria-label="Endings" hidden><button type="button" data-end="er">-er</button><button type="button" data-end="ist">-ist</button><button type="button" data-end="ful">-ful</button><button type="button" data-end="ness">-ness</button></div>
+        <p class="mrule">Make new words with <span class="nw">-er</span>, <span class="nw">-ist</span>, <span class="nw">-ful</span> and <span class="nw">-ness</span>.</p>
+        <button class="mplay" type="button" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg><span>Show me</span></button>
+      </article>
+    </div>
+    <p class="cap-s play3-cap"><span class="tagill">Illustration</span> Three small tasks written for this page, one idea from each level. In Ramp English, practice means producing the answer.</p>
+
+    <div class="steps4 reveal" data-st="live">
+      <p class="s4-l">Every Ramp Start lesson, in four steps <span class="st live">Live</span></p>
+      <ol>
+        <li><span class="vi">Xem cảnh</span><span class="en">Look</span></li>
+        <li><span class="vi">Hiểu bài</span><span class="en">Understand</span></li>
+        <li><span class="vi">Luyện tập</span><span class="en">Practise</span></li>
+        <li class="on"><span class="vi">Kiểm tra bài</span><span class="en">Lesson check</span></li>
+      </ol>
+    </div>
+
+    <div class="gmap" data-switch id="gmap">
+      <div class="segs gsegs" role="group" aria-label="Choose a level" hidden>
+        <button type="button" data-for="gc-start" aria-pressed="true">Start</button>
+        <button type="button" data-for="gc-climb" aria-pressed="false">Climb</button>
+        <button type="button" data-for="gc-summit" aria-pressed="false">Summit</button>
+      </div>
+      <div class="gcol c reveal" id="gc-start" data-panel data-st="live coming">
+        <h3 class="gnm">Ramp Start</h3>
+        <p class="glab" data-st="live"><span class="st live">Live</span> in the lessons today</p>
+        <ul class="tags" data-st="live"><li class="lv">Common and proper nouns, with capital letters</li></ul>
+        <p class="glab" data-st="coming"><span class="st coming">Coming</span> 9 more units; the full map is 11 units, 74 lessons</p>
+        <ul class="tags cm" data-st="coming"><li>a and an</li><li>this and that</li><li>plural <span class="nw">-s</span>, <span class="nw">-es</span></li><li>countable, uncountable</li><li>compound nouns</li><li>collective nouns</li><li>abstract nouns</li><li>am, is, are</li><li>have, has</li><li>everyday verbs</li><li>the present simple</li></ul>
+      </div>
+      <div class="gcol s reveal" id="gc-climb" data-panel data-st="built">
+        <h3 class="gnm">Ramp Climb <span class="st built">Built</span></h3>
+        <p class="glab">14 units, 56 lessons, 126 words</p>
+        <ul class="tags"><li>subject and object pronouns</li><li>my, your and 's</li><li>wh-questions and because</li><li>a, an, the or nothing</li><li>there is and there are</li><li>the present continuous</li><li>the past simple: <span class="nw">-ed</span>, was and were</li><li>comparing: <span class="nw">-er</span>, more, the most</li><li>joining ideas</li><li>order words and plans</li></ul>
+      </div>
+      <div class="gcol g reveal" id="gc-summit" data-panel data-st="built">
+        <h3 class="gnm">Ramp Summit <span class="st built">Built</span></h3>
+        <p class="glab">10 units, 50 lessons, 120 words</p>
+        <ul class="tags"><li>word stress</li><li>weak forms and linking</li><li>irregular verbs</li><li>spelling rules</li><li>suffixes and prefixes</li><li>word families</li><li>B1 grammar for reading</li><li>linking words</li><li>emails and short essays</li></ul>
+      </div>
+    </div>
+
+    <div class="gproof">
+      <figure class="snip reveal" data-st="live"><img src="assets/img/z-explain.webp" width="720" height="586" alt="Hỏi gia sư (Ask the tutor) with Giải thích (Explain) selected: I explain briefly with examples, then ask you one question" loading="lazy"><figcaption class="cap-s">Real screen: Hỏi gia sư (Ask the tutor), Giải thích (Explain) mode. <span class="st live">Live</span></figcaption></figure>
+      <div class="gp-pts">
+        <div class="reveal" data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/> <path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg><p><b>Stuck on a grammar point today?</b> Giải thích (Explain) takes one grammar or word idea at the student's level, with examples, then checks they understood. <span class="st live">Live</span></p></div>
+        <div class="reveal" data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 5h8"/> <path d="M13 12h8"/> <path d="M13 19h8"/> <path d="m3 17 2 2 4-4"/> <path d="m3 7 2 2 4-4"/></svg><p><b>Grammar from the first test.</b> The starting test has grammar items at Climb and Summit, so grammar counts toward where a student starts. <span class="st live">Live</span></p></div>
+      </div>
+      <figure class="snip reveal" data-st="built"><img src="assets/img/z-climb.webp" width="710" height="702" alt="The Ramp Climb card on the road: Grammar, sounds and short texts, with Who does what and Grammar and rules, locked" loading="lazy"><figcaption class="cap-s">Real screen: Grammar and rules on the road, locked. <span class="st built">Built</span></figcaption></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec sounds dk" id="sounds" aria-labelledby="h-snd">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-snd" class="h2">The 44 sounds of British English.</h2>
+      <p class="lead">In the symbols Vietnamese textbooks print: 12 single vowels, 8 diphthongs and 24 consonants. Every word in Ramp English carries its British IPA. <span class="st live">Live</span></p>
+    </div>
+
+    <p class="ipa-hint" hidden><span class="spk" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span>Tap a sound to see its example word. The nine vowels with a speaker play an open reference sample.</p>
+    <div class="ipa-wrap reveal" data-st="live">
+      <div class="ipa" id="ipa" role="group" aria-label="The 44 sounds. Choose a sound to see its example word.">
+        <p class="ipa-row-l">Single vowels</p>
+        <button type="button" class="lv" data-k="Long vowel" data-clip="ii"><b>iː</b><i>green</i><span class="spk" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span></button>
+        <button type="button" class="sv" data-k="Short vowel" data-clip="i"><b>ɪ</b><i>big</i><span class="spk" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span></button>
+        <button type="button" class="sv" data-k="Short vowel" data-clip="e"><b>e</b><i>bed</i><span class="spk" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span></button>
+        <button type="button" class="sv" data-k="Short vowel" data-clip="ae"><b>æ</b><i>cat</i><span class="spk" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span></button>
+        <button type="button" class="lv" data-k="Long vowel" data-clip="aa"><b>ɑː</b><i>heart</i><span class="spk" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span></button>
+        <button type="button" class="sv" data-k="Short vowel" data-clip="o"><b>ɒ</b><i>hot</i><span class="spk" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span></button>
+        <button type="button" class="lv" data-k="Long vowel" data-clip="oo"><b>ɔː</b><i>door</i><span class="spk" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span></button>
+        <button type="button" class="sv" data-k="Short vowel" data-clip="u"><b>ʊ</b><i>good</i><span class="spk" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span></button>
+        <button type="button" class="lv" data-k="Long vowel" data-clip="uu"><b>uː</b><i>blue</i><span class="spk" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg></span></button>
+        <button type="button" class="sv" data-k="Short vowel"><b>ʌ</b><i>cup</i></button>
+        <button type="button" class="lv" data-k="Long vowel"><b>ɜː</b><i>first</i></button>
+        <button type="button" class="sv" data-k="Short vowel"><b>ə</b><i>about</i></button>
+        <p class="ipa-row-l">Diphthongs</p>
+        <button type="button" class="dp" data-k="Diphthong"><b>eɪ</b><i>eight</i></button>
+        <button type="button" class="dp" data-k="Diphthong"><b>aɪ</b><i>five</i></button>
+        <button type="button" class="dp" data-k="Diphthong"><b>ɔɪ</b><i>coin</i></button>
+        <button type="button" class="dp" data-k="Diphthong"><b>aʊ</b><i>now</i></button>
+        <button type="button" class="dp" data-k="Diphthong"><b>əʊ</b><i>home</i></button>
+        <button type="button" class="dp" data-k="Diphthong"><b>ɪə</b><i>here</i></button>
+        <button type="button" class="dp" data-k="Diphthong"><b>eə</b><i>chair</i></button>
+        <button type="button" class="dp" data-k="Diphthong"><b>ʊə</b><i>tour</i></button>
+        <p class="ipa-row-l">Consonants</p>
+        <button type="button" class="cn" data-k="Consonant"><b>p</b><i>apple</i></button><button type="button" class="cn" data-k="Consonant"><b>b</b><i>big</i></button><button type="button" class="cn" data-k="Consonant"><b>t</b><i>ten</i></button><button type="button" class="cn" data-k="Consonant"><b>d</b><i>dog</i></button><button type="button" class="cn" data-k="Consonant"><b>k</b><i>cat</i></button><button type="button" class="cn" data-k="Consonant"><b>g</b><i>dog</i></button><button type="button" class="cn" data-k="Consonant"><b>f</b><i>five</i></button><button type="button" class="cn" data-k="Consonant"><b>v</b><i>van</i></button><button type="button" class="cn" data-k="Consonant"><b>θ</b><i>three</i></button><button type="button" class="cn" data-k="Consonant"><b>ð</b><i>this</i></button><button type="button" class="cn" data-k="Consonant"><b>s</b><i>class</i></button><button type="button" class="cn" data-k="Consonant"><b>z</b><i>zoo</i></button><button type="button" class="cn" data-k="Consonant"><b>ʃ</b><i>she</i></button><button type="button" class="cn" data-k="Consonant"><b>ʒ</b><i>television</i></button><button type="button" class="cn" data-k="Consonant"><b>h</b><i>happy</i></button><button type="button" class="cn" data-k="Consonant"><b>tʃ</b><i>chair</i></button><button type="button" class="cn" data-k="Consonant"><b>dʒ</b><i>jam</i></button><button type="button" class="cn" data-k="Consonant"><b>m</b><i>milk</i></button><button type="button" class="cn" data-k="Consonant"><b>n</b><i>nine</i></button><button type="button" class="cn" data-k="Consonant"><b>ŋ</b><i>long</i></button><button type="button" class="cn" data-k="Consonant"><b>l</b><i>long</i></button><button type="button" class="cn" data-k="Consonant"><b>r</b><i>red</i></button><button type="button" class="cn" data-k="Consonant"><b>w</b><i>water</i></button><button type="button" class="cn" data-k="Consonant"><b>j</b><i>yes</i></button>
+      </div>
+      <aside class="ipa-card" aria-live="polite">
+        <p class="ic-k" id="ic-k">Tap a sound</p>
+        <p class="ic-s" id="ic-s">iː</p>
+        <p class="ic-w">as in <b id="ic-w">green</b></p>
+        <button class="ic-play" id="ic-play" type="button" hidden><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 4.702a.705.705 0 0 0-1.203-.498L6.413 7.587A1.4 1.4 0 0 1 5.416 8H3a1 1 0 0 0-1 1v6a1 1 0 0 0 1 1h2.416a1.4 1.4 0 0 1 .997.413l3.383 3.384A.705.705 0 0 0 11 19.298z"/> <path d="M16 9a5 5 0 0 1 0 6"/> <path d="M19.364 18.364a9 9 0 0 0 0-12.728"/></svg><span>Hear the sample</span></button>
+        <p class="ic-note" id="ic-note">Nine vowels play an open reference recording of their IPA symbol, from Wikimedia Commons. These are not Ramp's lesson audio. <a href="credits.html">Credits</a></p>
+      </aside>
+      <div class="ipa-foot">
+        <p class="listen"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 19v3"/> <path d="M15 9.34V5a3 3 0 0 0-5.68-1.33"/> <path d="M16.95 16.95A7 7 0 0 1 5 12v-2"/> <path d="M18.89 13.23A7 7 0 0 0 19 12v-2"/> <path d="m2 2 20 20"/> <path d="M9 9v3a3 3 0 0 0 5.12 2.12"/></svg><span><b>Listen only.</b> Ramp never records the student's voice.</span></p>
+        <div class="key"><span class="k-lv">5 long vowels</span><span class="k-sv">7 short vowels</span><span class="k-dp">8 diphthongs</span><span class="k-cn">24 consonants</span></div>
+      </div>
+    </div>
+
+    <div class="slist reveal" data-st="live">
+      <h3 class="h2s">30 listening lessons, 648 exercise items</h3>
+      <p class="sl-sub">A student sees the lessons up to their own level.</p>
+      <div class="sbar" aria-hidden="true"><i class="c" style="--n:16"></i><i class="s" style="--n:8"></i><i class="g" style="--n:6"></i></div>
+      <div class="scols" data-switch id="slist">
+        <div class="segs ssegs" role="group" aria-label="Choose a level" hidden><button type="button" data-for="sl-start" aria-pressed="true">Start · 16</button><button type="button" data-for="sl-climb" aria-pressed="false">Climb · 8</button><button type="button" data-for="sl-summit" aria-pressed="false">Summit · 6</button></div>
+        <div id="sl-start" data-panel><h4 class="h4 c">Ramp Start · 16</h4><ol>
+          <li>Final /t/ and /d/</li><li>Final /p/ and /k/</li><li>Final /s/ and /z/</li><li>-s endings: /s/, /z/, /ɪz/</li><li>-ed endings: /t/, /d/, /ɪd/</li><li>Final consonant clusters</li><li>/l/ and /n/</li><li>/iː/ and /ɪ/</li><li>/e/ and /æ/</li><li>/æ/, /ʌ/ and /ɑː/</li><li>/ɜː/</li><li>/ʊ/, /uː/, /ɒ/ and /ɔː/</li><li>/eɪ/, /aɪ/ and /ɔɪ/</li><li>/əʊ/, /aʊ/ and /ɔː/</li><li>/ɪə/, /eə/ and /ʊə/</li><li>/ə/ and syllables</li></ol></div>
+        <div id="sl-climb" data-panel><h4 class="h4 s">Ramp Climb · 8</h4><ol start="17">
+          <li>Puffed /p t k/ and /b d g/</li><li>Starting clusters</li><li>/s/ and /ʃ/</li><li>/tʃ/, /dʒ/ and /ʃ/</li><li>/z/ and /ʒ/</li><li>/f/, /v/ and /w/</li><li>/r/, /j/ and /h/</li><li>/θ/ and /ð/</li></ol></div>
+        <div id="sl-summit" data-panel><h4 class="h4 g">Ramp Summit · 6</h4><ol start="25">
+          <li>Stress in two-syllable words</li><li>Stress and word endings</li><li>Weak forms and can, can't</li><li>Linking and short forms</li><li>When spelling and sound differ</li><li>Stress in sentences</li></ol></div>
+      </div>
+    </div>
+
+    <div class="sbot">
+      <div class="wnw reveal" data-st="live">
+        <p class="vs" aria-label="white, not why"><span class="vw">whi<u>t</u>e</span><span class="x">not</span><span class="vw why">why</span></p>
+        <p>Lesson one starts where Vietnamese speakers most often lose English: the sound at the end of a word. Drop the final t, and white becomes why.</p>
+      </div>
+      <figure class="crops reveal" data-st="live">
+        <div class="snip"><img src="assets/img/z-sound-title.webp" width="720" height="278" alt="Sound lesson title: Âm cuối /t/ và /d/, Final /t/ and /d/" loading="lazy"></div>
+        <div class="snip"><img src="assets/img/z-sound-ten.webp" width="690" height="496" alt="How to make /t/, with the word ten and its Nghe (Listen) button" loading="lazy"></div>
+        <figcaption class="cap-s">Real screen: lesson one. Vietnamese marked * is a machine draft.</figcaption>
+      </figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec kept" id="kept" aria-labelledby="h-kept">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-kept" class="h2">A word counts only when it is kept.</h2>
+      <p class="lead">Seeing a word is not knowing it. Ramp counts a word as kept only when the student brings it back from memory a day later, and again about a week later. Ramp's server decides every mark and every wait, not the phone. <span class="st live">Live</span></p>
+    </div>
+
+    <div class="kept-play reveal" id="keptplay" data-st="live">
+      <div class="wordcard">
+        <figure class="hs" data-hs>
+          <img src="assets/img/z-word.webp" width="690" height="515" alt="The word card for taxi: a taxi picture, the word taxi, its IPA /ˈtæksi/ and the meaning xe tắc xi marked as a draft" loading="lazy">
+          <button class="hs-dot" type="button" style="left:55%;top:20%" aria-expanded="false" data-note="0"><span>1</span></button>
+          <button class="hs-dot" type="button" style="left:31%;top:72%" aria-expanded="false" data-note="1"><span>2</span></button>
+          <button class="hs-dot" type="button" style="left:34%;top:89%" aria-expanded="false" data-note="2"><span>3</span></button>
+          <div class="stamp" aria-hidden="true"><span class="vi"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/> <path d="m9 12 2 2 4-4"/></svg>Đã giữ được một tuần</span><span class="en">Kept for a week</span></div>
+        </figure>
+        <ol class="hs-notes">
+          <li>A picture for most words: 20 of the first 32.</li>
+          <li>British IPA on every word, taken from Britfone (MIT licence), and a British voice.</li>
+          <li>A draft Vietnamese meaning, marked * as a machine draft.</li>
+        </ol>
+      </div>
+
+      <div class="kept-side">
+        <ol class="ksteps" id="ksteps">
+          <li data-k="0"><span class="kb"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/> <circle cx="12" cy="12" r="3"/></svg></span><div><b>Meet it</b><p>A word card with a British voice, the IPA, an example sentence, a draft Vietnamese meaning and, for most words, a picture.</p></div></li>
+          <li data-k="1"><span class="kb"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 18V5"/> <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/> <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/> <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/> <path d="M18 18a4 4 0 0 0 2-7.464"/> <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/> <path d="M6 18a4 4 0 0 1-2-7.464"/> <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></svg></span><div><b>A day later</b><p>At least 20 hours on, recall it from its picture or meaning.</p></div></li>
+          <li data-k="2"><span class="kb"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M8 2v4"/> <path d="M16 2v4"/> <rect width="18" height="18" x="3" y="4" rx="2"/> <path d="M3 10h18"/> <path d="m9 16 2 2 4-4"/></svg></span><div><b>About a week later</b><p>Recall it again, with no peek in between and no first-letter help.</p></div></li>
+          <li data-k="3"><span class="kb"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/> <path d="m9 12 2 2 4-4"/></svg></span><div><b>Kept</b><p>The app says "kept for a week", never "learned".</p></div></li>
+        </ol>
+      </div>
+      <div class="kctl" hidden>
+        <div class="kclock"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/> <path d="M12 6v6l4 2"/></svg><span id="kclock">Today</span><span class="kdots" aria-hidden="true"><i></i><i></i><i></i><i></i></span></div>
+        <p class="kmsg" id="kmsg" aria-live="polite">Try it: walk the word taxi to kept.</p>
+        <div class="kbtns">
+          <button class="btn btn-green" type="button" id="k-next"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></svg><span>A day later</span></button>
+          <button class="btn btn-line" type="button" id="k-peek"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.062 12.348a1 1 0 0 1 0-.696 10.75 10.75 0 0 1 19.876 0 1 1 0 0 1 0 .696 10.75 10.75 0 0 1-19.876 0"/> <circle cx="12" cy="12" r="3"/></svg><span>Peek</span></button>
+          <button class="btn btn-line" type="button" id="k-miss"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/> <path d="M3 3v5h5"/></svg><span>Miss</span></button>
+        </div>
+        <p class="cap-s">Illustration of the rules. In the app the waits are real: at least 20 hours, then about a week.</p>
+      </div>
+    </div>
+
+    <div class="back reveal" data-st="live" id="gaps">
+      <div class="back-h"><h3 class="h3l">Every return, at growing gaps</h3><p>Two recalls make a word kept; after that it keeps being checked.</p></div>
+      <svg class="hops" viewBox="0 0 660 146" aria-hidden="true">
+        <path d="M 6 112 H 654" stroke="#1A2B24" stroke-opacity=".2" stroke-width="2" stroke-dasharray="3 5"/>
+        <g class="arcs" fill="none" stroke-width="3" stroke-linecap="round">
+          <path d="M 20 112 Q 49 80 78 112"/><path d="M 78 112 Q 113 64 148 112"/><path d="M 148 112 Q 191 46 234 112"/><path d="M 234 112 Q 287 24 340 112"/><path d="M 340 112 Q 408 -2 476 112"/><path d="M 476 112 Q 563 -36 650 112"/>
+        </g>
+        <g class="pts" stroke="#FFFFFF" stroke-width="2.5"><circle cx="20" cy="112" r="8" fill="#1A2B24"/><circle cx="78" cy="112" r="7"/><circle cx="148" cy="112" r="9" class="kept-pt"/><circle cx="234" cy="112" r="7"/><circle cx="340" cy="112" r="7"/><circle cx="476" cy="112" r="7"/><circle cx="650" cy="112" r="7"/></g>
+        <g class="lbls" font-family="Inter, sans-serif" font-size="13" font-weight="600" fill="#1A2B24" text-anchor="middle"><text x="49" y="90">1 day</text><text x="113" y="78">6 days</text><text x="191" y="66">14 days</text><text x="287" y="52">30 days</text><text x="408" y="38">60 days</text><text x="563" y="22">120 days</text></g>
+        <g class="plbls" font-family="Inter, sans-serif" font-size="12" font-weight="600" fill="#42564C" text-anchor="middle"><text x="20" y="138">Met</text><text x="78" y="138">Recall</text><text x="148" y="138" class="kept-l">Kept</text><text x="287" y="138">then checked again and again</text></g>
+        <g class="hop-ball"><circle r="7" fill="#FFC248" stroke="#1A2B24" stroke-width="2.5"/></g>
+      </svg>
+      <ol class="gapchips" aria-label="The six gaps"><li>1 day to the first recall</li><li>6 days to the second recall, then kept</li><li>14 days</li><li>30 days</li><li>60 days</li><li>120 days</li></ol>
+      <div class="scrub" hidden>
+        <label for="gap-r">Scrub the returns</label>
+        <input type="range" id="gap-r" min="1" max="6" step="1" value="1" aria-valuetext="Gap 1 of 6: 1 day from meeting the word to its first recall">
+        <output id="gap-o" for="gap-r">Gap 1 of 6: 1 day from meeting the word to its first recall.</output>
+      </div>
+    </div>
+
+    <div class="rules reveal" data-st="live">
+      <div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/> <path d="M3 3v5h5"/></svg><p><b>Look again</b> and the wait starts over.</p></div>
+      <div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m17 2 4 4-4 4"/> <path d="M3 11v-1a4 4 0 0 1 4-4h14"/> <path d="m7 22-4-4 4-4"/> <path d="M21 13v1a4 4 0 0 1-4 4H3"/></svg><p><b>Miss a recall</b> and the word goes back to learning.</p></div>
+      <div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 21h8"/> <path d="M21.174 6.812a1 1 0 0 0-3.986-3.987L3.842 16.174a2 2 0 0 0-.5.83l-1.321 4.352a.5.5 0 0 0 .623.622l4.353-1.32a2 2 0 0 0 .83-.497z"/></svg><p><b>Say "I know it"</b> and write the word next time.</p></div>
+      <div><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="10" x2="14" y1="2" y2="2"/> <line x1="12" x2="15" y1="14" y2="11"/> <circle cx="12" cy="14" r="8"/></svg><p><b>Answer too fast</b> and it does not count.</p></div>
+    </div>
+
+    <div class="day">
+      <div class="day-shot reveal" data-st="built"><figure class="phone day-ph"><div class="scr"><img src="assets/img/x9.webp" width="640" height="1386" alt="The starting test's result: Bạn bắt đầu từ những âm và từ đầu tiên (You start from the very first sounds and words), with the drawn road and Bắt đầu học (Start learning)" loading="lazy"></div></figure><p class="cap-s">Real screen: a starting test result, in the simpler student app <span class="st built">Built</span></p></div>
+      <div class="day-list">
+        <h3 class="h2s reveal">A day in Ramp English <span class="st live">Live</span></h3>
+        <details class="df reveal" data-st="live" open><summary><span class="fi"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/> <circle cx="12" cy="12" r="6"/> <circle cx="12" cy="12" r="2"/></svg></span><span class="df-t"><span class="h4">Làm quen: two questions, then a 2-minute test</span></span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><p>Two questions, then a short test of at most 8 questions places the student at Start, Climb or Summit. At Start, made-up words catch a guess, and a retake can only move a student up.</p></details>
+        <details class="df reveal" data-st="live" open><summary><span class="fi"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11.017 2.814a1 1 0 0 1 1.966 0l1.051 5.558a2 2 0 0 0 1.594 1.594l5.558 1.051a1 1 0 0 1 0 1.966l-5.558 1.051a2 2 0 0 0-1.594 1.594l-1.051 5.558a1 1 0 0 1-1.966 0l-1.051-5.558a2 2 0 0 0-1.594-1.594l-5.558-1.051a1 1 0 0 1 0-1.966l5.558-1.051a2 2 0 0 0 1.594-1.594z"/> <path d="M20 2v4"/> <path d="M22 4h-4"/> <circle cx="4" cy="20" r="2"/></svg></span><span class="df-t"><span class="h4">New words, 3 at a time</span></span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><p>3 new words a day; each time they pass their check, 3 more open, up to 15. Practice means producing the word, such as building it from letter tiles. Daily words run for Ramp Start today.</p></details>
+        <details class="df reveal" data-st="live" open><summary><span class="fi"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><line x1="6" x2="10" y1="11" y2="11"/> <line x1="8" x2="8" y1="9" y2="13"/> <line x1="15" x2="15.01" y1="12" y2="12"/> <line x1="18" x2="18.01" y1="10" y2="10"/> <path d="M17.32 5H6.68a4 4 0 0 0-3.978 3.59c-.006.052-.01.101-.017.152C2.604 9.416 2 14.456 2 16a3 3 0 0 0 3 3c1 0 1.5-.5 2-1l1.414-1.414A2 2 0 0 1 9.828 16h4.344a2 2 0 0 1 1.414.586L17 18c.5.5 1 1 2 1a3 3 0 0 0 3-3c0-1.545-.604-6.584-.685-7.258-.007-.05-.011-.1-.017-.151A4 4 0 0 0 17.32 5z"/></svg></span><span class="df-t"><span class="h4">Four word games</span></span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><p>Spell it, Hear and write, Fill the gap and Mini crossword. Games never count toward kept and show only the student's own last and best score.</p></details>
+        <details class="df reveal" data-st="live" open><summary><span class="fi"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 10a2 2 0 0 1-2 2H6.828a2 2 0 0 0-1.414.586l-2.202 2.202A.71.71 0 0 1 2 14.286V4a2 2 0 0 1 2-2h10a2 2 0 0 1 2 2z"/> <path d="M20 9a2 2 0 0 1 2 2v10.286a.71.71 0 0 1-1.212.502l-2.202-2.202A2 2 0 0 0 17.172 19H10a2 2 0 0 1-2-2v-1"/></svg></span><span class="df-t"><span class="h4">Hỏi gia sư, the English tutor</span></span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><p>Two modes, Hướng dẫn tôi (Guide me) and Giải thích (Explain). It stays on English and never says a word the student is tested on today. In Guide me, the answer appears only after three real tries.</p></details>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="sec subjects" id="subjects" aria-labelledby="h-subj">
+  <div class="field" aria-hidden="true"></div>
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-subj" class="h2">Every subject, in Vietnamese, English or both.</h2>
+      <p class="lead">A study chat for every subject of the student's grade, built on <b>Chương trình GDPT 2018</b> and the <b>Kết nối tri thức với cuộc sống</b> books. The subject and its English words arrive together. <span class="st live">Live</span></p>
+    </div>
+
+    <p class="swipe-hint" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></svg>Swipe through the four steps</p>
+    <ol class="flow4">
+      <li class="reveal" data-st="live"><figure class="phone"><div class="scr"><img src="assets/img/subj-1.webp" width="640" height="1386" alt="Tất cả môn học, all subjects for grade 6" loading="lazy"></div></figure><div class="cap"><span class="num">1</span><h3 class="h3">Pick the subject</h3><p>Every subject of the grade opens a study chat.</p></div></li>
+      <li class="reveal" data-st="live"><figure class="phone"><div class="scr"><img src="assets/img/subj-2.webp" width="640" height="1386" alt="Hỏi bài Tin học, ask about Informatics, with example questions and the Ảnh bài (Photo) button" loading="lazy"></div></figure><div class="cap"><span class="num">2</span><h3 class="h3">Type it, or snap it</h3><p>From a photo, Ramp checks each step of the student's own working, and never stores the photo.</p></div></li>
+      <li class="reveal" data-st="live"><figure class="phone"><div class="scr"><img src="assets/img/subj-3.webp" width="640" height="1386" alt="Hướng dẫn tôi (Guide me) in Natural science" loading="lazy"></div></figure><div class="cap"><span class="num">3</span><h3 class="h3">Ramp asks first</h3><p>In Hướng dẫn tôi (Guide me), one short question at a time.</p></div></li>
+      <li class="reveal" data-st="live"><figure class="phone"><div class="scr"><img src="assets/img/subj-4.webp" width="640" height="1386" alt="A maths answer with the rule, numbered steps, an example and key English terms" loading="lazy"></div></figure><div class="cap"><span class="num">4</span><h3 class="h3">See why, in steps</h3><p>The rule, numbered steps, an example and the key English terms.</p></div></li>
+    </ol>
+
+    <div class="guide reveal" data-st="live" id="chat">
+      <div class="guide-l">
+        <h3 class="h2s">How Hướng dẫn tôi (Guide me) teaches</h3>
+        <ul class="gl">
+          <li><b>Checks the base.</b> If the topic builds on an idea students of that grade often miss, the first question checks it.</li>
+          <li><b>One question at a time.</b> Short questions that move the student's own thinking forward.</li>
+          <li><b>Answer last.</b> After three stuck replies in a row, Hiện đáp án (Show me the answer) appears.</li>
+          <li><b>Never trapped.</b> Kết thúc (End) always gives the full answer.</li>
+          <li><b>Credit for thinking.</b> When the student works it out, their score on that topic goes up.</li>
+          <li><b>Seen by the teacher.</b> A common wrong idea is noted for the teacher, and the student is told.</li>
+        </ul>
+      </div>
+      <div class="chat" aria-label="Illustration of a Guide me chat">
+        <div class="chat-top"><span class="ct-t"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/> <path d="m16.24 7.76-1.804 5.411a2 2 0 0 1-1.265 1.265L7.76 16.24l1.804-5.411a2 2 0 0 1 1.265-1.265z"/></svg>Hướng dẫn tôi <span class="en">Guide me</span></span><span class="tagill">Illustration</span></div>
+        <div class="segs chat-segs" role="group" aria-label="Choose how the chat goes" hidden>
+          <button type="button" data-path="works" aria-pressed="false">The student works it out</button>
+          <button type="button" data-path="stuck" aria-pressed="true">The student is stuck</button>
+        </div>
+        <ol class="msgs" id="msgs">
+          <li class="me">Why does ice melt when it is left outside?</li>
+          <li class="rp">Let's work it out together. First, what does the question give you, and what does it ask?</li>
+          <li class="me">Ice, outside. It asks why it melts.</li>
+          <li class="rp">Good. Before that: is the air outside warmer or colder than the ice?</li>
+          <li class="me stuck" data-p="stuck">I'm not sure.</li>
+          <li class="rp" data-p="stuck">Put an ice cube in your hand. What does your hand feel?</li>
+          <li class="me stuck" data-p="stuck">I don't know.</li>
+          <li class="rp" data-p="stuck">What happens to the ice in your hand after a minute?</li>
+          <li class="me stuck" data-p="stuck">No idea.</li>
+          <li class="sys" data-p="stuck"><span class="show-ans"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15 14c.2-1 .7-1.7 1.5-2.5 1-.9 1.5-2.2 1.5-3.5A6 6 0 0 0 6 8c0 1 .2 2.2 1.5 3.5.7.7 1.3 1.5 1.5 2.5"/> <path d="M9 18h6"/> <path d="M10 22h4"/></svg><span>Hiện đáp án<span class="en">Show me the answer</span></span></span><span class="sys-n">Appears after three stuck replies in a row. Kết thúc (End) always gives the full answer.</span></li>
+          <li class="me" data-p="works" hidden>Warmer.</li>
+          <li class="rp" data-p="works" hidden>Yes. So where does the ice get the heat it needs to melt?</li>
+          <li class="me" data-p="works" hidden>From the warm air around it.</li>
+          <li class="rp" data-p="works" hidden>That's it: heat moves from the warmer air into the colder ice, and the ice melts.</li>
+          <li class="sys win" data-p="works" hidden><span class="won"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3.85 8.62a4 4 0 0 1 4.78-4.77 4 4 0 0 1 6.74 0 4 4 0 0 1 4.78 4.78 4 4 0 0 1 0 6.74 4 4 0 0 1-4.77 4.78 4 4 0 0 1-6.75 0 4 4 0 0 1-4.78-4.77 4 4 0 0 1 0-6.76Z"/> <path d="m9 12 2 2 4-4"/></svg><span>Worked it out</span></span><span class="sys-n">When the student works it out, their score on that topic goes up.</span></li>
+        </ol>
+        <div class="chat-ctl" hidden><span class="stuckc" id="stuckc" aria-live="polite">Stuck replies: 0 of 3</span><button class="btn btn-line btn-sm" type="button" id="chat-play"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 5a2 2 0 0 1 3.008-1.728l11.997 6.998a2 2 0 0 1 .003 3.458l-12 7A2 2 0 0 1 5 19z"/></svg><span>Play the chat</span></button></div>
+        <p class="cap-s">Illustration in English, written for this page. In the app the chat runs in Tiếng Việt, English or Song ngữ, and button labels are the app's.</p>
+      </div>
+    </div>
+
+    <div class="also">
+      <div class="reveal" data-st="live"><span class="ai"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/> <path d="m14 7 3 3"/> <path d="M5 6v4"/> <path d="M19 14v4"/> <path d="M10 2v2"/> <path d="M7 8H3"/> <path d="M21 16h-4"/> <path d="M11 3H9"/></svg></span><p><b>Tạo hoạt hình</b> (Animate this) in maths, the sciences and Tin học, plus diagrams in maths and the sciences.</p></div>
+      <div class="reveal" data-st="live"><span class="ai"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M15.39 4.39a1 1 0 0 0 1.68-.474 2.5 2.5 0 1 1 3.014 3.015 1 1 0 0 0-.474 1.68l1.683 1.682a2.414 2.414 0 0 1 0 3.414L19.61 15.39a1 1 0 0 1-1.68-.474 2.5 2.5 0 1 0-3.014 3.015 1 1 0 0 1 .474 1.68l-1.683 1.682a2.414 2.414 0 0 1-3.414 0L8.61 19.61a1 1 0 0 0-1.68.474 2.5 2.5 0 1 1-3.014-3.015 1 1 0 0 0 .474-1.68l-1.683-1.682a2.414 2.414 0 0 1 0-3.414L4.39 8.61a1 1 0 0 1 1.68.474 2.5 2.5 0 1 0 3.014-3.015 1 1 0 0 1-.474-1.68l1.683-1.682a2.414 2.414 0 0 1 3.414 0z"/></svg></span><p><b>Đố tôi</b> (Quiz me) turns a topic into practice questions.</p></div>
+      <div class="reveal" data-st="live"><span class="ai"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7v14"/> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg></span><p><b>Chapter titles only.</b> Six books have full chapter lists, from Toán 6 to Sinh học 10. Ramp stores the titles, never textbook text.</p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec teachers dk" id="teachers" aria-labelledby="h-tea">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-tea" class="h2">Plan tomorrow from what the class got stuck on.</h2>
+      <p class="lead">Two weeks of real questions become one picture of where the class is stuck, and one press drafts the next lesson or a test from it. The AI drafts. The teacher decides. <span class="st live">Live</span></p>
+    </div>
+
+    <div class="loop reveal" data-switch id="loop" data-st="live">
+      <div class="loop-ringbox">
+      <div class="ring" aria-hidden="true">
+        <svg viewBox="0 0 300 300"><circle cx="150" cy="150" r="118" fill="none" stroke="#FFFFFF" stroke-opacity=".14" stroke-width="18"/><circle class="ring-dots" cx="150" cy="150" r="118" fill="none" stroke="#FFC248" stroke-width="2.5" stroke-dasharray="2 9" stroke-linecap="round"/><circle class="ring-arc" cx="150" cy="150" r="118" fill="none" stroke="#FFC248" stroke-width="6" stroke-linecap="round" pathLength="100" stroke-dasharray="0 100" transform="rotate(-90 150 150)"/></svg>
+        <div class="ring-c"><svg class="mk" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="3" y="26" width="7" height="11" rx="2" fill="#FFFFFF" fill-opacity="1"/><rect x="12" y="19" width="7" height="18" rx="2" fill="#FFFFFF" fill-opacity="0.8"/><rect x="21" y="11" width="7" height="26" rx="2" fill="#FFFFFF" fill-opacity="0.75"/><rect x="30" y="3" width="7" height="34" rx="2" fill="#FFFFFF" fill-opacity="1"/></svg><b>Your class</b><span>the same loop, every week</span></div>
+      </div>
+      <div class="ring-btns" role="group" aria-label="The five steps of the teacher loop" hidden>
+        <button type="button" data-for="ls1" aria-pressed="true" style="--a:0"><span>1</span><em>Students get stuck</em></button>
+        <button type="button" data-for="ls2" aria-pressed="false" style="--a:1"><span>2</span><em>The class page sees it</em></button>
+        <button type="button" data-for="ls3" aria-pressed="false" style="--a:2"><span>3</span><em>Ramp drafts</em></button>
+        <button type="button" data-for="ls4" aria-pressed="false" style="--a:3"><span>4</span><em>The server marks</em></button>
+        <button type="button" data-for="ls5" aria-pressed="false" style="--a:4"><span>5</span><em>The teacher confirms</em></button>
+      </div>
+      </div>
+      <ol class="lsteps">
+        <li id="ls1" data-panel><div class="lt"><span class="num">1</span><h3 class="h3">Students get stuck</h3><p>In Hướng dẫn tôi (Guide me), on a chapter or on an idea.</p></div><figure class="snip"><img src="assets/img/z-asks.webp" width="706" height="440" alt="A Guide me question about why ice melts, and Ramp's first question back" loading="lazy"></figure></li>
+        <li id="ls2" data-panel><div class="lt"><span class="num">2</span><h3 class="h3">The class page sees it</h3><p>Chỗ lớp đang kẹt (Where the class is stuck) groups 14 days by chapter, with wrong ideas 3 or more students share.</p></div>
+          <figure class="snip hs" data-hs><img src="assets/img/z-stuck.webp" width="718" height="322" alt="Where the class is stuck: Natural science, Chapter V, Cells, 3 students, by topic, and what they were stuck on" loading="lazy">
+            <button class="hs-dot" type="button" style="left:31%;top:15%" aria-expanded="false" data-note="0"><span>1</span></button>
+            <button class="hs-dot" type="button" style="left:71%;top:10%" aria-expanded="false" data-note="1"><span>2</span></button>
+            <button class="hs-dot" type="button" style="left:18%;top:56%" aria-expanded="false" data-note="2"><span>3</span></button>
+          </figure>
+          <ol class="hs-notes"><li>Grouped by chapter: here Chương V, Tế bào (Chapter V, Cells).</li><li>How many students got stuck there. A stuck group is flagged from 2 students.</li><li>Kẹt ở (Stuck on): what they were stuck on, in plain Vietnamese.</li></ol>
+          <figure class="snip btns-snip"><img src="assets/img/z-stuck-btns.webp" width="504" height="74" alt="Soạn giáo án cho buổi sau từ chỗ này (Plan the next lesson from this) and Ra đề từ chỗ này (Make a test from this)" loading="lazy"><figcaption class="cap-s">One press drafts the next lesson or a test from the card. Sample class data.</figcaption></figure></li>
+        <li id="ls3" data-panel><div class="lt"><span class="num">3</span><h3 class="h3">Ramp drafts the plan or the test</h3><p>A KHBD plan (Phụ lục IV of Công văn 5512) or a Công văn 7991 test out of 10, with no student names. The teacher edits every part, and every draft is labelled Bản nháp AI (AI draft).</p></div><figure class="snip" data-zoom><img src="assets/img/x6b.webp" width="800" height="610" alt="Part of a draft lesson plan in the KHBD layout" loading="lazy"><figcaption class="cap-s">Part of a draft lesson plan.</figcaption></figure><figure class="snip tabs-snip"><img src="assets/img/x5b.webp" width="428" height="72" alt="A draft test's four parts: Ma trận (grid), Bản đặc tả (specification), Đề (paper) and Hướng dẫn chấm (marking guide)" loading="lazy"><img src="assets/img/x5c.webp" width="736" height="86" alt="The Bản nháp AI (AI draft) and Nháp (Draft) badges over a Toán 6 test" loading="lazy"><figcaption class="cap-s">A draft test's four parts, and the label every AI draft carries.</figcaption></figure></li>
+        <li id="ls4" data-panel><div class="lt"><span class="num">4</span><h3 class="h3">Students sit it, the server marks</h3><p>Students take the test in the app against a timer. Ramp's server marks multiple choice, true or false and short answers; the essay waits for the teacher.</p></div><figure class="snip"><img src="assets/img/mark-objective.webp" width="640" height="222" alt="The student's result: Phần trắc nghiệm 5,35 điểm (Objective part: 5.35 points); Phần tự luận: thầy cô đang chấm (Essay part: your teacher is marking it)" loading="lazy"><figcaption class="cap-s">Real screen: what the student sees before the essay is marked. Test data.</figcaption></figure><figure class="snip"><img src="assets/img/x5a.webp" width="736" height="278" alt="Download and print: the test pack of grid, specification, paper and marking guide, as Word or print; the student paper has no answers" loading="lazy"><figcaption class="cap-s">Or print it: the test pack downloads for Word.</figcaption></figure></li>
+        <li id="ls5" data-panel><div class="lt"><span class="num">5</span><h3 class="h3">The teacher confirms</h3><p>The AI only suggests essay marks and quotes the student's own words. No total exists until the teacher confirms each one, and each draft is logged in the teacher's own AI log.</p></div><figure class="snip"><img src="assets/img/mark-total.webp" width="640" height="148" alt="Điểm: 6,85/10 (Mark: 6.85/10), the total out of 10" loading="lazy"><figcaption class="cap-s">Real screen: the total, out of 10, once the teacher has confirmed the essay mark. Test data.</figcaption></figure></li>
+      </ol>
+    </div>
+
+    <div class="tools">
+      <div class="reveal" data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M12 18v-6"/> <path d="m9 15 3 3 3-3"/></svg><h3 class="h3">Ready for Word or print</h3><p>Every draft is labelled Bản nháp AI (AI draft); plans and tests download as a Word file or print to PDF.</p></div>
+      <div class="reveal" data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="8" r="5"/> <path d="M20 21a8 8 0 0 0-16 0"/></svg><h3 class="h3">A page for every student</h3><p>Strengths, weak topics, saved terms, tests, and subject chats the teacher can read but not change.</p></div>
+      <div class="reveal" data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/> <path d="m9 14 2 2 4-4"/></svg><h3 class="h3">Marks for vnEdu or SMAS</h3><p>A marks file for either system, still to be checked against a school's template.</p></div>
+      <div class="reveal" data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/> <path d="m21.854 2.147-10.94 10.939"/></svg><h3 class="h3">Parent drafts and an assistant</h3><p>Drafts the teacher sends, and an assistant that reads class figures without students' names. The conversation is not saved, and only the teacher can see their AI log.</p></div>
+      <div class="reveal" data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.268 21a2 2 0 0 0 3.464 0"/> <path d="M3.262 15.326A1 1 0 0 0 4 17h16a1 1 0 0 0 .74-1.673C19.41 13.956 18 12.499 18 8A6 6 0 0 0 6 8c0 4.499-1.411 5.956-2.738 7.326"/></svg><h3 class="h3">The Ramp English digest</h3><p>At most three students who need help, or "The class is fine today; nothing to do."</p></div>
+      <div class="reveal" data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/> <circle cx="12" cy="8" r="6"/></svg><h3 class="h3">English level-end tests</h3><p>Confirm writing marks, see milestone counts and how ready the class is for each exam. <span class="st built">Built</span></p></div>
+    </div>
+  </div>
+</section>
+
+<section class="sec giup" id="giup" aria-labelledby="h-giup">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-giup" class="h2">Help that points at the button.</h2>
+      <p class="lead">Made for a class 6 child. The simpler student app puts one clear next step on every screen, and a <span class="gchip">Giúp<svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/> <path d="M12 17h.01"/></svg></span> (Help) button in the top row that explains the screen, points at the button to press and gives a first-day tour. <span class="st built">Built</span></p>
+      <div class="gdemo" hidden>
+        <button type="button" class="gdemo-btn" id="gdemo"><span>Giúp</span><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/> <path d="M9.09 9a3 3 0 0 1 5.83 1c0 2-3 3-3 3"/> <path d="M12 17h.01"/></svg></button>
+        <p><b>How Giúp points, shown on this page.</b> Press it to see Chỉ cho mình (Show me) ring a real button here.</p>
+      </div>
+    </div>
+
+    <p class="swipe-hint" aria-hidden="true"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M5 12h14"/> <path d="m12 5 7 7-7 7"/></svg>Swipe through the three</p>
+    <div class="three">
+      <div class="reveal" data-st="built"><figure class="phone"><div class="scr"><img src="assets/img/giup-1.webp" width="640" height="1386" alt="The Giúp panel: Ramp is an AI, not a person; On this page, Where should I start, in two numbered steps, and the Chỉ cho mình (Show me) button" loading="lazy"></div></figure>
+        <div class="cap"><span class="num">1</span><h3 class="h3">Giúp explains the screen</h3><p>What this page is for, in numbered steps, and plainly that Ramp is an AI, not a person.</p></div></div>
+      <div class="reveal" data-st="built">
+        <figure class="phone ring-ph hs" data-hs><div class="scr"><img src="assets/img/giup-2-ring.webp" width="640" height="676" alt="Show me in action: the page dims, a ring circles the Vào lớp (Join the class) button, and a card says Bấm vào đây (Press here), step 2 of 3" loading="lazy"></div>
+          <button class="hs-dot" type="button" style="left:92%;top:8%" aria-expanded="false" data-note="0"><span>1</span></button>
+          <button class="hs-dot" type="button" style="left:88%;top:47%" aria-expanded="false" data-note="1"><span>2</span></button>
+          <button class="hs-dot" type="button" style="left:73%;top:76%" aria-expanded="false" data-note="2"><span>3</span></button>
+        </figure>
+        <ol class="hs-notes"><li>The ring: Chỉ cho mình (Show me) dims the page and rings the real button.</li><li>Bấm vào đây (Press here) says what to do, in Vietnamese with English under it.</li><li>Bước 2 trên 3 (Step 2 of 3), with Thôi (Stop) to end it.</li></ol>
+        <div class="cap"><span class="num">2</span><h3 class="h3">Chỉ cho mình points to it</h3><p>Show me rings the real button on the page.</p></div></div>
+      <div class="reveal" data-st="built"><figure class="phone"><div class="scr"><img src="assets/img/giup-3.webp" width="640" height="1386" alt="The first-day tour on the home page: Hỏi bài mọi môn ở đây (Ask about any subject here), 1 of 3, Skip and Next" loading="lazy"></div></figure>
+        <div class="cap"><span class="num">3</span><h3 class="h3">A first-day tour</h3><p>Three short stops on day one, such as Hỏi bài mọi môn ở đây (Ask about any subject here).</p></div></div>
+    </div>
+
+    <div class="gbot">
+      <ul class="nexts">
+        <li class="reveal" data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="12" cy="12" r="10"/> <circle cx="12" cy="12" r="6"/> <circle cx="12" cy="12" r="2"/></svg><p><b>Việc của bạn bây giờ</b> (Your next step): one action and one button at the top of the home page.</p></li>
+        <li class="reveal" data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><circle cx="6" cy="19" r="3"/> <path d="M9 19h8.5a3.5 3.5 0 0 0 0-7h-11a3.5 3.5 0 0 1 0-7H15"/> <circle cx="18" cy="5" r="3"/></svg><p><b>Hôm nay</b> (Today): today's words, a progress line and one Học ngay (Learn now) button, above the drawn road.</p></li>
+        <li class="reveal" data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 4.1 12 6"/> <path d="m5.1 8-2.9-.8"/> <path d="m6 12-1.9 2"/> <path d="M7.2 2.2 8 5.1"/> <path d="M9.037 9.69a.498.498 0 0 1 .653-.653l11 4.5a.5.5 0 0 1-.074.949l-4.349 1.041a1 1 0 0 0-.74.739l-1.04 4.35a.5.5 0 0 1-.95.074z"/></svg><p><b>Giúp</b> answers questions about the app, points at buttons and gives the tour.</p></li>
+        <li class="reveal" data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg><p><b>In today's app,</b> Hỏi Ramp (Ask Ramp) has 14 ready answers about the app that use no AI. <span class="st live">Live</span></p></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="sec safety" id="safety" aria-labelledby="h-safe">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-safe" class="h2">A safe corner that reaches the right adult.</h2>
+      <p class="lead">In Góc tâm sự (a corner to talk) a student can write about a worry. Every message is checked before Ramp replies. If one suggests danger, Ramp alerts the student's homeroom teacher and the school's counsellors in the app, at once for high risk. <span class="st live">Live</span></p>
+    </div>
+
+    <ol class="pipe reveal" data-st="live" id="pipe" aria-label="What happens to each message">
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg>A student writes</li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13 5h8"/> <path d="M13 12h8"/> <path d="M13 19h8"/> <path d="m3 17 2 2 4-4"/> <path d="m3 7 2 2 4-4"/></svg>Warning words check</li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 18V5"/> <path d="M15 13a4.17 4.17 0 0 1-3-4 4.17 4.17 0 0 1-3 4"/> <path d="M17.598 6.5A3 3 0 1 0 12 5a3 3 0 1 0-5.598 1.5"/> <path d="M17.997 5.125a4 4 0 0 1 2.526 5.77"/> <path d="M18 18a4 4 0 0 0 2-7.464"/> <path d="M19.967 17.483A4 4 0 1 1 12 18a4 4 0 1 1-7.967-.517"/> <path d="M6 18a4 4 0 0 1-2-7.464"/> <path d="M6.003 5.125a4 4 0 0 0-2.526 5.77"/></svg>Risk read in context</li>
+      <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14.536 21.686a.5.5 0 0 0 .937-.024l6.5-19a.496.496 0 0 0-.635-.635l-19 6.5a.5.5 0 0 0-.024.937l7.93 3.18a2 2 0 0 1 1.112 1.11z"/> <path d="m21.854 2.147-10.94 10.939"/></svg>Ramp replies</li>
+    </ol>
+
+    <div class="risk reveal" data-switch id="risk" data-st="live built">
+      <div class="risk-l">
+        <div class="segs risk-segs" role="group" aria-label="Choose a risk level" hidden>
+          <button type="button" data-for="rk-hi" aria-pressed="true" class="hi">High</button>
+          <button type="button" data-for="rk-md" aria-pressed="false" class="md">Medium</button>
+          <button type="button" data-for="rk-lo" aria-pressed="false" class="lo">Low or none</button>
+        </div>
+        <div class="tiers">
+          <div class="tier hi" id="rk-hi" data-panel><h3 class="rk">High risk</h3>
+            <div class="tcols"><div data-st="live"><p class="tl">The student sees</p><p>A warm reply that asks if they are safe and urges them to talk to an adult today, with help lines 111, 115 and 113, the Ngày Mai hotline and the school's team.</p></div><div><p class="tl">Who is told</p><p data-st="live">The homeroom teacher and counsellors, at once, in the app.</p><p data-st="built">By email too, holding only the class, the level and a link. <span class="st built">Built</span></p></div></div></div>
+          <div class="tier md" id="rk-md" data-panel><h3 class="rk">Medium risk</h3>
+            <div class="tcols"><div><p class="tl">The student sees</p><p>Ramp keeps listening and gently moves toward talking to a trusted adult.</p></div><div><p class="tl">Who is told</p><p>The same people, in the app.</p></div></div></div>
+          <div class="tier lo" id="rk-lo" data-panel><h3 class="rk">Low or none</h3>
+            <div class="tcols"><div><p class="tl">The student sees</p><p>A normal reply.</p></div><div><p class="tl">Who is told</p><p>No one.</p></div></div></div>
+        </div>
+        <ul class="priv">
+          <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M2.992 16.342a2 2 0 0 1 .094 1.167l-1.065 3.29a1 1 0 0 0 1.236 1.168l3.413-.998a2 2 0 0 1 1.099.092 10 10 0 1 0-4.777-4.719"/></svg><p><b>The notice comes first.</b> Ramp is an AI, not a person, and does not promise to keep secrets. The chat never says a teacher was told; the notice says it once, plainly.</p></li>
+          <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg><p><b>No chat text in alerts.</b> To read a flagged chat, staff press Open, and Ramp records who and when.</p></li>
+          <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/> <path d="M16 3.128a4 4 0 0 1 0 7.744"/> <path d="M22 21v-2a4 4 0 0 0-3-3.87"/> <circle cx="9" cy="7" r="4"/></svg><p><b>Counts only for the admin.</b> The school admin sees how many alerts, never a name or a word.</p></li>
+          <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"/> <path d="M3 3v5h5"/> <path d="M12 7v5l4 2"/></svg><p><b>Gone in 30 days.</b> A chat with no alert is deleted 30 days after its last message.</p></li>
+          <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><line x1="19" x2="19" y1="8" y2="14"/><line x1="22" x2="16" y1="11" y2="11"/></svg><p><b>Set up first.</b> The school admin names each class's homeroom teacher and invites counsellors, and the admin page warns while an alert would reach no one.</p></li>
+        </ul>
+      </div>
+      <div class="risk-r">
+        <figure class="phone"><div class="scr"><img src="assets/img/safe.webp" width="640" height="1386" alt="The Góc tâm sự notice: before you start, Ramp is an AI program, not a person, who can read it, and Ramp does not promise to keep secrets" loading="lazy"></div></figure>
+        <figure class="snip z111" id="z111"><img src="assets/img/z-111.webp" width="690" height="739" alt="Help line 111, Tổng đài quốc gia Bảo vệ trẻ em, the national child protection line, with a Call 111 button" loading="lazy"></figure>
+      </div>
+    </div>
+
+    <div class="careers reveal" data-st="live built">
+      <div class="car-t">
+        <h3 class="h2s">Careers facts, with the source on the page. <span class="st live">Live</span></h3>
+        <p class="bil"><span class="vi">Hướng nghiệp</span><span class="en">Careers</span></p>
+        <p>Exams, fees, scholarships and deadlines are answered only from reviewed facts or official sites, always with the source, the link and the date.</p>
+        <ul class="pts">
+          <li data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg><span>Only the student can read their careers chats.</span></li>
+          <li data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><span>Every fact shows where it comes from and when.</span></li>
+          <li data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="m9 15 2 2 4-4"/></svg><span>219 more career facts drafted, waiting for approval. <span class="st built">Built</span></span></li>
+          <li data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M3 7V5a2 2 0 0 1 2-2h2"/> <path d="M17 3h2a2 2 0 0 1 2 2v2"/> <path d="M21 17v2a2 2 0 0 1-2 2h-2"/> <path d="M7 21H5a2 2 0 0 1-2-2v-2"/> <path d="M7 8h8"/> <path d="M7 12h10"/> <path d="M7 16h6"/></svg><span>Facts taken from newspapers carry a press label. <span class="st built">Built</span></span></li>
+        </ul>
+        <p class="cap-s">Real screen: a general careers question. Exam, fee and deadline answers carry their source, link and date.</p>
+      </div>
+      <figure class="phone car-ph"><div class="scr"><img src="assets/img/careers.webp" width="640" height="1386" alt="Hướng nghiệp (Careers): a student asks what to study to become a doctor, and Ramp answers" loading="lazy"></div></figure>
+    </div>
+  </div>
+</section>
+
+<section class="sec parents" id="parents" aria-labelledby="h-par">
+  <div class="wrap">
+    <div class="sec-head reveal">
+      <h2 id="h-par" class="h2">Parents see the effort. Never the private words.</h2>
+      <p class="lead">A parent who links to their child gets a short daily English report: plain numbers and one thing to do tonight. It starts only after the parent agrees, one tap stops it at once, and the child is told what the parent sees. <span class="st live">Live</span></p>
+    </div>
+
+    <div class="par">
+      <div class="par-shot reveal" data-st="live">
+        <figure class="phone short hs edge-dots" data-hs><div class="scr"><img src="assets/img/parent-report.webp" width="640" height="1198" alt="The parent's daily English report on a test account: opened today, minutes Ramp saw working, words through their check, words kept for a week, days opened, a note that many answers were too fast to count, and one thing to do tonight" loading="lazy"></div>
+          <button class="hs-dot" type="button" style="left:104%;top:21%" aria-expanded="false" data-note="0"><span>1</span></button>
+          <button class="hs-dot" type="button" style="left:104%;top:74%" aria-expanded="false" data-note="1"><span>2</span></button>
+          <button class="hs-dot" type="button" style="left:104%;top:91%" aria-expanded="false" data-note="2"><span>3</span></button>
+        </figure>
+        <ol class="hs-notes"><li>Ramp thấy (Ramp saw): the minutes Ramp recorded the child working, beside words kept for a week.</li><li>Answers given too fast do not count, and the report says so plainly.</li><li>Bạn có thể làm gì (What you can do): one plain thing for tonight, here "Ask your child if the work is the right size. Do not blame them."</li></ol>
+        <p class="cap-s">Real screen of a test account. The numbers are test data.</p>
+      </div>
+      <div class="never reveal" data-st="live built">
+        <h3 class="h3l">What a parent never sees <span class="st live">Live</span></h3>
+        <ul class="nl" data-st="live"><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg>Answers</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg>Messages</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg>Góc tâm sự</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg>Conversations with Ramp</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg>Keystrokes</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg>Location</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg>The child's voice</li><li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10.733 5.076a10.744 10.744 0 0 1 11.205 6.575 1 1 0 0 1 0 .696 10.747 10.747 0 0 1-1.444 2.49"/> <path d="M14.084 14.158a3 3 0 0 1-4.242-4.242"/> <path d="M17.479 17.499a10.75 10.75 0 0 1-15.417-5.151 1 1 0 0 1 0-.696 10.75 10.75 0 0 1 4.446-5.143"/> <path d="m2 2 20 20"/></svg>Comparisons with other children</li></ul>
+        <ul class="pp">
+          <li data-st="live"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"/> <path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"/></svg><p><b>Linked by the school or the child.</b> A school invite, or a family code the child opens on their own account.</p></li>
+          <li data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/> <rect x="2" y="4" width="20" height="16" rx="2"/></svg><p><b>An evening email</b> that holds only a link: no name and no numbers. <span class="st built">Built</span></p></li>
+          <li data-st="built"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/> <circle cx="12" cy="8" r="6"/></svg><p><b>Finished courses, certificates</b> and the exam estimate, for parents. <span class="st built">Built</span></p></li>
+        </ul>
+      </div>
+    </div>
+
+    <div class="roles">
+      <h3 class="h2s reveal">Who sets up what <span class="st live">Live</span></h3>
+      <div class="role-cards">
+        <details class="role a reveal" data-st="live" open><summary><span class="ri"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M10 12h4"/> <path d="M10 8h4"/> <path d="M14 21v-3a2 2 0 0 0-4 0v3"/> <path d="M6 10H4a2 2 0 0 0-2 2v7a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V9a2 2 0 0 0-2-2h-2"/> <path d="M6 21V5a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v16"/></svg></span><span class="h4">School admin</span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li>Invites staff and parents; each invite lasts 14 days.</li><li>Names each class's homeroom teacher and invites counsellors for safety alerts.</li><li>Sets four English report switches; one turned off is off for every parent.</li></ul>
+          <figure class="snip off-snip"><img src="assets/img/parent-off.webp" width="640" height="394" alt="What a parent sees when the school has turned parent reports off, with Withdraw consent and Unlink this child" loading="lazy"><figcaption class="cap-s">Real screen: what every parent sees when the school turns reports off.</figcaption></figure></details>
+        <details class="role t reveal" data-st="live" open><summary><span class="ri"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/> <path d="M16 3.128a4 4 0 0 1 0 7.744"/> <path d="M22 21v-2a4 4 0 0 0-3-3.87"/> <circle cx="9" cy="7" r="4"/></svg></span><span class="h4">Teacher</span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li>Makes the class, its grade and its answer language. Students join by QR code, link or a <span class="nw">6-character</span> code.</li><li>Sets each plan and test, and when a test opens and closes.</li><li>Confirms essay marks and can accept or refuse any short answer.</li></ul></details>
+        <details class="role p reveal" data-st="live" open><summary><span class="ri"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M11 14h2a2 2 0 0 0 0-4h-3c-.6 0-1.1.2-1.4.6L3 16"/> <path d="m14.45 13.39 5.05-4.694C20.196 8 21 6.85 21 5.75a2.75 2.75 0 0 0-4.797-1.837.276.276 0 0 1-.406 0A2.75 2.75 0 0 0 11 5.75c0 1.2.802 2.248 1.5 2.946L16 11.95"/> <path d="m2 15 6 6"/> <path d="m7 20 1.6-1.4c.3-.4.8-.6 1.4-.6h4c1.1 0 2.1-.4 2.8-1.2l4.6-4.4a1 1 0 0 0-2.75-2.91"/></svg></span><span class="h4">Student and parent</span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary><ul><li>The student picks the help style and the answer language in each chat.</li><li>The parent agrees to start the daily report and stops it with one tap.</li></ul></details>
+      </div>
+    </div>
+
+    <details class="bwys reveal" data-st="coming" open>
+      <summary class="bw-h"><span class="h2s">Built with your school <span class="st coming">Coming</span></span><span class="bw-p">Ideas we can build with a school, on top of what Ramp does today. None is built yet.</span><svg class="ic chev" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m6 9 6 6 6-6"/></svg></summary>
+      <ul class="ideas">
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12 7v14"/> <path d="M3 18a1 1 0 0 1-1-1V4a1 1 0 0 1 1-1h5a4 4 0 0 1 4 4 4 4 0 0 1 4-4h5a1 1 0 0 1 1 1v13a1 1 0 0 1-1 1h-6a3 3 0 0 0-3 3 3 3 0 0 0-3-3z"/></svg>Chapter lists for more books and grades</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m21.64 3.64-1.28-1.28a1.21 1.21 0 0 0-1.72 0L2.36 18.64a1.21 1.21 0 0 0 0 1.72l1.28 1.28a1.2 1.2 0 0 0 1.72 0L21.64 5.36a1.2 1.2 0 0 0 0-1.72"/> <path d="m14 7 3 3"/> <path d="M5 6v4"/> <path d="M19 14v4"/> <path d="M10 2v2"/> <path d="M7 8H3"/> <path d="M21 16h-4"/> <path d="M11 3H9"/></svg>More ready-made animations</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="8" height="4" x="8" y="2" rx="1" ry="1"/> <path d="M16 4h2a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h2"/> <path d="m9 14 2 2 4-4"/></svg>A province's own grade 10 English exam format</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M14 21v-3a2 2 0 0 0-4 0v3"/> <path d="M18 4.933V21"/> <path d="m4 6 7.106-3.79a2 2 0 0 1 1.788 0L20 6"/> <path d="m6 11-3.52 2.147a1 1 0 0 0-.48.854V19a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-5a1 1 0 0 0-.48-.853L18 11"/> <path d="M6 4.933V21"/> <circle cx="12" cy="9" r="2"/></svg>The school's logo, colours or own web address</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M13.832 16.568a1 1 0 0 0 1.213-.303l.355-.465A2 2 0 0 1 17 15h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2A18 18 0 0 1 2 4a2 2 0 0 1 2-2h3a2 2 0 0 1 2 2v3a2 2 0 0 1-.8 1.6l-.468.351a1 1 0 0 0-.292 1.233 14 14 0 0 0 6.392 6.384"/></svg>The school's counselling number on the help card</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M12 18v-6"/> <path d="m9 15 3 3 3-3"/></svg>The school's own vnEdu or SMAS marks template</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M12.83 2.18a2 2 0 0 0-1.66 0L2.6 6.08a1 1 0 0 0 0 1.83l8.58 3.91a2 2 0 0 0 1.66 0l8.58-3.9a1 1 0 0 0 0-1.83z"/> <path d="M2 12a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 12"/> <path d="M2 17a1 1 0 0 0 .58.91l8.6 3.91a2 2 0 0 0 1.65 0l8.58-3.9A1 1 0 0 0 22 17"/></svg>A summary for school leaders, with no rankings</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/> <path d="M16 3.128a4 4 0 0 1 0 7.744"/> <path d="M22 21v-2a4 4 0 0 0-3-3.87"/> <circle cx="9" cy="7" r="4"/></svg>Teachers sharing plans and tests</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/> <circle cx="12" cy="8" r="6"/></svg>A public page to check a Ramp certificate</li>
+        <li><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m5 8 6 6"/> <path d="m4 14 6-6 2-3"/> <path d="M2 5h12"/> <path d="M7 2h1"/> <path d="m22 22-5-10-5 10"/> <path d="M14 18h6"/></svg>Menus and buttons in another language</li>
+      </ul>
+    </details>
+
+    <div class="start reveal" data-switch id="start" data-st="live built">
+      <div class="start-h">
+        <h3 class="h2s">Start with your school <span class="st live">Live</span></h3>
+        <p>Three steps from an empty school to a class at work.</p>
+        <div class="segs start-segs" role="group" aria-label="Choose a step" hidden>
+          <button type="button" data-for="st1" aria-pressed="true"><span class="n">1</span>Invite</button>
+          <button type="button" data-for="st2" aria-pressed="false"><span class="n">2</span>Join</button>
+          <button type="button" data-for="st3" aria-pressed="false"><span class="n">3</span>Link</button>
+        </div>
+      </div>
+      <ol class="start-steps">
+        <li id="st1" data-panel data-st="live"><div class="sp-t"><span class="num">1</span><h4 class="h4">The school admin invites staff and parents</h4><p>Teachers, counsellors and parents each get an invite, and each invite lasts 14 days.</p></div><figure class="snip"><img src="assets/img/admin-invite.webp" width="644" height="268" alt="Mời nhân sự (Invite staff): a role, the number of uses and Tạo lời mời (Create invitation)" loading="lazy"><figcaption class="cap-s">Real screen: Mời nhân sự (Invite staff).</figcaption></figure></li>
+        <li id="st2" data-panel data-st="live built"><div class="sp-t"><span class="num">2</span><h4 class="h4">A teacher makes a class, and students join</h4><p>The class sets each student's grade. Students join by QR code, link or a <span class="nw">6-character</span> code.</p></div><figure class="snip"><img src="assets/img/z-next.webp" width="720" height="835" alt="The next-step card: Nhập mã lớp thầy cô đưa cho bạn, type the class code your teacher gave you, with an empty 6-character box" loading="lazy"><figcaption class="cap-s">Real screen: the next-step card in the simpler student app <span class="st built">Built</span></figcaption></figure></li>
+        <li id="st3" data-panel data-st="live"><div class="sp-t"><span class="num">3</span><h4 class="h4">A parent links to their child</h4><p>By a school invite, or a family code the child opens on their own account. The daily report starts only after the parent agrees.</p></div><figure class="snip"><img src="assets/img/parent-link.webp" width="640" height="845" alt="Thêm con (Add a child): Tạo mã (Make a code); and Nhập mã của trường (Enter a school code) with an Open button" loading="lazy"><figcaption class="cap-s">Real screen: the parent's two ways to link.</figcaption></figure></li>
+      </ol>
+    </div>
+  </div>
+</section>
+
+<section class="close dk" id="close" aria-labelledby="h-close">
+  <div class="wrap close-in">
+    <h2 id="h-close" class="bigc reveal">Where every subject <span>meets English.</span></h2>
+    <p class="close-p reveal">Ramp Schools for grades 6 to 12: every subject in Vietnamese and English, Ramp English from the first sound to the first essay, teacher tools in the official formats, and a safe corner to talk.</p>
+    <div class="close-cta reveal">
+      <p class="walk"><span class="ni"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><rect width="14" height="20" x="5" y="2" rx="2" ry="2"/> <path d="M12 18h.01"/></svg></span><span><b>See it on a phone.</b> Ask the Ramp team for a live walk-through.</span></p>
+      <a class="btn btn-sun btn-lg magnetic" href="mailto:pr3n3v@gmail.com?subject=Ramp%20Schools%20walk-through"><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="m22 7-8.991 5.727a2 2 0 0 1-2.009 0L2 7"/> <rect x="2" y="4" width="20" height="16" rx="2"/></svg><span>Email pr3n3v@gmail.com</span></a>
+      <a class="btn btn-line btn-lg" href="Ramp-Schools-explainer-v2.pdf" download><svg class="ic" viewBox="0 0 24 24" aria-hidden="true" focusable="false"><path d="M6 22a2 2 0 0 1-2-2V4a2 2 0 0 1 2-2h8a2.4 2.4 0 0 1 1.704.706l3.588 3.588A2.4 2.4 0 0 1 20 8v12a2 2 0 0 1-2 2z"/> <path d="M14 2v5a1 1 0 0 0 1 1h5"/> <path d="M12 18v-6"/> <path d="m9 15 3 3 3-3"/></svg><span>Download the PDF <small>3.6 MB</small></span></a>
+    </div>
+  </div>
+  <div class="close-art" aria-hidden="true">
+  <svg viewBox="0 0 1440 420" preserveAspectRatio="xMaxYMax slice" aria-hidden="true" focusable="false">
+      <path d="M -40 420 L -40 330 C 120 270, 360 262, 540 320 L 580 420 Z" fill="#0B7B51"/>
+      <path d="M 440 420 L 1236 120 Q 1260 100 1284 120 L 1500 300 L 1500 420 Z" fill="#0A7049"/>
+      <path d="M 1236 120 Q 1260 100 1284 120 L 1300 136 L 1280 129 L 1266 144 L 1252 130 L 1232 140 Z" fill="#FFFFFF" fill-opacity=".92"/>
+      <g fill="none" stroke-linecap="round">
+        <path d="M -40 300 C 200 300, 420 268, 620 230 C 820 192, 980 186, 1120 172 C 1190 164, 1236 150, 1260 116" stroke="#1A2B24" stroke-width="30"/>
+        <path class="cseg" pathLength="100" d="M -40 300 C 200 300, 420 268, 620 230" stroke="#FF6D3F" stroke-width="20"/>
+        <path class="cseg" pathLength="100" d="M 620 230 C 820 192, 980 186, 1120 172" stroke="#FFC248" stroke-width="20"/>
+        <path class="cseg" pathLength="100" d="M 1120 172 C 1190 164, 1236 150, 1260 116" stroke="#DFF2E9" stroke-width="20"/>
+      </g>
+      <path d="M 1260 116 L 1260 62" stroke="#1A2B24" stroke-width="5" stroke-linecap="round"/>
+      <path d="M 1260 62 L 1294 74 L 1260 86 Z" fill="#FFC248" stroke="#1A2B24" stroke-width="3" stroke-linejoin="round"/>
+    </svg>
+    </div>
+  <footer class="foot wrap">
+    <div class="wm"><svg class="mk" viewBox="0 0 40 40" aria-hidden="true" focusable="false"><rect x="3" y="26" width="7" height="11" rx="2" fill="#FFFFFF" fill-opacity="1"/><rect x="12" y="19" width="7" height="18" rx="2" fill="#FFFFFF" fill-opacity="0.8"/><rect x="21" y="11" width="7" height="26" rx="2" fill="#FFFFFF" fill-opacity="0.75"/><rect x="30" y="3" width="7" height="34" rx="2" fill="#FFFFFF" fill-opacity="1"/></svg><span class="word">ramp<span>Schools</span></span></div>
+    <div class="foot-r">
+      <p class="lg"><span class="st live">Live</span> working today for adult testers <span class="st built">Built</span> built and tested, not released <span class="st coming">Coming</span> planned, not built</p>
+      <p>Ramp is in testing with adult testers and claims no results yet. Data is stored in Singapore.</p>
+      <p class="fine">Icons: Lucide, ISC licence. Fonts: Bricolage Grotesque and Inter, SIL Open Font Licence. Reference vowel recordings from Wikimedia Commons, CC BY-SA. <a href="credits.html">All credits</a></p>
+    </div>
+  </footer>
+</section>
+</main>
+
+<div class="filter-pill" id="fpill" hidden><span>Showing <b id="fpill-t">Live</b> only</span><button type="button" id="fpill-x">Show all</button></div>
+<script src="assets/js/site.js" defer></script>
 </body>
 </html>
