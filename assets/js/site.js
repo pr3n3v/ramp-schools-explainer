@@ -336,30 +336,43 @@
   });
 
   /* ---------- the 44 sounds ---------- */
-  const tiles = $$('#ipa button'), icK = $('#ic-k'), icS = $('#ic-s'), icW = $('#ic-w'), icP = $('#ic-play'), icN = $('#ic-note');
+  // every tile plays its example word (assets/audio/w/<word>.mp3: the app's chart word in its British teaching voice);
+  // the nine vowels with data-clip can also be heard alone (Commons reference samples)
+  const tiles = $$('#ipa button'), icK = $('#ic-k'), icS = $('#ic-s'), icW = $('#ic-w'), icN = $('#ic-note');
+  const icP = $('#ic-play'), icPL = $('#ic-play span'), icA = $('#ic-alone');
   const CR = { ii: ['Denelson83', '3.0'], i: ['Denelson83', '3.0'], e: ['Peter Roach (User:RoachPeter)', '4.0'], ae: ['Peter Roach (User:RoachPeter)', '4.0'], aa: ['Denelson83', '3.0'], o: ['Peter Roach (User:RoachPeter)', '4.0'], oo: ['Peter Roach (User:RoachPeter)', '4.0'], u: ['Denelson83', '3.0'], uu: ['Denelson83', '3.0'] };
   const audio = new Audio();
   audio.preload = 'none';
   const ext = audio.canPlayType('audio/mpeg') ? 'mp3' : 'ogg';
-  let cur = null;
-  const playClip = () => {
-    if (!cur || !cur.dataset.clip) return;
-    audio.src = 'assets/audio/' + cur.dataset.clip + '.' + ext;
-    cur.classList.remove('playing'); void cur.offsetWidth; cur.classList.add('playing');
-    audio.play().catch(() => {});
+  let cur = null, on = null;
+  const quiet = () => { if (on) on.classList.remove('playing'); on = null; };
+  audio.addEventListener('ended', quiet);
+  audio.addEventListener('error', quiet);
+  const play = (src) => {
+    if (!cur) return;
+    quiet();
+    audio.src = src;
+    const t = cur;
+    void t.offsetWidth; t.classList.add('playing'); on = t;
+    audio.play().catch(() => { if (on === t) quiet(); });
   };
+  const wordOf = (t) => $('i', t).textContent.trim();
+  const playWord = () => cur && play('assets/audio/w/' + encodeURIComponent(wordOf(cur)) + '.mp3');
+  const playAlone = () => cur && cur.dataset.clip && play('assets/audio/' + cur.dataset.clip + '.' + ext);
   const pick = (t, sound) => {
     tiles.forEach((x) => { x.setAttribute('aria-pressed', String(x === t)); x.tabIndex = x === t ? 0 : -1; });
     cur = t;
+    const w = wordOf(t), c = CR[t.dataset.clip];
     icK.textContent = t.dataset.k;
     icS.textContent = $('b', t).textContent;
-    icW.textContent = $('i', t).textContent;
-    const c = CR[t.dataset.clip];
-    icP.hidden = !c;
-    icN.innerHTML = c
-      ? 'Open reference recording of this IPA vowel by ' + c[0] + ', CC BY-SA ' + c[1] + ', Wikimedia Commons. Close to, not the same as, the British vowel; not Ramp\'s lesson audio. <a href="credits.html">Credits</a>'
-      : 'No sample on this page for this sound; the app\'s sound lessons have their own audio. <a href="credits.html">Credits</a>';
-    if (c && sound) playClip();
+    icW.textContent = w;
+    icPL.textContent = 'Hear ' + w;
+    icP.hidden = false;
+    icA.hidden = !c;
+    icN.innerHTML = 'Said by a British text-to-speech voice from Ramp\'s sound lessons.'
+      + (c ? ' Vowel alone: IPA sample by ' + c[0] + ', CC BY-SA ' + c[1] + ', Wikimedia Commons; close to the British vowel, not the same.' : '')
+      + ' <a href="credits.html">Credits</a>';
+    if (sound) playWord();
   };
   tiles.forEach((t, i) => {
     t.tabIndex = i === 0 ? 0 : -1;
@@ -371,7 +384,8 @@
       e.preventDefault(); tiles[j].focus(); pick(tiles[j], false);
     });
   });
-  icP.addEventListener('click', playClip);
+  icP.addEventListener('click', playWord);
+  icA.addEventListener('click', playAlone);
   pick(tiles[0], false);
 
   /* ---------- a word counts only when it is kept ---------- */
