@@ -1,0 +1,225 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="robots" content="noindex, nofollow">
+<title>Ramp Schools</title>
+<meta name="description" content="Ramp Schools for Vietnamese schools, grades 6 to 12: every subject in Vietnamese and English, a full English course in three levels, teacher tools in the official formats and a safe corner to talk.">
+<meta property="og:title" content="Ramp Schools: where every subject meets English">
+<meta property="og:description" content="Every subject in two languages, Ramp English as a full course in three levels, teacher tools in the official formats and a safe corner to talk.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="https://pr3n3v.github.io/ramp-schools-explainer/og.png">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="color-scheme" content="light">
+<meta name="theme-color" content="#FFC248">
+<link rel="icon" type="image/svg+xml" href="favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,600..800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{--sun:#FFC248;--coral:#FF6D3F;--green:#0D8558;--forest:#1B4332;--ink:#1A2B24;--soft:#4A5A53;--page:#FAFAF8;--line:#E8E0D2;--white:#fff}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth;color-scheme:light}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+body{margin:0;background:var(--page);color:var(--ink);font:16px/1.55 Inter,system-ui,-apple-system,sans-serif;-webkit-font-smoothing:antialiased}
+a{color:inherit}
+.bar{position:sticky;top:0;z-index:10;display:flex;align-items:center;justify-content:space-between;gap:12px;padding:10px 16px;background:rgba(250,250,248,.92);backdrop-filter:saturate(1.4) blur(10px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:8px;font:700 20px/1 "Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.02em;text-decoration:none;color:var(--forest)}
+.brand img{width:26px;height:26px}
+.brand b{font-weight:600;color:var(--ink)}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;min-height:44px;padding:10px 18px;border-radius:999px;font-weight:600;text-decoration:none;transition:transform .15s ease,box-shadow .15s ease}
+.btn:hover{transform:translateY(-1px)}
+.btn.dark{background:var(--forest);color:#fff;box-shadow:0 6px 18px rgba(27,67,50,.25)}
+.btn.light{background:#fff;color:var(--forest);border:1.5px solid var(--forest)}
+.btn:focus-visible,.chips a:focus-visible,.sheet:focus-visible,summary:focus-visible{outline:3px solid var(--coral);outline-offset:3px}
+.hero{background:var(--sun);padding:56px 16px 64px;overflow:hidden;position:relative}
+.wrap{max-width:980px;margin:0 auto}
+.kicker{font-weight:600;font-size:14px;letter-spacing:.04em;text-transform:uppercase;color:var(--forest)}
+h1{font:800 clamp(44px,9vw,96px)/.95 "Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.035em;margin:14px 0 18px;color:var(--ink);max-width:12ch}
+.lead{font-size:clamp(17px,2.2vw,21px);max-width:44ch;margin:0 0 26px;color:var(--ink)}
+.pills{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 28px;padding:0;list-style:none}
+.pills li{background:#fff;border-radius:999px;padding:8px 14px;font-weight:600;font-size:15px;box-shadow:0 2px 0 rgba(26,43,36,.08)}
+.pills li i{display:inline-block;width:10px;height:10px;border-radius:50%;margin-right:8px;vertical-align:1px}
+.cta{display:flex;flex-wrap:wrap;gap:10px}
+.road{position:absolute;right:-40px;bottom:-10px;width:min(560px,80vw);opacity:.95;pointer-events:none}
+.road path{stroke-dasharray:1400;stroke-dashoffset:1400;animation:draw 2.2s .3s cubic-bezier(.6,.1,.2,1) forwards}
+@keyframes draw{to{stroke-dashoffset:0}}
+@media (prefers-reduced-motion:reduce){.road path{animation:none;stroke-dashoffset:0}}
+.note{margin:26px 0 0;font-size:14px;color:var(--forest);display:flex;gap:8px;align-items:center}
+.chipsbar{position:sticky;top:65px;z-index:9;background:var(--page);border-bottom:1px solid var(--line)}
+.chips{display:flex;gap:8px;overflow-x:auto;padding:10px 16px;scrollbar-width:none;max-width:1012px;margin:0 auto}
+.chips::-webkit-scrollbar{display:none}
+.chips a{flex:none;text-decoration:none;font-size:14px;font-weight:600;padding:8px 14px;border-radius:999px;background:#fff;border:1px solid var(--line);min-height:36px;display:flex;align-items:center}
+.chips a.on{background:var(--forest);color:#fff;border-color:var(--forest)}
+main{padding:32px 16px 16px}
+.page{max-width:900px;margin:0 auto 56px;scroll-margin-top:130px}
+.cap{display:flex;align-items:baseline;gap:12px;margin:0 0 14px}
+.num{font:800 15px/1 "Bricolage Grotesque",Inter,sans-serif;color:var(--coral)}
+h2{font:700 clamp(22px,3.2vw,30px)/1.15 "Bricolage Grotesque",Inter,sans-serif;letter-spacing:-.02em;margin:0}
+.sheet{display:block;border-radius:18px;overflow:hidden;background:#fff;box-shadow:0 1px 2px rgba(26,43,36,.06),0 18px 50px rgba(26,43,36,.12);transition:transform .25s ease,box-shadow .25s ease}
+.sheet:hover{transform:translateY(-3px);box-shadow:0 2px 4px rgba(26,43,36,.08),0 26px 60px rgba(26,43,36,.16)}
+.sheet img{display:block;width:100%;height:auto}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .6s ease,transform .6s ease}
+.reveal.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){.reveal{opacity:1;transform:none;transition:none}}
+details.text{margin:12px 2px 0;font-size:15px;color:var(--soft)}
+summary{cursor:pointer;font-weight:600;color:var(--forest);min-height:44px;display:flex;align-items:center}
+details.text div{background:#fff;border:1px solid var(--line);border-radius:12px;padding:6px 16px;margin-top:6px}
+details.text p{margin:10px 0}
+.closing{background:var(--forest);color:#fff;padding:64px 16px;margin-top:24px}
+.closing h2{font-size:clamp(30px,5vw,52px);color:#fff;max-width:16ch}
+.closing p{max-width:52ch;font-size:18px;color:#E5F1EA}
+.closing .btn.dark{background:var(--sun);color:var(--ink);box-shadow:none}
+.closing .btn.light{background:transparent;color:#fff;border-color:#fff}
+footer{padding:24px 16px 40px;font-size:13px;color:var(--soft)}
+footer p{max-width:980px;margin:6px auto}
+@media (max-width:520px){.bar .btn{padding:8px 14px;font-size:14px}.hero{padding-top:40px}.chipsbar{top:61px}}
+</style>
+</head>
+<body>
+<header class="bar">
+  <a class="brand" href="#top" aria-label="Ramp Schools, back to top"><img src="favicon.svg" alt="" width="26" height="26">ramp <b>Schools</b></a>
+  <a class="btn dark" href="Ramp-Schools-explainer.pdf" download>Download PDF</a>
+</header>
+<div class="hero" id="top">
+  <svg class="road" viewBox="0 0 560 260" aria-hidden="true"><defs><linearGradient id="g" x1="0" x2="1"><stop offset="0" stop-color="#FF6D3F"/><stop offset=".55" stop-color="#FFE29A"/><stop offset="1" stop-color="#0D8558"/></linearGradient></defs><path d="M10 250 C 160 240, 210 170, 300 150 S 440 90, 540 30" fill="none" stroke="url(#g)" stroke-width="26" stroke-linecap="round"/><path d="M10 250 C 160 240, 210 170, 300 150 S 440 90, 540 30" fill="none" stroke="#1A2B24" stroke-width="2" stroke-dasharray="10 12" stroke-linecap="round" opacity=".35"/></svg>
+  <div class="wrap">
+    <div class="kicker">For school leaders, teachers and partners</div>
+    <h1>Where every subject meets English.</h1>
+    <p class="lead">One study platform for Vietnamese schools, grades 6 to 12. Every subject in Vietnamese and English, a full English course in three levels, teacher tools in the official formats and a safe corner to talk.</p>
+    <ul class="pills">
+      <li><i style="background:#FF6D3F"></i>Ramp Start</li>
+      <li><i style="background:#FFC248;box-shadow:inset 0 0 0 1.5px #1A2B24"></i>Ramp Climb</li>
+      <li><i style="background:#0D8558"></i>Ramp Summit</li>
+    </ul>
+    <div class="cta">
+      <a class="btn dark" href="#minute">Read the explainer</a>
+      <a class="btn light" href="Ramp-Schools-explainer.pdf" download>Download the PDF, 13 pages</a>
+    </div>
+    <p class="note">Ramp is in testing with adult testers and claims no results yet.</p>
+  </div>
+</div>
+<nav class="chipsbar" aria-label="Sections"><div class="chips"><a href="#cover">Cover</a><a href="#minute">In a minute</a><a href="#different">Why it is different</a><a href="#road">The Ramp English road</a><a href="#grammar">Grammar</a><a href="#sounds">Sounds</a><a href="#kept">Words that stay</a><a href="#subjects">Subjects</a><a href="#teachers">Teachers</a><a href="#giup">Giúp, the helper</a><a href="#safe">Safe corner and careers</a><a href="#parents">Parents and schools</a><a href="#close">Closing</a></div></nav>
+<main>
+<section class="page" id="cover" aria-labelledby="h-cover">
+  <div class="cap"><span class="num">01</span><h2 id="h-cover">Where every subject meets English.</h2></div>
+  <a class="sheet" href="pages/page-01.webp" aria-label="Open page 1 full size">
+    <img src="pages/page-01.webp" width="1405" height="1988" loading="eager" decoding="async" alt="Page 1 of the Ramp Schools explainer: Where every subject meets English.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>ramp Schools</p><p>For school leaders, teachers and partners</p><p>Where every subject meets English. One study platform for Vietnamese schools, grades 6 to 12. Every subject in Vietnamese and English, a full English course in three levels, teacher tools in the official formats and a safe corner to talk.</p><p>Subjects in two languages</p><p>Ramp English</p><p>Plans and tests</p><p>Góc tâm sự, careers</p><p>3 2</p><p>1</p></div></details>
+</section>
+<section class="page" id="minute" aria-labelledby="h-minute">
+  <div class="cap"><span class="num">02</span><h2 id="h-minute">Ramp Schools in a minute.</h2></div>
+  <a class="sheet" href="pages/page-02.webp" aria-label="Open page 2 full size">
+    <img src="pages/page-02.webp" width="1405" height="1988" loading="eager" decoding="async" alt="Page 2 of the Ramp Schools explainer: Ramp Schools in a minute.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>Ramp Schools in a minute. One study platform for Vietnamese schools, grades 6 to 12, built on Chương trình GDPT 2018. Every subject in two languages, a full English course, teacher tools in the official formats and a safe corner to talk. Live</p><p>working today for adult testers</p><p>Built</p><p>built and tested, not released</p><p>Student screens in this guide show the simpler student app</p><p>Giáo án · Đề kiểm tra</p><p>Ask about any subject</p><p>Lesson plans · Tests</p><p>Every subject, in two languages A study chat for every subject of the grade, with the key English terms to save. Homework photos are checked step by step. English</p><p>Vietnamese</p><p>planned</p><p>Built</p><p>Hỏi bài các môn</p><p>Tiếng Việt</p><p>Coming</p><p>Song ngữ</p><p>English</p><p>Bilingual</p><p>Teacher tools in the official formats Draft a plan or a test from where the class is stuck, edit it and download it for Word. KHBD</p><p>Live</p><p>Công văn 7991</p><p>Live</p><p>Ba cấp độ</p><p>The three levels</p><p>Ramp English, a full course Sounds</p><p>Words</p><p>Grammar</p><p>Reading</p><p>A safe corner and a careers guide Writing</p><p>Ramp Start</p><p>Sounds, words and first sentences</p><p>Ramp Climb</p><p>Grammar, sounds and short texts</p><p>road, sounds, daily words, first lessons</p><p>courses, level-end tests</p><p>Coming</p><p>Built</p><p>Start&#x27;s grammar units</p><p>Why it is different Asks before it tells Hướng dẫn tôi (Guide me) goes one question at a time.</p><p>A corner to talk</p><p>Every message is checked, and the right adult at school is alerted if one suggests danger. Hướng nghiệp Careers</p><p>Ramp Summit Read, understand and write</p><p>Live</p><p>Góc tâm sự</p><p>Exam, fee and deadline answers come only from reviewed facts or official sites, with the source, the link and the date. Live</p><p>Four design choices, all working today</p><p>A word counts only when kept</p><p>No streaks, points or leaderboards</p><p>Recalled a day later, then again a week later.</p><p>Nothing compares one child with another.</p><p>Live</p><p>Safety reaches the right adult A risky message alerts the school&#x27;s own people.</p><p>Ramp is in testing with adult testers and claims no results yet. Data is stored in Singapore. Ramp Schools in a minute</p></div></details>
+</section>
+<section class="page" id="different" aria-labelledby="h-different">
+  <div class="cap"><span class="num">03</span><h2 id="h-different">Not one more app. A new kind of school tool.</h2></div>
+  <a class="sheet" href="pages/page-03.webp" aria-label="Open page 3 full size">
+    <img src="pages/page-03.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 3 of the Ramp Schools explainer: Not one more app. A new kind of school tool.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>Not one more app. A new kind of school tool. Schools already know these four kinds of tools. Here is what Ramp does instead, by design, with the status of each line. Follows the grade and the national programme.</p><p>A general AI chat</p><p>A textbook app</p><p>Asks before it tells in Hướng dẫn tôi</p><p>Live</p><p>(Guide me).</p><p>Live</p><p>The teacher can see subject chats, Live and the student is told.</p><p>Every Góc tâm sự message is Live checked for risk.</p><p>Answers the student&#x27;s own question, even from a homework Live photo.</p><p>Stores only chapter titles, never</p><p>A full course in three levels, with grammar, reading and writing.</p><p>A word counts only when recalled a</p><p>textbook text.</p><p>Live</p><p>day and a week later.</p><p>Live</p><p>Built</p><p>An English app</p><p>Ramp&#x27;s server decides the marks, not the phone.</p><p>Never records the student&#x27;s voice.</p><p>Live</p><p>Live</p><p>Helps the class teacher and does not replace them.</p><p>A tutoring centre</p><p>The teacher confirms every essay mark and sends every parent Live message.</p><p>Live</p><p>No streaks. No points. No leaderboards.</p><p>Hôm nay của bạn Your day</p><p>Honest from the first test</p><p>Live</p><p>At Start, the test slips in made-up words, so a student who taps &quot;I know it&quot; for a word that does not exist is noticed.</p><p>How Ramp is different</p><p>Two languages, one chat</p><p>20 phút</p><p>14 phút</p><p>20 minutes, 6 words</p><p>14 working minutes, 4 checked words</p><p>Ramp saw</p><p>6 từ</p><p>score, nothing compares one child with another, and the plan Live</p><p>Ramp thấy</p><p>You said</p><p>On purpose. Games show a student only their own last and best runs every day with no streak to lose.</p><p>Bạn nói</p><p>4 từ</p><p>Side by side, kindly. Drawing with sample numbers, not a real report.</p><p>Live</p><p>Every subject in Tiếng Việt, English or Song ngữ (both), with the key English terms of the subject to save.</p><p>Safety before features</p><p>Live</p><p>Live</p><p>Only adult testers sign in today, and student data is stored in Singapore.</p></div></details>
+</section>
+<section class="page" id="road" aria-labelledby="h-road">
+  <div class="cap"><span class="num">04</span><h2 id="h-road">From the first sound to the first essay.</h2></div>
+  <a class="sheet" href="pages/page-04.webp" aria-label="Open page 4 full size">
+    <img src="pages/page-04.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 4 of the Ramp Schools explainer: From the first sound to the first essay.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>From the first sound to the first essay.</p><p>Ramp English</p><p>A full English course, not a word app. Three levels, each with courses for sounds, words, grammar, Live reading and writing, and a test at the end. The whole road shows from day one. 3 2 1</p><p>Ramp Start</p><p>Ramp Climb</p><p>Ramp Summit</p><p>Âm, từ và những câu đầu tiên</p><p>Ngữ pháp, âm và đoạn văn ngắn</p><p>Đọc hiểu và viết bài</p><p>4 courses, 12 lessons live, 62 more planned</p><p>5 courses, 14 units, 56 lessons</p><p>5 courses, 10 units, 50 lessons</p><p>About A1 to A2</p><p>About A2 to B1</p><p>Sounds, words and first sentences</p><p>Grammar, sounds and short texts</p><p>About A0 to A1 Live</p><p>Read, understand and write</p><p>Built</p><p>Built</p><p>Coming</p><p>1</p><p>The IPA alphabet with sound Read the 44 British IPA symbols</p><p>2</p><p>Names of things: the 8 noun types Use a, an, some and plural -s</p><p>3</p><p>Actions: verbs and the present simple Talk about your day</p><p>4</p><p>First reading and writing Write 4 to 6 sentences about yourself</p><p>Level-end test</p><p>Built</p><p>After Ramp Summit Grade 10 entrance English</p><p>1</p><p>Who does what: subject, object, pronouns Ask with what, where, when, who and why</p><p>1</p><p>Phonetics: linking and weak forms Hear can and can&#x27;t in a sentence</p><p>2</p><p>Grammar and rules Talk about the past with -ed, was and were</p><p>2</p><p>Exceptions: irregular verbs and spelling Use the past of irregular verbs</p><p>3</p><p>Sounds 2: stress and endings Hear θ and ð, new to Vietnamese</p><p>3</p><p>Word-building Make words with -er, -ful and -ness</p><p>4</p><p>Read and understand Tell a fact from an opinion</p><p>5</p><p>Write emails and short essays Write an essay of 80 to 120 words</p><p>4</p><p>Reading short texts Answer questions on about 120 words</p><p>5</p><p>Writing short paragraphs Write 50 to 80 words about yourself</p><p>Level-end test</p><p>Built</p><p>Built</p><p>Level-end test</p><p>Built</p><p>A final check of the student&#x27;s Ramp level, then readiness estimates for five exams (reading, listening and writing; IELTS only as a range).</p><p>THPT graduation English</p><p>A2 Key for Schools</p><p>B1 Preliminary for Schools</p><p>IELTS starter range</p><p>13 next courses</p><p>Built</p><p>5 for exams, 6 for school subjects in English and 2 for everyday English.</p><p>Levels and readiness are Ramp&#x27;s own estimates, not official certificates or exam results. Speaking is not tested. Ramp English: the road</p></div></details>
+</section>
+<section class="page" id="grammar" aria-labelledby="h-grammar">
+  <div class="cap"><span class="num">05</span><h2 id="h-grammar">Grammar in every level. One idea at a time.</h2></div>
+  <a class="sheet" href="pages/page-05.webp" aria-label="Open page 5 full size">
+    <img src="pages/page-05.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 5 of the Ramp Schools explainer: Grammar in every level. One idea at a time.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>Grammar in every level. One idea at a time. Words only become sentences with grammar, so Ramp English teaches it on purpose: one idea per lesson, practised by producing it, then checked. Every Ramp Start lesson, in four steps</p><p>Xem cảnh</p><p>Hiểu bài</p><p>Luyện tập</p><p>Kiểm tra bài</p><p>Look</p><p>Understand</p><p>Practise</p><p>Lesson check</p><p>Ramp Start</p><p>Live</p><p>Ramp Climb</p><p>Built</p><p>Ramp Summit</p><p>Live</p><p>Built</p><p>a london → L ondon</p><p>walk → walk ed</p><p>help → help ful</p><p>A name takes a capital and no &quot;a&quot;: London, Monday, July.</p><p>Talk about the past with -ed, was and were.</p><p>Build new words with -er, -ist, -ful and -ness.</p><p>Ramp Start Live</p><p>Ramp Climb</p><p>in the lessons today</p><p>Common and proper nouns, with capital letters Coming</p><p>9 more units; the full map is 11 units, 74 lessons a and an</p><p>this and that</p><p>plural -s, -es countable, uncountable</p><p>collective nouns am, is, are</p><p>abstract nouns</p><p>have, has</p><p>Ramp Summit</p><p>Built</p><p>14 units, 56 lessons, 126 words</p><p>10 units, 50 lessons, 120 words</p><p>subject and object pronouns</p><p>word stress</p><p>my, your and &#x27;s</p><p>weak forms and linking</p><p>wh-questions and because</p><p>irregular verbs</p><p>a, an, the or nothing</p><p>spelling rules</p><p>there is and there are</p><p>suffixes and prefixes</p><p>the present continuous</p><p>word families</p><p>the past simple: -ed, was and were</p><p>B1 grammar for reading</p><p>comparing: -er, more, the most</p><p>compound nouns</p><p>Built</p><p>linking words emails and short essays</p><p>joining ideas order words and plans</p><p>everyday verbs the present simple</p><p>Stuck on a grammar point today? Giải thích (Explain) takes one grammar or word idea at the student&#x27;s level, with examples, then Live checks they understood. Grammar from the first test. The starting test checks grammar at Climb and Summit, built so a student can start at the right Live level. Real screen: Grammar and rules on the road, locked. Real screen: Hỏi gia sư (Ask the tutor), Giải thích (Explain) mode.</p><p>Ramp English: grammar</p><p>Built</p></div></details>
+</section>
+<section class="page" id="sounds" aria-labelledby="h-sounds">
+  <div class="cap"><span class="num">06</span><h2 id="h-sounds">The 44 sounds of British English.</h2></div>
+  <a class="sheet" href="pages/page-06.webp" aria-label="Open page 6 full size">
+    <img src="pages/page-06.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 6 of the Ramp Schools explainer: The 44 sounds of British English.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>The 44 sounds of British English. In the symbols Vietnamese textbooks print: 12 single vowels, 8 diphthongs and 24 consonants. Every word in Ramp carries its British IPA, and every sound has its own example word. Live</p><p>see</p><p>iː</p><p>sit</p><p>bed</p><p>e</p><p>æ</p><p>ɑː car</p><p>hot</p><p>ɒ</p><p>ɔː ball</p><p>book</p><p>eɪ</p><p>aɪ</p><p>ɔɪ</p><p>aʊ</p><p>əʊ</p><p>ɪə</p><p>eə</p><p>ʊə</p><p>day</p><p>p</p><p>pen</p><p>ʃ</p><p>she</p><p>ɪ</p><p>five</p><p>b</p><p>big</p><p>ʒ</p><p>usually</p><p>cat</p><p>boy</p><p>now</p><p>t</p><p>go</p><p>d</p><p>ten</p><p>h</p><p>hat</p><p>k</p><p>hair</p><p>g</p><p>dog</p><p>cat</p><p>tʃ</p><p>dʒ</p><p>chair</p><p>here</p><p>f</p><p>girl</p><p>jam</p><p>fish</p><p>m</p><p>n</p><p>man</p><p>name</p><p>30 listening lessons, 648 exercises RAMP START · 16</p><p>Final /t/ and /d/</p><p>9</p><p>/e/ and /æ/</p><p>2</p><p>Final /p/ and /k/</p><p>10</p><p>/æ/, /ʌ/ and /ɑː/</p><p>3</p><p>Final /s/ and /z/</p><p>11</p><p>/ɜː/</p><p>4</p><p>-s endings: /s/, /z/, /ɪz/</p><p>12</p><p>/ʊ/, /uː/, /ɒ/ and /ɔː/</p><p>5</p><p>-ed endings: /t/, /d/, /ɪd/</p><p>13</p><p>/eɪ/, /aɪ/ and /ɔɪ/</p><p>6</p><p>Final consonant clusters</p><p>14</p><p>/əʊ/, /aʊ/ and /ɔː/</p><p>/l/ and /n/</p><p>8</p><p>/iː/ and /ɪ/</p><p>white</p><p>uː</p><p>food</p><p>tour</p><p>v</p><p>van</p><p>ŋ</p><p>sing</p><p>15 16</p><p>not</p><p>/ɪə/, /eə/ and /ʊə/ /ə/ and syllables</p><p>ʌ</p><p>cup</p><p>ɜː girl</p><p>ə</p><p>about</p><p>5 long vowels</p><p>7 short vowels</p><p>8 diphthongs</p><p>24 consonants</p><p>θ</p><p>three</p><p>l</p><p>look</p><p>ð</p><p>this</p><p>r</p><p>red</p><p>s</p><p>sun</p><p>w</p><p>water</p><p>z</p><p>zoo</p><p>j</p><p>yes</p><p>Live</p><p>RAMP CLIMB · 8</p><p>1</p><p>7</p><p>ʊ</p><p>RAMP SUMMIT · 6</p><p>17</p><p>Puffed /p t k/ and /b d g/</p><p>25</p><p>Stress in twosyllable words</p><p>18</p><p>Starting clusters</p><p>26</p><p>19</p><p>/s/ and /ʃ/</p><p>Stress and word endings</p><p>20</p><p>/tʃ/, /dʒ/ and /ʃ/</p><p>27</p><p>21</p><p>/z/ and /ʒ/</p><p>Weak forms and can, can&#x27;t</p><p>22</p><p>/f/, /v/ and /w/</p><p>28</p><p>Linking and short forms</p><p>23</p><p>/r/, /j/ and /h/</p><p>29</p><p>When spelling and sound differ</p><p>24</p><p>/θ/ and /ð/</p><p>30</p><p>Stress in sentences</p><p>why</p><p>Lesson one starts where Vietnamese speakers most often lose English: the</p><p>Listen only</p><p>sound at the end of a word. Drop the final t, and white becomes why.</p><p>Ramp plays sound and never records the student&#x27;s voice. A student sees the lessons up to their own level.</p><p>Real screen: lesson one. Vietnamese marked * is a draft. Ramp English: sounds</p></div></details>
+</section>
+<section class="page" id="kept" aria-labelledby="h-kept">
+  <div class="cap"><span class="num">07</span><h2 id="h-kept">A word counts only when it is kept.</h2></div>
+  <a class="sheet" href="pages/page-07.webp" aria-label="Open page 7 full size">
+    <img src="pages/page-07.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 7 of the Ramp Schools explainer: A word counts only when it is kept.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>A word counts only when it is kept. Seeing a word is not knowing it. Ramp counts a word as kept only when the student brings it back from memory a day later, and again a week later. Ramp&#x27;s server decides every mark and every wait, not the phone. Live c một tuần</p><p>Đã giữ đượ</p><p>Kept. Meet it</p><p>A day later</p><p>A word card with a British voice, the IPA, an example, a draft Vietnamese meaning and, for most words, a picture.</p><p>At least 20 hours on, recall it from its picture or meaning. No firstletter help.</p><p>k</p><p>wee Kept for a</p><p>About a week later Recall it again, with no peek in between.</p><p>Then it keeps coming back, at growing gaps</p><p>so a kept word stays kept 120 days</p><p>1 day</p><p>Look again and the wait starts over.</p><p>6 days</p><p>14 days</p><p>30 days</p><p>Miss a recall and the word goes back to learning.</p><p>60 days</p><p>Say &quot;I know it&quot; and write the word next time.</p><p>Answer too fast and it does not count.</p><p>A day in Ramp English Làm quen, about 2 minutes</p><p>Live</p><p>Two questions, then a short test of at most 8 questions places the student at Start, Climb or Summit. At Start, made-up words catch a guess, and a retake can only move a student up.</p><p>New words, 3 at a time</p><p>Live</p><p>3 new words a day; each time they pass their check, 3 more open, up to 15. Practice means producing the word, such as building it from letter tiles. Daily words run for Ramp Start today.</p><p>Four word games</p><p>Live</p><p>Spell it, Hear and write, Fill the gap and Mini crossword. Games never count toward kept and show only the student&#x27;s own last and best score.</p><p>Hỏi gia sư, the English tutor</p><p>Live</p><p>Two modes, Hướng dẫn tôi (Guide me) and Giải thích (Explain). It stays on English and never says a word the student is tested on today. In Hướng dẫn tôi, the answer appears only after three real tries. Ramp English: words that stay</p></div></details>
+</section>
+<section class="page" id="subjects" aria-labelledby="h-subjects">
+  <div class="cap"><span class="num">08</span><h2 id="h-subjects">Every subject, in Vietnamese, English or both.</h2></div>
+  <a class="sheet" href="pages/page-08.webp" aria-label="Open page 8 full size">
+    <img src="pages/page-08.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 8 of the Ramp Schools explainer: Every subject, in Vietnamese, English or both.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>Every subject, in Vietnamese, English or both. A study chat for every subject of the student&#x27;s grade, built on Chương trình GDPT 2018 and the Kết nối tri thức với cuộc sống books. The subject and its English words arrive together. Live</p><p>1</p><p>Pick the subject</p><p>2</p><p>Every subject of the grade opens a study chat.</p><p>Type it, or snap it</p><p>Ramp checks each step of the student&#x27;s own working and never stores the photo.</p><p>3</p><p>Ramp asks first</p><p>4</p><p>In Hướng dẫn tôi (Guide me), one short question at a time.</p><p>See why, in steps</p><p>The rule, numbered steps, an example and the key English terms.</p><p>How Hướng dẫn tôi (Guide me) teaches Checks the base. If the topic builds on an idea students of that grade often miss, the first question checks it.</p><p>One question at a time. Short questions that move the student&#x27;s own thinking forward.</p><p>Live</p><p>Answer last.</p><p>Never trapped.</p><p>After three stuck replies in a row, Hiện đáp án (Show me the answer) appears.</p><p>Kết thúc (End) always gives the full answer.</p><p>Seen by the teacher. A common wrong idea is noted for the teacher, and the student is told.</p><p>Tạo hoạt hình</p><p>Đố tôi</p><p>Chapter titles only</p><p>(Animate this) in maths, the sciences and Tin học, plus diagrams in maths and the sciences.</p><p>(Quiz me) turns a topic into practice questions.</p><p>Six books have full chapter lists, from Toán 6 to Sinh học 10. Ramp stores the titles, never textbook text.</p><p>Live</p><p>Subjects</p><p>Live</p><p>Live</p></div></details>
+</section>
+<section class="page" id="teachers" aria-labelledby="h-teachers">
+  <div class="cap"><span class="num">09</span><h2 id="h-teachers">Plan tomorrow from what the class got stuck on.</h2></div>
+  <a class="sheet" href="pages/page-09.webp" aria-label="Open page 9 full size">
+    <img src="pages/page-09.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 9 of the Ramp Schools explainer: Plan tomorrow from what the class got stuck on.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>Plan tomorrow from what the class got stuck on. Two weeks of real questions become one picture of where the class is stuck, and one press drafts the next lesson or a test from it. The AI drafts. The teacher decides. Students get stuck</p><p>In Guide me, on a chapter or on an idea.</p><p>1</p><p>The teacher confirms The AI only suggests essay marks. No total exists until the teacher confirms each one.</p><p>Live</p><p>5</p><p>The class page sees it</p><p>2</p><p>Chỗ lớp đang kẹt groups 14 days by chapter, with wrong ideas 3 or more students share.</p><p>Your class the same loop, every week</p><p>The server marks</p><p>4</p><p>3</p><p>Students sit it in the app. Ramp&#x27;s server marks choice, true or false and short answers.</p><p>Ramp drafts the plan or the test A KHBD plan (Công văn 5512) or a 7991 test out of 10, with no student names.</p><p>Chỗ lớp đang kẹt · Where the class is stuck</p><p>One press drafts the next lesson or a test from this card. Real screen, the teacher&#x27;s class page, with sample class data and made-up names.</p><p>Ready for Word or print</p><p>A page for every student</p><p>Marks for vnEdu or SMAS</p><p>Parent drafts and an assistant</p><p>The Ramp English digest</p><p>Each draft is labelled Bản nháp AI (AI draft) and downloads for Word or PDF.</p><p>Strengths, weak topics, saved terms, tests, and subject chats to read.</p><p>A marks file for either system, still to check against a school&#x27;s template.</p><p>Drafts the teacher sends, and an assistant with no student names.</p><p>At most three students who need help, or &quot;The class is fine today; nothing to do.&quot;</p><p>Live Built</p><p>Teachers</p><p>Live</p><p>Live</p><p>Live</p><p>Live</p><p>English level-end tests: confirm writing marks, see milestones and the class&#x27;s exam readiness. 09 / 13</p></div></details>
+</section>
+<section class="page" id="giup" aria-labelledby="h-giup">
+  <div class="cap"><span class="num">10</span><h2 id="h-giup">Help that points at the button.</h2></div>
+  <a class="sheet" href="pages/page-10.webp" aria-label="Open page 10 full size">
+    <img src="pages/page-10.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 10 of the Ramp Schools explainer: Help that points at the button.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>Help that points at the button. Built so a class 6 child knows what to do next on every screen, without asking an adult. The simpler student app puts one clear next step on every screen, and a Giúp (Help) button in the top row that teaches the app where it is used. Built</p><p>1</p><p>Giúp explains the screen</p><p>What this page is for, in numbered steps, and plainly that Ramp is an AI, not a person.</p><p>2</p><p>Chỉ cho mình points to it</p><p>Show me dims the page and rings the real button: Bấm vào đây (Press here), step 2 of 3.</p><p>3</p><p>A first-day tour</p><p>Three short stops on day one, such as Hỏi bài mọi môn ở đây (Ask about any subject here).</p><p>One clear next step Việc của bạn bây giờ (Your next step): one action and one button at the top of the home page.</p><p>Built</p><p>Hôm nay (Today): today&#x27;s words, a progress line and one Học ngay (Learn now) button, above the drawn road.</p><p>Built</p><p>Giúp answers questions about the app, points at buttons and gives the tour.</p><p>Built</p><p>In today&#x27;s app, Hỏi Ramp (Ask Ramp) has 14 ready answers about the app that use no AI.</p><p>Live</p><p>Real screen: the next-step card before a student joins a class.</p><p>The Giúp helper</p></div></details>
+</section>
+<section class="page" id="safe" aria-labelledby="h-safe">
+  <div class="cap"><span class="num">11</span><h2 id="h-safe">A safe corner that reaches the right adult.</h2></div>
+  <a class="sheet" href="pages/page-11.webp" aria-label="Open page 11 full size">
+    <img src="pages/page-11.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 11 of the Ramp Schools explainer: A safe corner that reaches the right adult.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>A safe corner that reaches the right adult. In Góc tâm sự (a corner to talk) a student can write about a worry. Every message is checked before Ramp replies, and if one suggests danger, the school&#x27;s own people know at once. Live A student writes</p><p>Warning words check</p><p>Risk read in context</p><p>Ramp replies</p><p>Risk</p><p>The student sees</p><p>Who is told</p><p>High</p><p>A warm reply that asks if they are safe and urges them to talk to an adult today, with help lines 111, 115 and 113, the Ngày Mai hotline and the school&#x27;s team.</p><p>The homeroom teacher and counsellors, at once, in the app. By</p><p>Medium</p><p>Ramp keeps listening and gently moves toward talking to a trusted adult.</p><p>The same people, in the app</p><p>Low or none</p><p>A normal reply.</p><p>No one</p><p>email too:</p><p>Built</p><p>The notice comes first. Ramp is an AI, not a person, and does not promise to keep secrets.</p><p>No chat text in alerts. To read a flagged chat, staff press Open, and Ramp records who and when.</p><p>Counts only for the admin. The school admin sees how many alerts, never a name or a word.</p><p>Gone in 30 days. A chat with no alert is deleted 30 days after its last message.</p><p>Careers facts, with the source on the page. Hướng nghiệp Careers</p><p>Exams, fees, scholarships and deadlines are answered only from reviewed facts or official sites, always with the source, the link and the date. Shown right: a general question gets a short answer and a question back. Only the student can read their careers chats.</p><p>Live</p><p>Every fact shows where it comes from and when. 219 more career facts drafted, waiting for approval. Facts taken from newspapers carry a press label.</p><p>Safety and careers</p><p>Live Built Built</p></div></details>
+</section>
+<section class="page" id="parents" aria-labelledby="h-parents">
+  <div class="cap"><span class="num">12</span><h2 id="h-parents">Parents see the effort. Never the private words.</h2></div>
+  <a class="sheet" href="pages/page-12.webp" aria-label="Open page 12 full size">
+    <img src="pages/page-12.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 12 of the Ramp Schools explainer: Parents see the effort. Never the private words.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>Parents see the effort. Never the private words. A parent who links to their child gets a short daily English report: plain numbers and one thing to do tonight. It starts only after the parent agrees, one tap stops it at once, and the child is told what the parent sees. Live What a parent never sees</p><p>Daily English report</p><p>Answers</p><p>Opened today</p><p>Messages</p><p>Góc tâm sự</p><p>Days this week</p><p>Conversations with Ramp</p><p>Words through their check</p><p>Location</p><p>Words kept</p><p>Comparisons with other children</p><p>Minutes working</p><p>Keystrokes</p><p>The child&#x27;s voice</p><p>Linked by the school or the child. A school invite, or a family code the child opens on their own account.</p><p>One thing to do tonight A single, plain suggestion for the parent.</p><p>Live</p><p>An evening email that holds only a link: no name and no numbers.</p><p>Drawing of the report&#x27;s parts, not a real report.</p><p>Built</p><p>Finished courses, certificates and the exam estimate, for parents.</p><p>Built</p><p>Who sets up what</p><p>School admin Invites staff and parents; each invite lasts 14 days. Names each class&#x27;s homeroom teacher and invites counsellors for safety alerts. Sets four English report switches; one turned off is off for every parent.</p><p>Coming</p><p>Built with your school</p><p>Live</p><p>Teacher</p><p>Student and parent</p><p>Makes the class, its grade and its answer language. Students join by QR code, link or a 6-character code. Sets each plan and test, and when a test opens and closes.</p><p>The student picks the help style and the answer language in each chat. The parent agrees to start the daily report and stops it with one tap.</p><p>Confirms essay marks and can accept or refuse any short answer.</p><p>Ideas we can build with a school, on top of what Ramp does today. None is built yet.</p><p>Chapter lists for more books and grades</p><p>More ready-made animations</p><p>A province&#x27;s own grade 10 English exam format</p><p>The school&#x27;s logo, colours or own web address</p><p>The school&#x27;s counselling number on the help card</p><p>The school&#x27;s own vnEdu or SMAS marks template</p><p>A summary for school leaders, with no rankings</p><p>Teachers sharing plans and tests</p><p>A public page to check a Ramp certificate</p><p>Menus and buttons in another language</p><p>Parents and school leaders</p></div></details>
+</section>
+<section class="page" id="close" aria-labelledby="h-close">
+  <div class="cap"><span class="num">13</span><h2 id="h-close">Where every subject meets English.</h2></div>
+  <a class="sheet" href="pages/page-13.webp" aria-label="Open page 13 full size">
+    <img src="pages/page-13.webp" width="1405" height="1988" loading="lazy" decoding="async" alt="Page 13 of the Ramp Schools explainer: Where every subject meets English.">
+  </a>
+  <details class="text"><summary>Read this page as text</summary><div><p>Where every subject meets English. Ramp Schools for grades 6 to 12: every subject in Vietnamese and English, Ramp English from the first sound to the first essay, teacher tools in the official formats, and a safe corner to talk.</p><p>See it on a phone. Ask for a live walk-through of the app.</p><p>3 2</p><p>Ramp Summit</p><p>Ramp Climb</p><p>1 Ramp Start</p><p>Live</p><p>ramp Schools</p><p>working today for adult testers</p><p>Built</p><p>built and tested, not released Coming</p><p>planned, not built</p><p>Ramp is in testing with adult testers and claims no results yet. Data is stored in Singapore.</p></div></details>
+</section></main>
+<section class="closing" aria-labelledby="h-talk">
+  <div class="wrap">
+    <h2 id="h-talk">See it on a phone.</h2>
+    <p>Ask the Ramp team for a live walk-through of the app.</p>
+    <div class="cta">
+      <a class="btn dark" href="mailto:pr3n3v@gmail.com?subject=Ramp%20Schools%20walk-through">Email pr3n3v@gmail.com</a>
+      <a class="btn light" href="Ramp-Schools-explainer.pdf" download>Download the PDF</a>
+    </div>
+  </div>
+</section>
+<footer>
+  <p>Ramp is in testing with adult testers and claims no results yet. Data is stored in Singapore.</p>
+  <p>Fonts: Bricolage Grotesque and Inter (SIL Open Font License). Icons in the explainer: Lucide (ISC License).</p>
+</footer>
+<script>
+(function(){
+  var io='IntersectionObserver' in window;
+  var secs=[].slice.call(document.querySelectorAll('.page'));
+  var links={};[].slice.call(document.querySelectorAll('.chips a')).forEach(function(a){links[a.getAttribute('href').slice(1)]=a});
+  if(!io) return;
+  secs.forEach(function(s){s.querySelector('.sheet').classList.add('reveal')});
+  var rv=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('in');rv.unobserve(e.target)}})},{rootMargin:'0px 0px -10% 0px'});
+  secs.forEach(function(s){rv.observe(s.querySelector('.sheet'))});
+  var cur=null;
+  var sp=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){var a=links[e.target.id];if(!a||a===cur)return;if(cur)cur.classList.remove('on');a.classList.add('on');cur=a;var bar=a.parentNode;bar.scrollTo({left:a.offsetLeft-16,behavior:'smooth'})}})},{rootMargin:'-45% 0px -50% 0px'});
+  secs.forEach(function(s){sp.observe(s)});
+})();
+</script>
+</body>
+</html>
