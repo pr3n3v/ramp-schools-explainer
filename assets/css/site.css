@@ -980,12 +980,13 @@ input[type=range] { width: 100%; height: 44px; accent-color: var(--green); curso
   .js .ic-s { grid-column: 1; grid-row: 1 / span 2; font-size: 2.75rem; margin: 0; min-width: 1.4em; text-align: center }
   .js .ic-k { grid-column: 2; grid-row: 1; font-size: .8125rem }
   .js .ic-w { grid-column: 2; grid-row: 2; font-size: .9375rem } .js .ic-w b { font-size: 1.25rem }
-  .js .ic-btns { grid-column: 3; grid-row: 1 / span 2; margin: 0; flex-wrap: nowrap; gap: 8px }
-  .js .ic-play, .js .ic-alone { padding: 0 14px }
+  .js .ic-btns { display: contents }
+  .js .ic-play { grid-column: 3; grid-row: 1 / span 2; margin: 0; padding: 0 14px }
+  .js .ic-alone { grid-column: 1 / -1; grid-row: 3; justify-self: start; margin-top: 10px; min-height: 44px; padding: 0 14px; font-size: .875rem }
+  .js .ic-note { grid-row: 4 }
   .js .ic-note { grid-column: 1 / -1; font-size: .75rem; line-height: 1.35; margin-top: 8px }
   .ipa-foot { margin-top: 6px }
 }
-@media (max-width: 639px) { .js .ic-alone span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap } .js .ic-alone { width: 48px; padding: 0; justify-content: center } }
 @media (max-width: 439px) { .js .ic-play span { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap } .js .ic-play { width: 48px; padding: 0; justify-content: center } }
 .ssegs { grid-column: 1 / -1; justify-self: start }
 @media (min-width: 760px) { .ssegs { display: none !important } .scols [data-panel][data-off] { display: block !important } }

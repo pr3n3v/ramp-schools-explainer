@@ -336,29 +336,46 @@
   });
 
   /* ---------- the 44 sounds ---------- */
-  // every tile plays its example word (assets/audio/w/<word>.mp3: the app's chart word in its British teaching voice);
+  // every tile plays its example word (assets/audio/w/<word>.mp3, the app's own chart clip in its British teaching voice);
   // the nine vowels with data-clip can also be heard alone (Commons reference samples)
-  const tiles = $$('#ipa button'), icK = $('#ic-k'), icS = $('#ic-s'), icW = $('#ic-w'), icN = $('#ic-note');
+  const tiles = $$('#ipa button'), card = $('.ipa-card'), icK = $('#ic-k'), icS = $('#ic-s'), icW = $('#ic-w'), icN = $('#ic-note');
   const icP = $('#ic-play'), icPL = $('#ic-play span'), icA = $('#ic-alone');
   const CR = { ii: ['Denelson83', '3.0'], i: ['Denelson83', '3.0'], e: ['Peter Roach (User:RoachPeter)', '4.0'], ae: ['Peter Roach (User:RoachPeter)', '4.0'], aa: ['Denelson83', '3.0'], o: ['Peter Roach (User:RoachPeter)', '4.0'], oo: ['Peter Roach (User:RoachPeter)', '4.0'], u: ['Denelson83', '3.0'], uu: ['Denelson83', '3.0'] };
+  const narrow = matchMedia('(max-width: 999px)');
   const audio = new Audio();
   audio.preload = 'none';
   const ext = audio.canPlayType('audio/mpeg') ? 'mp3' : 'ogg';
-  let cur = null, on = null;
+  let cur = null, on = null, seq = 0, noteWas = '';
   const quiet = () => { if (on) on.classList.remove('playing'); on = null; };
   audio.addEventListener('ended', quiet);
   audio.addEventListener('error', quiet);
   const play = (src) => {
     if (!cur) return;
     quiet();
+    const id = ++seq, t = cur;   // a rejected play() only clears the marker if no newer play() started
     audio.src = src;
-    const t = cur;
     void t.offsetWidth; t.classList.add('playing'); on = t;
-    audio.play().catch(() => { if (on === t) quiet(); });
+    audio.play().catch(() => { if (id === seq) quiet(); });
   };
   const wordOf = (t) => $('i', t).textContent.trim();
   const playWord = () => cur && play('assets/audio/w/' + encodeURIComponent(wordOf(cur)) + '.mp3');
   const playAlone = () => cur && cur.dataset.clip && play('assets/audio/' + cur.dataset.clip + '.' + ext);
+  const note = (c) => {
+    const html = (narrow.matches
+      ? 'British text-to-speech voice.' + (c ? ' Vowel alone: IPA sample by ' + c[0] + ', CC BY-SA ' + c[1] + ', Wikimedia Commons, close to the British vowel.' : '')
+      : 'Said by a British text-to-speech voice from Ramp\'s sound lessons.' + (c ? ' Vowel alone: IPA sample by ' + c[0] + ', CC BY-SA ' + c[1] + ', Wikimedia Commons; close to the British vowel, not the same.' : ''))
+      + ' <a href="credits.html">Credits</a>';
+    if (html !== noteWas) { icN.innerHTML = html; noteWas = html; }   // only rewrite when it changes, so the live region stays quiet
+  };
+  // keep the chosen tile in view: below the sticky header, and above the card where it sticks to the bottom (phones)
+  const navEl = $('#nav');
+  const lift = (t) => {   // reading the rects forces layout, so the card's new height after pick() is already counted
+    const r = t.getBoundingClientRect(), c = card.getBoundingClientRect();
+    const under = getComputedStyle(card).position === 'sticky' && r.right > c.left && r.left < c.right;
+    const bottom = (under ? Math.min(c.top, innerHeight) : innerHeight) - 12, top = (navEl ? navEl.getBoundingClientRect().bottom : 0) + 12;
+    const dy = r.bottom > bottom ? r.bottom - bottom : r.top < top ? r.top - top : 0;
+    if (dy) scrollBy({ top: dy, behavior: reduce ? 'auto' : 'smooth' });
+  };
   const pick = (t, sound) => {
     tiles.forEach((x) => { x.setAttribute('aria-pressed', String(x === t)); x.tabIndex = x === t ? 0 : -1; });
     cur = t;
@@ -369,23 +386,22 @@
     icPL.textContent = 'Hear ' + w;
     icP.hidden = false;
     icA.hidden = !c;
-    icN.innerHTML = 'Said by a British text-to-speech voice from Ramp\'s sound lessons.'
-      + (c ? ' Vowel alone: IPA sample by ' + c[0] + ', CC BY-SA ' + c[1] + ', Wikimedia Commons; close to the British vowel, not the same.' : '')
-      + ' <a href="credits.html">Credits</a>';
+    note(c);
     if (sound) playWord();
   };
   tiles.forEach((t, i) => {
     t.tabIndex = i === 0 ? 0 : -1;
-    t.addEventListener('click', () => pick(t, true));
+    t.addEventListener('click', () => { pick(t, true); lift(t); });
     t.addEventListener('keydown', (e) => {
       const k = e.key, n = tiles.length;
       const j = k === 'ArrowRight' || k === 'ArrowDown' ? (i + 1) % n : k === 'ArrowLeft' || k === 'ArrowUp' ? (i - 1 + n) % n : k === 'Home' ? 0 : k === 'End' ? n - 1 : -1;
       if (j < 0) return;
-      e.preventDefault(); tiles[j].focus(); pick(tiles[j], false);
+      e.preventDefault(); tiles[j].focus({ preventScroll: true }); pick(tiles[j], false); lift(tiles[j]);
     });
   });
   icP.addEventListener('click', playWord);
   icA.addEventListener('click', playAlone);
+  narrow.addEventListener && narrow.addEventListener('change', () => cur && note(CR[cur.dataset.clip]));
   pick(tiles[0], false);
 
   /* ---------- a word counts only when it is kept ---------- */
