@@ -181,12 +181,6 @@ body.p-schools.gd-on .nav { z-index: 50 }
 .login .h3l { display: flex; align-items: center; gap: 10px; flex-wrap: wrap }
 .login .h3l .ic { color: var(--hi) }
 .login p { margin-top: 8px; color: rgba(255,255,255,.88) }
-.ftruth { display: flex; flex-wrap: wrap; gap: 8px }
-.ftruth li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,.08); font-weight: 600; color: #fff }
-.ftruth .ic { color: var(--hi) }
-.flinks { display: flex; flex-wrap: wrap; gap: 0 20px }
-.flinks a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; font-weight: 600; text-decoration: underline; text-decoration-color: rgba(255,255,255,.4) }
-.flinks a:hover { text-decoration-color: #fff }
 
 /* ---- Giúp's card on this page: both lines, as in the app ---- */
 .gd-card .gd-h .en { display: block }
@@ -205,5 +199,19 @@ body.p-schools.gd-on .nav { z-index: 50 }
 .pcard .thd { padding-right: 0 }
 .nav-in .menu-btn { flex: none }
 @media (max-width: 420px) { .nav-in .lang button { min-width: 44px; padding: 0 9px } }
-@media (max-width: 420px) { .nav-in { gap: 6px } .nav-in .word { font-size: 1.3rem } .nav-in .brand .mark { width: 24px; height: 24px } }
-@media (max-width: 359px) { .nav-in .word span { display: none } }
+@media (max-width: 420px) { .nav-in { gap: 6px } .nav-in .word, .nav-in .brand-sub { font-size: 1.3rem } .nav-in .brand .mark { width: 24px; height: 24px } }
+@media (max-width: 359px) { .nav-in .brand-sub { display: none } }
+
+/* ---- review fixes, 23 Nov 2026 ---- */
+.brand-sub { color: inherit; opacity: .9 }
+.p-schools .nav.top .nav-links a.way::before { box-shadow: 0 0 0 1.5px #fff }
+/* teachers: every step's picture fills the same frame, so no step leaves a hole beside the list */
+.plan-snip img { max-height: 300px; object-fit: cover; object-position: top }
+@media (min-width: 960px) {
+  .js .tvis { align-self: stretch; display: flex }
+  .js .tvis .desk { flex: 1; align-content: center }
+}
+/* the two-button crop shrinks with the frame instead of being cut off on phones */
+.desk { grid-template-columns: minmax(0, 1fr) }
+.desk .btns-snip, .desk .tabs-snip { max-width: 100% }
+.desk .btns-snip img { width: 100%; height: auto }

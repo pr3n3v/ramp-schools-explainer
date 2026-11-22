@@ -65,3 +65,30 @@ html:not([data-lang]) [data-l="en"] { display: none !important }
   .float { animation: none }
   .js .reveal { opacity: 1 !important; translate: none !important; transition: none !important }
 }
+
+/* ---- shared fix ---- */
+/* One family across the four pages: "ramp" in the wordmark goes home, the product word goes to the top,
+   product links carry their colour, and every footer has the same facts and links in the same order. */
+.brand.split { gap: 0 }
+.brand-home { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; color: inherit; text-decoration: none }
+.brand-sub { display: inline-flex; align-items: center; min-height: 44px; padding: 0 6px; font-family: var(--head); font-weight: 700; font-variation-settings: 'opsz' 32; font-size: 1.5rem; letter-spacing: -0.01em; line-height: 1; text-decoration: none }
+.brand-home:hover .word, .brand-sub:hover { text-decoration: underline; text-decoration-thickness: 2px; text-underline-offset: 5px }
+.way { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px; border-radius: 10px; font-size: .9375rem; font-weight: 600; color: inherit; text-decoration: none; white-space: nowrap }
+.way::before { content: ''; flex: none; width: 10px; height: 10px; border-radius: 3px; background: var(--wc); box-shadow: 0 0 0 1.5px currentColor }
+.way.to-e { --wc: #70309C } .way.to-k { --wc: #0B6B5F }
+.rf-facts { display: flex; flex-wrap: wrap; gap: 8px }
+.rf-facts li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,.08); color: #fff; font-size: .9375rem; font-weight: 600; line-height: 1.3 }
+.rf-facts .ic { flex: none; color: var(--hi) }
+.rf-links { display: flex; flex-wrap: wrap; gap: 0 4px; margin-left: -10px }
+.rf-links a { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px; border-radius: 10px; font-size: .9375rem; font-weight: 600; color: #fff; text-decoration: underline; text-decoration-color: rgba(255,255,255,.35); text-underline-offset: 5px }
+.rf-links a:hover { text-decoration-color: #fff; background: rgba(255,255,255,.08) }
+.rf-links a[aria-current="page"] { text-decoration: none; color: var(--hi) }
+.rf-links a[aria-current="page"]::before { content: ''; width: 8px; height: 8px; border-radius: 50%; background: currentColor }
+/* the smallest phones (320 px): the nav keeps the wordmark and the switch on one line */
+@media (max-width: 359px) {
+  .nav-in { gap: 8px }
+  .nav-in .lang button { min-width: 44px; padding: 0 8px }
+  .nav-in .word, .nav-in .brand-sub { font-size: 1.3rem }
+  .nav-in .brand .mark { width: 24px; height: 24px }
+  .nav-in .nav-login { display: none }
+}

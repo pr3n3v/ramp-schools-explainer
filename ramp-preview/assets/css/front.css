@@ -108,6 +108,11 @@ body[data-way="english"] .fh-road .fl-e, body[data-way="schools"] .fh-road .fl-k
 .f-books { --fx: calc(var(--pw) * .58); top: 46%; left: -4% }
 .f-micro { --fx: calc(var(--pw) * .62); bottom: 0; right: -2% }
 
+/* phones: the line, chips and button use the card's full width; only the name sits beside the art */
+@media (max-width: 599px) {
+  .pcard { --pw: 104px; --over: 60px; grid-template-rows: auto auto auto auto; grid-template-areas: "head art" "line line" "chips chips" "go go" }
+  .pc-line { max-width: none }
+}
 @media (min-width: 1100px) {
   .pcard { grid-template-rows: auto auto auto 1fr; grid-template-areas: "head art" "line art" "chips art" "go art"; column-gap: 20px }
   .pc-go { align-self: end }
@@ -136,6 +141,7 @@ body[data-way="english"] .fh-road .fl-e, body[data-way="schools"] .fh-road .fl-k
 .ff-btns .btn { color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.22) }
 .b-e { background: #70309C } .b-e:hover { background: #5D2683 }
 .b-k { background: #0B6B5F } .b-k:hover { background: #08524A }
+.ff-btns .b-m { background: transparent; box-shadow: inset 0 0 0 2px rgba(255,255,255,.7) } .ff-btns .b-m:hover { background: rgba(255,255,255,.1) }
 .ff-btns .ic { transition: translate .35s var(--spring) }
 .ff-btns .btn:hover .ic { translate: 3px 0 }
 .ff-adult { display: flex; align-items: center; gap: 10px; margin-top: 14px; font-size: .9375rem; font-weight: 600 }
@@ -143,11 +149,6 @@ body[data-way="english"] .fh-road .fl-e, body[data-way="schools"] .fh-road .fl-k
 .ff-side { display: grid; gap: 16px; align-content: start }
 .ffoot .wm { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; color: #fff; text-decoration: none; justify-self: start }
 .ffoot .wm svg { width: 30px; height: 30px }
-.ff-facts { display: grid; gap: 4px; font-size: .9375rem; color: rgba(255,255,255,.88) }
-.ff-links { display: flex; flex-wrap: wrap; gap: 0 4px; margin-left: -10px }
-.ff-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 10px; font-size: .9375rem; font-weight: 600; color: #fff; text-decoration: underline; text-decoration-color: rgba(255,255,255,.35); text-underline-offset: 5px }
-.ff-links a:hover { text-decoration-color: #fff; background: rgba(255,255,255,.08) }
-.ff-fine { font-size: .8125rem; color: rgba(255,255,255,.75) }
 
 ::selection { background: var(--sun); color: var(--ink) }
 
@@ -175,4 +176,6 @@ body[data-way="english"] .fh-road .fl-e, body[data-way="schools"] .fh-road .fl-k
 .cr-tw tr:last-child td { border-bottom: 0 }
 .cr-tw th { font-size: .8125rem; color: var(--soft) }
 .cr-tw .sym { font-size: 1.25rem; font-weight: 600 }
-.cr-tw a { display: inline-block; padding-block: 2px }
+.cr-tw a { display: inline-flex; align-items: center; min-height: 44px; padding-inline: 8px; margin: -10px -8px }
+/* inline links in the credits prose: a 44px hit area that does not move the lines */
+.cr p a, .cr-lic a { padding-block: 11px }

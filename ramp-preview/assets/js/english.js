@@ -69,10 +69,11 @@
     const wordOf = (t) => $('i', t).textContent.trim();
     const playWord = () => cur && play(wordClip(wordOf(cur)), cur);
     const playAlone = () => cur && cur.dataset.clip && play('assets/audio/' + cur.dataset.clip + '.' + ext, cur);
+    // on phones the card sticks over the grid, so its text shows only once "hear the vowel alone" is used (.cred)
     const note = (c) => {
-      const html = bi('Từ ví dụ đọc bằng giọng máy kiểu Anh của các bài âm trong Ramp.', 'The example word is said in the British text-to-speech voice of Ramp\'s sound lessons.')
+      const html = '<span class="icn-t">' + bi('Từ ví dụ đọc bằng giọng máy kiểu Anh của các bài âm trong Ramp.', 'The example word is said in the British text-to-speech voice of Ramp\'s sound lessons.')
         + (c ? ' ' + bi('Nguyên âm riêng: mẫu IPA của ' + c[0] + ', CC BY-SA ' + c[1] + ', Wikimedia Commons; gần với nguyên âm kiểu Anh, không hoàn toàn giống.', 'Vowel alone: IPA sample by ' + c[0] + ', CC BY-SA ' + c[1] + ', Wikimedia Commons; close to the British vowel, not the same.') : '')
-        + ' <a href="credits.html">' + bi('Nguồn', 'Credits') + '</a>';
+        + '</span> <a href="credits.html">' + bi('Nguồn', 'Credits') + '</a>';
       if (html !== noteWas) { icN.innerHTML = html; noteWas = html; }   // rewrite only on change, so the live region stays quiet
     };
     const lift = (t) => {   // keep the chosen tile in view: under the nav, and above the card where it sticks (phones)
@@ -85,6 +86,7 @@
     const pick = (t, sound) => {
       tiles.forEach((x) => { x.setAttribute('aria-pressed', String(x === t)); x.tabIndex = x === t ? 0 : -1; });
       cur = t;
+      card.classList.remove('cred');
       const w = wordOf(t), c = CR[t.dataset.clip];
       icK.innerHTML = bi(t.dataset.kv, t.dataset.ke);
       icS.textContent = $('b', t).textContent;
@@ -106,9 +108,11 @@
       });
     });
     icP.addEventListener('click', playWord);
-    icA.addEventListener('click', playAlone);
+    icA.addEventListener('click', () => { card.classList.add('cred'); playAlone(); });
     pick(tiles[0], false);
     icK.innerHTML = bi('Chạm vào một âm', 'Tap a sound');
+    icA.hidden = true;   // "hear the vowel alone" waits until a vowel is tapped
+    note(null);
   }
 
   /* a word counts only when it is kept: walk taxi from today to kept */
@@ -164,7 +168,9 @@
       i = 0; right = 0;
       tDay.innerHTML = bi('Ngày mai', 'Tomorrow');
       bars.forEach((b, k) => b.classList.toggle('on', k < 1));
-      stage(sTom); ask(); tIn.focus();
+      stage(sTom); ask();
+      tc.scrollIntoView({ behavior: RM.matches ? 'auto' : 'smooth', block: 'center' });
+      tIn.focus({ preventScroll: true });
     });
     tForm.addEventListener('submit', (e) => {
       e.preventDefault();
