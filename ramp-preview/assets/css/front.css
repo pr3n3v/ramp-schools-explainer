@@ -1,0 +1,178 @@
+/* Ramp front page: the explainer's sun hero, its road forking into the two products, two 3D product cards, three facts.
+   Loads after site.css and ramp-family.css. Contrast checked: ink on level coral #F87966 6.50, on #FDCA3A 11.24,
+   on #4BC680 7.96, on mint #CDE9E2 13.43; white 75% on ink 10.11; ink 80% on sun 6.65. */
+
+/* ---- nav ---- */
+.nav { background: var(--paper) }
+.fnav { display: none; gap: 2px; margin-left: auto }
+.fnav a, .nav-login { display: inline-flex; align-items: center; gap: 8px; min-height: 44px; padding: 0 10px; border-radius: 10px; font-size: .9375rem; font-weight: 600; color: var(--ink); text-decoration: none; white-space: nowrap; transition: background-color .2s }
+.fnav a::before { content: ''; width: 10px; height: 10px; border-radius: 3px; background: var(--c); box-shadow: 0 0 0 1.5px var(--ink) }
+.fnav .to-e { --c: #70309C } .fnav .to-k { --c: #0B6B5F }
+.fnav a:hover, .nav-login:hover { background: rgba(27,26,34,.07) }
+.nav.top .fnav a:hover, .nav.top .nav-login:hover { background: rgba(255,255,255,.55) }
+.nav-login { margin-left: auto }
+.nav-login .ic { font-size: 1.15em }
+.nav .lang { flex: none }
+@media (min-width: 760px) { .fnav { display: flex } .nav-login { margin-left: 0 } }
+
+/* ---- hero: the sun band and its road ---- */
+.front-hero { background: var(--hero-bg) }
+.fh-in { position: relative; padding-top: clamp(30px, 4.4vw, 64px) }
+.front-hero .display { font-size: clamp(2.6rem, 0.6rem + 7.6vw, 6rem); max-width: none }
+.front-hero .display .ln { display: block }
+.fh-copy { max-width: 34rem; margin-top: clamp(16px, 2.4vw, 26px) }
+.front-hero .pillars { margin-top: 22px }
+.front-hero .aud { color: rgba(27,26,34,.8); margin-top: 16px; padding-bottom: 8px }
+.pillars .d-e { background: #70309C } .pillars .d-k { background: #0B6B5F }
+
+.front-hero .fh-road { position: relative; display: block; left: auto; right: auto; bottom: auto; width: 100%; height: auto; z-index: 0; margin-top: 6px }
+.front-hero .fh-road.wide { display: none }
+.fh-road .rlabel text { fill: #fff; font-family: var(--head); font-weight: 700; font-size: 19px; letter-spacing: -0.01em }
+.fh-road.narrow .rlabel text { font-size: 13.5px }
+/* the wide road shrinks with the screen below 1000px, so its two names grow back */
+@media (max-width: 999px) { .fh-road.wide .lb { transform-box: fill-box; transform-origin: 50% 100%; transform: scale(1.35) } }
+@media (min-width: 600px) {
+  .front-hero .fh-road.narrow { display: none }
+  .front-hero .fh-road.wide { display: block }
+}
+@media (min-width: 1000px) {
+  .front-hero { min-height: max(520px, 41vw) }
+  .fh-in { padding-bottom: 120px }
+  .front-hero .display { font-size: min(6rem, calc(6.9vw - 4px)) }
+  .front-hero .fh-road.wide { position: absolute; left: 0; right: 0; bottom: 0; margin: 0; z-index: -1 }
+}
+
+/* road motion: the trunk draws, then both ways, then the flags and their names */
+.js .fh-road .seg-t { animation-delay: .2s }
+.js .fh-road .seg-e { animation-delay: .9s }
+.js .fh-road .seg-k { animation-delay: 1.1s }
+.js .fh-road .fp-e { animation-delay: 1.75s }
+.js .fh-road .fp-k { animation-delay: 1.95s }
+.js .fh-road .rlabel { opacity: 0; animation: fade .5s ease forwards }
+.js .fh-road .rl-e { animation-delay: 2.15s } .js .fh-road .rl-k { animation-delay: 2.35s }
+
+/* a product under the pointer (card, pill or nav link) lights its own way */
+.fh-road .w-e, .fh-road .w-k { transition: opacity .45s var(--ease) }
+.fh-road .flag { transform-box: fill-box; transform-origin: 0 100%; transition: transform .5s var(--spring) }
+body[data-way="english"] .fh-road .w-k, body[data-way="schools"] .fh-road .w-e { opacity: .22 }
+body[data-way="english"] .fh-road .fl-e, body[data-way="schools"] .fh-road .fl-k { transform: scale(1.22) }
+
+/* ---- the two ways ---- */
+.ways { padding-block: clamp(84px, 7.6vw, 104px) clamp(40px, 5vw, 64px) }
+.ways-grid { display: grid; gap: 92px }
+.ways-grid > .rv { display: grid }
+/* the cards rise in on load, like the explainer's phones, so they are never hidden at the fold */
+.js .ways-grid > .rv { opacity: 0; translate: 0 56px; animation: rise 1s var(--ease) .4s forwards }
+.js .ways-grid > .rv + .rv { animation-delay: .55s }
+@media (min-width: 860px) { .ways-grid { grid-template-columns: 1fr 1fr; gap: clamp(20px, 2.4vw, 32px) } .pcard { --pw: clamp(118px, 15vw, 196px) } }
+
+.pcard {
+  --pad: clamp(22px, 3vw, 36px); --over: clamp(44px, 5.4vw, 76px); --pw: clamp(118px, 21vw, 168px);
+  display: grid; grid-template-columns: minmax(0, 1fr) auto; grid-template-rows: auto auto 1fr auto auto;
+  grid-template-areas: "head art" "line art" ". art" "chips chips" "go go"; gap: 16px 14px;
+  border-radius: 32px; padding: var(--pad); color: #fff; text-decoration: none;
+  box-shadow: 0 2px 4px rgba(27,26,34,.08), 0 34px 54px -30px rgba(27,26,34,.75);
+}
+.pcard:hover { box-shadow: 0 2px 4px rgba(27,26,34,.08), 0 46px 70px -34px rgba(27,26,34,.85) }
+.pcard:focus-visible { outline: 3px solid var(--ink); outline-offset: 5px; border-radius: 32px }
+.pc-eng { background: #381E4C; --on: #DBC8ED }
+.pc-sch { background: #0E3B35; --on: #CDE9E2 }
+.pc-head { grid-area: head; align-self: start }
+.pc-name { font-family: var(--head); font-weight: 800; font-variation-settings: 'opsz' 72; font-size: clamp(1.9rem, 1.25rem + 1.7vw, 2.75rem); line-height: 1.04; letter-spacing: -0.03em }
+.pc-line { grid-area: line; color: var(--on); font-size: clamp(1.0625rem, 1rem + .3vw, 1.1875rem); line-height: 1.5; max-width: 30ch }
+.pc-chips { grid-area: chips; align-self: end; display: flex; flex-wrap: wrap; gap: 6px }
+.chip { display: inline-flex; align-items: center; min-height: 30px; padding: 0 12px; border-radius: 99px; font-size: .875rem; font-weight: 600; line-height: 1.15; color: var(--ink) }
+.chip.lv-s { background: var(--lv-start) } .chip.lv-c { background: var(--lv-climb) } .chip.lv-u { background: var(--lv-summit) }
+.chip.mint { background: #CDE9E2 }
+.pc-go { grid-area: go; justify-self: start; pointer-events: none }
+.pcard:hover .pc-go { background: #F7B532 }
+.pc-go .ic { transition: translate .35s var(--spring) }
+.pcard:hover .pc-go .ic { translate: 4px 0 }
+
+/* the seven purple steps, on a lilac ground so the deepest steps still read */
+.steps { display: inline-flex; align-items: flex-end; gap: 3px; height: 30px; padding: 6px 8px; margin-top: 12px; border-radius: 10px; background: #F1E8F8 }
+.steps i { width: 7px; border-radius: 2px }
+.steps i:nth-child(1) { height: 22%; background: #A472CD } .steps i:nth-child(2) { height: 35%; background: #9156C0 }
+.steps i:nth-child(3) { height: 48%; background: #8140B0 } .steps i:nth-child(4) { height: 61%; background: #70309C }
+.steps i:nth-child(5) { height: 74%; background: #5D2683 } .steps i:nth-child(6) { height: 87%; background: #4A2268 }
+.steps i:nth-child(7) { height: 100%; background: #381E4C }
+
+/* art breaks out of the card's top edge and sits forward in 3D */
+.pc-art { grid-area: art; align-self: start; width: var(--pw); margin-top: calc((var(--pad) + var(--over)) * -1); transform-style: preserve-3d }
+.pc-head, .pc-art { transform-style: preserve-3d }
+.pc-art .phone { --w: var(--pw); rotate: 5deg; background: linear-gradient(155deg, #3E3846 0%, #1E1B24 38%, #121016 100%) }
+.tilt .lift-l { transform: translateZ(70px) }
+.fx3 { position: relative; height: calc(var(--pw) * 1.72) }
+.fx3 .fx { position: absolute }
+.f-school { --fx: calc(var(--pw) * .8); top: 0; right: -4% }
+.f-books { --fx: calc(var(--pw) * .58); top: 46%; left: -4% }
+.f-micro { --fx: calc(var(--pw) * .62); bottom: 0; right: -2% }
+
+@media (min-width: 1100px) {
+  .pcard { grid-template-rows: auto auto auto 1fr; grid-template-areas: "head art" "line art" "chips art" "go art"; column-gap: 20px }
+  .pc-go { align-self: end }
+}
+
+.ways-note { display: flex; align-items: center; gap: 10px; margin-top: clamp(22px, 3vw, 32px); font-size: .875rem; font-weight: 600; color: var(--soft) }
+.ways-note .ic { font-size: 18px; color: var(--ink) }
+
+/* ---- three facts ---- */
+.facts { background: var(--canvas); box-shadow: inset 0 1px 0 var(--line); padding-block: clamp(56px, 7vw, 96px) }
+.fl { display: grid; gap: 26px; margin-top: clamp(24px, 3vw, 36px) }
+.fl li { display: grid; grid-template-columns: 48px minmax(0, 1fr); gap: 16px; align-items: start; border-top: 3px solid var(--ink); padding-top: 18px }
+.fi { width: 48px; height: 48px; border-radius: 14px; display: grid; place-items: center; background: var(--sun); color: var(--ink); font-size: 24px }
+.fl-t { font-family: var(--head); font-weight: 800; font-variation-settings: 'opsz' 32; font-size: clamp(1.2rem, 1.05rem + .5vw, 1.45rem); line-height: 1.15; letter-spacing: -0.015em }
+.fl-s { margin-top: 6px; color: var(--soft) }
+@media (min-width: 860px) { .fl { grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 28px } }
+
+/* ---- footer, with the way in ---- */
+.ffoot { background: var(--ink); color: #fff; padding-block: clamp(52px, 6vw, 80px) 40px }
+.ffoot :focus-visible { outline-color: #fff }
+.ff-grid { display: grid; gap: 44px }
+@media (min-width: 900px) { .ff-grid { grid-template-columns: minmax(0, 1.15fr) minmax(0, 1fr); gap: 64px } }
+.ff-h { font-family: var(--head); font-weight: 800; font-variation-settings: 'opsz' 48; font-size: clamp(1.75rem, 1.3rem + 1.6vw, 2.5rem); line-height: 1.08; letter-spacing: -0.03em }
+.ff-login > p { margin-top: 10px; color: rgba(255,255,255,.84); max-width: 44ch }
+.ff-btns { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 20px }
+.ff-btns .btn { color: #fff; box-shadow: inset 0 0 0 1.5px rgba(255,255,255,.22) }
+.b-e { background: #70309C } .b-e:hover { background: #5D2683 }
+.b-k { background: #0B6B5F } .b-k:hover { background: #08524A }
+.ff-btns .ic { transition: translate .35s var(--spring) }
+.ff-btns .btn:hover .ic { translate: 3px 0 }
+.ff-adult { display: flex; align-items: center; gap: 10px; margin-top: 14px; font-size: .9375rem; font-weight: 600 }
+.ff-adult .ic { font-size: 20px; color: var(--sun) }
+.ff-side { display: grid; gap: 16px; align-content: start }
+.ffoot .wm { display: inline-flex; align-items: center; gap: 9px; min-height: 44px; color: #fff; text-decoration: none; justify-self: start }
+.ffoot .wm svg { width: 30px; height: 30px }
+.ff-facts { display: grid; gap: 4px; font-size: .9375rem; color: rgba(255,255,255,.88) }
+.ff-links { display: flex; flex-wrap: wrap; gap: 0 4px; margin-left: -10px }
+.ff-links a { display: inline-flex; align-items: center; min-height: 44px; padding: 0 10px; border-radius: 10px; font-size: .9375rem; font-weight: 600; color: #fff; text-decoration: underline; text-decoration-color: rgba(255,255,255,.35); text-underline-offset: 5px }
+.ff-links a:hover { text-decoration-color: #fff; background: rgba(255,255,255,.08) }
+.ff-fine { font-size: .8125rem; color: rgba(255,255,255,.75) }
+
+::selection { background: var(--sun); color: var(--ink) }
+
+/* ---- credits page ---- */
+.cr-hero { padding-block: clamp(36px, 6vw, 80px) clamp(40px, 6vw, 72px) }
+.cr-hero .display { font-size: clamp(2.6rem, 1rem + 6vw, 5rem) }
+.cr-hero .promise { max-width: 46ch; margin-top: 16px }
+.cr { padding-block: clamp(40px, 6vw, 72px) clamp(56px, 7vw, 96px) }
+.cr section { max-width: 920px }
+.cr section + section { margin-top: clamp(44px, 6vw, 64px); padding-top: clamp(28px, 4vw, 40px); border-top: 3px solid var(--ink) }
+.cr .h2s { margin-bottom: 12px }
+.cr p { max-width: 70ch; color: var(--soft) }
+.cr p + p, .cr p + .cr-lic, .cr-lic + p, .cr-icons + .cr-lic { margin-top: 14px }
+.cr a { color: #0B6B5F; font-weight: 600 }
+.cr code { font-size: .9em; background: var(--acc-tint); padding: 1px 6px; border-radius: 6px; color: var(--ink) }
+.cr-icons { display: grid; grid-template-columns: repeat(auto-fill, minmax(104px, 1fr)); gap: 8px; margin-top: 18px }
+.cr-icons li { display: grid; justify-items: center; align-content: start; gap: 6px; padding: 12px 6px; border-radius: 16px; background: #fff; box-shadow: var(--sh-card); text-align: center; font-size: .8125rem; font-weight: 600; line-height: 1.3 }
+.cr-icons .fx { --fx: 48px }
+.cr-lic { border-radius: 16px; background: #fff; box-shadow: inset 0 0 0 1px var(--line); padding: 16px 18px; font-size: .875rem; line-height: 1.6 }
+.cr-lic p { color: var(--soft) }
+.cr-lic p + p { margin-top: .8em }
+.cr-tw { overflow-x: auto; margin-top: 16px; border-radius: 16px; background: #fff; box-shadow: inset 0 0 0 1px var(--line) }
+.cr-tw table { border-collapse: collapse; width: 100%; min-width: 760px; font-size: .9375rem }
+.cr-tw th, .cr-tw td { text-align: left; padding: 10px 12px; border-bottom: 1px solid var(--line); vertical-align: top }
+.cr-tw tr:last-child td { border-bottom: 0 }
+.cr-tw th { font-size: .8125rem; color: var(--soft) }
+.cr-tw .sym { font-size: 1.25rem; font-weight: 600 }
+.cr-tw a { display: inline-block; padding-block: 2px }

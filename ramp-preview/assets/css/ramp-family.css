@@ -1,0 +1,67 @@
+/* Ramp family layer on top of the explainer's site.css: Vietnamese-ready fonts, one colour world per product,
+   the VI | EN switch, 3D tilt cards and floating 3D icons. Load after site.css.
+   Contrast (WCAG 2.x): ink #1B1A22 on paper #FBF7F0 16.15; soft #5B5866 on paper 6.48; ink on sun #FFC248 10.73.
+   English: white on #70309C 8.10, white on hero #381E4C 14.40, sun on hero 8.96, lilac #DBC8ED on hero 9.26,
+   #70309C on paper 7.59, #70309C on tint #F1E8F8 6.81, ink on tint 14.49.
+   Schools: white on #0B6B5F 6.40, white on #08524A 9.07, white on hero #0E3B35 12.38, sun on hero 7.70,
+   mint #CDE9E2 on hero 9.64, #0B6B5F on paper 5.99, #0B6B5F on tint #DCF1EC 5.43, ink on tint 14.65. */
+
+:root {
+  --ink: #1B1A22; --soft: #5B5866; --mist: #5F5C69; --paper: #FBF7F0; --canvas: #FBF7F0; --line: #E6DFD2;
+  --body: 'Be Vietnam Pro', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
+  --head: 'Bricolage Grotesque', 'Be Vietnam Pro', system-ui, sans-serif;
+  /* product world (front page defaults) */
+  --acc: #1B1A22; --acc-deep: #000; --acc-tint: #EFEAE0; --hero-bg: #FFC248; --hero-ink: #1B1A22; --hero-soft: #3E3A33; --hi: #FFC248;
+}
+.p-english {
+  --acc: #70309C; --acc-deep: #5D2683; --acc-tint: #F1E8F8; --hero-bg: #381E4C; --hero-ink: #FFFFFF; --hero-soft: #DBC8ED; --hi: #FFC248;
+  --s1: #A472CD; --s2: #9156C0; --s3: #8140B0; --s4: #70309C; --s5: #5D2683; --s6: #4A2268; --s7: #381E4C;
+}
+.p-schools {
+  --acc: #0B6B5F; --acc-deep: #08524A; --acc-tint: #DCF1EC; --hero-bg: #0E3B35; --hero-ink: #FFFFFF; --hero-soft: #CDE9E2; --hi: #FFC248;
+}
+/* Ramp English levels (always under ink text; 1.5px ink outline when a shape stands alone on paper) */
+:root { --lv-start: #F87966; --lv-climb: #FDCA3A; --lv-summit: #4BC680 }
+
+/* Headings: line-height floor so stacked Vietnamese marks (ệ ộ ữ Ở) never clip */
+.display { line-height: 1.04; letter-spacing: -0.035em }
+.h2 { line-height: 1.08 }
+.h2s, .h3x { line-height: 1.12 }
+
+/* Language switch: both languages in the DOM, the inactive one hidden */
+html[data-lang="vi"] [data-l="en"], html[data-lang="en"] [data-l="vi"] { display: none !important }
+html:not([data-lang]) [data-l="en"] { display: none !important }
+.lang { display: inline-flex; border-radius: 12px; box-shadow: inset 0 0 0 2px currentColor; overflow: hidden; font: 700 .8125rem/1 var(--body) }
+.lang button { min-height: 44px; min-width: 48px; padding: 0 12px; color: inherit }
+.lang button[aria-pressed="true"] { background: currentColor }
+.lang button[aria-pressed="true"] span { color: var(--paper) }
+.on-dark .lang button[aria-pressed="true"] span { color: var(--hero-bg) }
+
+/* Product buttons */
+.btn-acc { background: var(--acc); color: #fff; box-shadow: 0 12px 24px -14px var(--acc-deep) }
+.btn-acc:hover { background: var(--acc-deep) }
+.btn-hi { background: var(--hi); color: var(--ink); box-shadow: 0 14px 28px -14px rgba(0,0,0,.6) }
+.btn-hi:hover { background: #F7B532 }
+
+/* 3D tilt card: JS sets --rx, --ry (deg) and --gx, --gy (glare position) under a fine pointer */
+.tilt { --rx: 0deg; --ry: 0deg; --gx: 50%; --gy: 0%; position: relative; transform-style: preserve-3d; transform: perspective(900px) rotateX(var(--rx)) rotateY(var(--ry)); transition: transform .5s var(--ease), box-shadow .4s; will-change: transform }
+.tilt.tilting { transition: transform .08s linear, box-shadow .4s }
+.tilt::after { content: ''; position: absolute; inset: 0; border-radius: inherit; pointer-events: none; opacity: 0; transition: opacity .3s; background: radial-gradient(420px circle at var(--gx) var(--gy), rgba(255,255,255,.28), transparent 45%) }
+.tilt.tilting::after { opacity: 1 }
+.tilt .lift { transform: translateZ(46px) }
+.tilt .lift-s { transform: translateZ(24px) }
+.tilt:active { transform: perspective(900px) scale(.985) }
+
+/* Floating 3D icons (Fluent Emoji 3D, 192px webp) */
+.fx { display: block; width: var(--fx, 96px); height: var(--fx, 96px); object-fit: contain; filter: drop-shadow(0 14px 14px rgba(0,0,0,.22)); user-select: none; -webkit-user-drag: none }
+.float { animation: float 6s ease-in-out infinite }
+.float.d1 { animation-delay: -1.5s } .float.d2 { animation-delay: -3s } .float.d3 { animation-delay: -4.5s }
+@keyframes float { 0%, 100% { translate: 0 0 } 50% { translate: 0 -10px } }
+
+/* Reveal (site.css also styles .js .reveal) */
+@media (prefers-reduced-motion: reduce) {
+  .tilt, .tilt.tilting { transform: none !important; transition: none }
+  .tilt::after { display: none }
+  .float { animation: none }
+  .js .reveal { opacity: 1 !important; translate: none !important; transition: none !important }
+}

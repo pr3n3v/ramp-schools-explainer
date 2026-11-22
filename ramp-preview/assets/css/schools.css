@@ -1,0 +1,209 @@
+/* Ramp Schools landing: the explainer's world in jade, with 3D icons that lift when a card tilts.
+   Loads after site.css and ramp-family.css. New pairs checked (WCAG 2.x): sun on #0B6B5F 3.98 (large text only),
+   white .84 on #0B6B5F 5.02, mint #CDE9E2 on card #134A42 7.84, #5A4A7A on #F1E8F8 6.54, #2F5244 on #DCF1EC 7.40. */
+
+/* ---- nav: jade while over the hero ---- */
+.nav { color: var(--ink) }
+.brand .mark { color: var(--acc) }
+.p-schools .nav.top { background: var(--hero-bg); color: #fff; box-shadow: none }
+.p-schools .nav.top .brand .mark { color: #fff }
+.p-schools .nav.top .menu-btn { box-shadow: inset 0 0 0 2px rgba(255,255,255,.9) }
+.p-schools .nav.top :focus-visible { outline-color: #fff }
+@media (min-width: 1140px) {
+  .p-schools .nav.top .nav-links a { color: rgba(255,255,255,.86) }
+  .p-schools .nav.top .nav-links a:hover, .p-schools .nav.top .nav-links a[aria-current="true"] { color: #fff; background: rgba(255,255,255,.1) }
+}
+.nav-in .lang { flex: none; margin-left: 6px }
+@media (max-width: 1139px) { .nav-in .lang { margin-left: auto } }
+.trail .stop b { font-weight: inherit }
+body.p-schools.gd-on .nav { z-index: 50 }
+
+/* ---- hero ---- */
+.p-schools .hero { background: var(--hero-bg); color: #fff }
+.sc-hero .hero-in { padding-bottom: clamp(48px, 7vw, 88px) }
+.sc-hero .display { color: #fff; font-size: clamp(2.55rem, 0.9rem + 5.4vw, 5.25rem) }
+.sc-hero .promise { color: var(--hero-soft) }
+.sc-hero .promise b { color: #fff }
+.sc-hero .btn-line { background: transparent; color: #fff; box-shadow: inset 0 0 0 2px rgba(255,255,255,.88) }
+.sc-hero .btn-line:hover { background: rgba(255,255,255,.1) }
+.sc-hero :focus-visible, .sc-close :focus-visible, .sc-teach :focus-visible { outline-color: #fff }
+.adults { display: flex; align-items: flex-start; gap: 10px; margin-top: 18px; font-size: .9375rem; font-weight: 600; line-height: 1.45; color: var(--hero-soft); max-width: 48ch }
+.adults .ic { margin-top: .2em; color: var(--hi); font-size: 1.1em }
+.sc-hero .hero-note { color: rgba(255,255,255,.8); padding: 22px 0 0 }
+.sc-hero .adults { order: 2 }
+
+/* the stage: one tilt card, the phone and five 3D icons at different depths */
+.sc-stage { position: relative; order: 3; margin-top: 44px; padding-bottom: 34px }
+.sc-card { height: clamp(440px, 128vw, 600px); border-radius: 40px; background: #134A42; box-shadow: inset 0 0 0 1px rgba(205,233,226,.16), 0 50px 80px -44px rgba(0,0,0,.6) }
+.js .sc-card { opacity: 0; translate: 0 48px; animation: rise 1.1s var(--ease) .15s forwards }
+.sc-orbit { position: absolute; left: 50%; top: 50%; width: 100%; max-width: 560px; translate: -50% -50%; pointer-events: none }
+.sc-phone { --w: clamp(186px, 50vw, 248px); position: absolute; left: 50%; top: 50%; translate: -50% -50% }
+.sc-fx { position: absolute; --fx: 120px; animation: sc-pop .9s var(--spring) both, float 6s ease-in-out infinite }
+.sc-fx.f1 { --fx: clamp(78px, 21vw, 132px); left: -3%; top: 6%; animation-delay: .55s, 0s }
+.sc-fx.f2 { --fx: clamp(70px, 19vw, 116px); right: -3%; top: 3%; animation-delay: .7s, -1.5s }
+.sc-fx.f3 { --fx: clamp(72px, 20vw, 118px); left: -2%; bottom: 15%; animation-delay: .85s, -3s }
+.sc-fx.f4 { --fx: clamp(58px, 16vw, 96px); right: 2%; top: 45%; animation-delay: 1s, -4.5s }
+.sc-fx.f5 { --fx: clamp(78px, 21vw, 128px); right: -3%; bottom: 1%; animation-delay: 1.15s, -2s }
+@keyframes sc-pop { from { opacity: 0; scale: .35 } }
+.sc-pill { position: absolute; display: flex; flex-wrap: wrap; align-items: baseline; gap: 2px 8px; background: #fff; color: var(--ink); border-radius: 16px; padding: 10px 16px; font-weight: 700; font-size: .875rem; line-height: 1.3; box-shadow: 0 18px 30px -14px rgba(0,0,0,.55) }
+.sc-pill .pl { font-weight: 500; color: var(--soft) }
+.sc-pill.p1 { left: 4%; top: 36%; background: var(--hi) }
+.sc-pill.p2 { left: 50%; bottom: -22px; translate: -50% 0; width: max-content; max-width: 92% }
+@media (min-width: 1000px) {
+  .sc-hero .hero-in { grid-template-columns: minmax(0, 1.12fr) minmax(0, 1fr); grid-template-rows: auto 1fr; column-gap: clamp(40px, 5vw, 80px); align-items: start; min-height: min(calc(100svh - 78px), 860px); padding-top: clamp(44px, 7vh, 88px) }
+  .sc-hero .display { grid-column: 1; grid-row: 1; max-width: none }
+  .sc-hero .hero-copy { grid-column: 1; grid-row: 2; max-width: 560px }
+  .sc-stage { grid-column: 2; grid-row: 1 / span 2; align-self: center; margin-top: 0 }
+}
+@media (max-width: 999px) and (min-width: 600px) { .sc-stage { width: min(100%, 560px); align-self: center } }
+
+/* ---- the places ---- */
+.sc-places { background: var(--paper) }
+.sc-tiles { display: grid; grid-template-columns: repeat(12, minmax(0, 1fr)); gap: 58px 18px; padding-top: 40px }
+.sc-tiles > .cell { grid-column: 1 / -1; display: flex; min-width: 0 }
+@media (min-width: 860px) { .c-ask { grid-column: span 7 !important } .c-eng { grid-column: span 5 !important } .c-giup, .c-car, .c-care { grid-column: span 4 !important } }
+.sc-tiles .tile { flex: 1; overflow: visible; padding-bottom: 0; box-shadow: 0 30px 50px -36px rgba(14,59,53,.5) }
+.sc-tiles .tile.tilting { box-shadow: 0 40px 60px -34px rgba(14,59,53,.6) }
+.t-fx { position: absolute; top: -40px; right: 18px; --fx: clamp(80px, 8vw, 100px); z-index: 2; transition: scale .5s var(--spring) }
+.tilt.tilting .t-fx, .tilt.tilting .d-fx, .tilt.tilting .p-fx { scale: 1.08 }
+.pcard .thd, .lcard .thd { display: flex; align-items: center; gap: 6px 12px; font-size: .9375rem }
+.sc-tiles .thd, .pcard .thd, .lcard .thd { flex-wrap: wrap; padding-right: 96px; margin-bottom: 12px; min-height: 44px }
+.sc-tiles .h3x { max-width: 20ch }
+.sc-tiles .tile p { max-width: 58ch }
+.t-small { font-size: .875rem; line-height: 1.5 }
+.peeks { margin-top: auto; padding-top: 26px; display: flex; justify-content: center; gap: 18px }
+.peek { --pw: clamp(180px, 56vw, 220px); --ph: 280px; width: var(--pw); height: var(--ph); flex: none; overflow: hidden; border-radius: calc(var(--pw) * .16) calc(var(--pw) * .16) 0 0 }
+.peek .phone { --w: var(--pw) }
+@media (max-width: 599px) { .peek.second { display: none } }
+@media (min-width: 860px) { .c-giup .peek, .c-car .peek, .c-care .peek { --pw: clamp(170px, 16vw, 206px) } .c-ask .peek { --pw: clamp(200px, 18vw, 232px); --ph: 400px } }
+
+.t-ask { background: var(--acc); color: #fff }
+.t-ask p { color: rgba(255,255,255,.92) }
+.t-ask .en, .t-care .en { color: rgba(255,255,255,.84) }
+.anslang { display: flex; flex-wrap: wrap; align-items: center; gap: 6px; margin-top: 16px }
+.anslang .al-l { font-size: .9375rem; color: rgba(255,255,255,.88); margin-right: 4px }
+.anslang .al { font-size: .9375rem; font-weight: 700; padding: 6px 12px; border-radius: 12px; background: rgba(255,255,255,.14); color: #fff }
+.anslang .al:last-child { background: #fff; color: var(--acc-deep) }
+
+.t-eng2 { background: #F1E8F8; --soft: #5A4A7A; --mist: #5A4A7A }
+.lvchips { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 16px }
+.lvchips li { font-family: var(--head); font-weight: 800; font-size: .9375rem; padding: 6px 12px; border-radius: 99px; box-shadow: inset 0 0 0 1.5px var(--ink) }
+.lvchips .ls { background: var(--lv-start) } .lvchips .lc { background: var(--lv-climb) } .lvchips .lm { background: var(--lv-summit) }
+.sc-strows { margin-top: 14px; padding-top: 0 }
+.sc-strows li { grid-template-columns: auto 1fr; gap: 10px }
+.sc-more { display: inline-flex; align-items: center; gap: 8px; align-self: flex-start; min-height: 44px; margin-top: 8px; font-weight: 700; color: #70309C; text-decoration: underline; text-decoration-color: rgba(112,48,156,.35) }
+.sc-more:hover { text-decoration-color: currentColor }
+
+.t-giup { background: #fff; box-shadow: var(--sh-card) }
+.sc-gdemo { margin-top: 18px }
+.sc-gdemo p { font-size: .875rem }
+.t-car { background: var(--acc-tint); --soft: #2F5244; --mist: #2F5244 }
+.t-care { background: var(--hero-bg); color: #fff }
+.t-care p { color: rgba(255,255,255,.9) }
+.t-care .t-small { color: var(--hero-soft) }
+
+/* ---- teachers ---- */
+.sc-teach { background: var(--ink) }
+.sc-big { font-family: var(--head); font-weight: 800; font-variation-settings: 'opsz' 48; font-size: clamp(1.75rem, 1.2rem + 1.9vw, 2.75rem); line-height: 1.08; letter-spacing: -0.03em; max-width: 34ch; text-wrap: balance; margin: -12px 0 clamp(36px, 4vw, 52px) }
+.sc-big em { font-style: normal; color: var(--hi) }
+.tsteps { display: grid; gap: 12px }
+.tbtn { display: grid; grid-template-columns: 30px 1fr; gap: 14px; align-items: start; width: 100%; text-align: left; padding: 18px 20px; border-radius: 22px; background: rgba(255,255,255,.05); box-shadow: inset 0 0 0 1px rgba(255,255,255,.14); color: #fff; transition: background-color .3s, box-shadow .3s }
+.tbtn:hover { background: rgba(255,255,255,.09) }
+.tbtn[aria-pressed="true"] { background: rgba(255,255,255,.1); box-shadow: inset 0 0 0 2px var(--hi) }
+.tbtn .num { margin: 2px 0 0 }
+.tb-h { display: block; font-family: var(--head); font-weight: 800; font-size: 1.25rem; line-height: 1.15; letter-spacing: -0.01em }
+.tb-p { display: block; margin-top: 6px; color: rgba(255,255,255,.8); font-size: .9375rem; line-height: 1.5 }
+.tb-p b { color: #fff }
+.tvis { padding: 34px 0 8px }
+.desk { display: grid; gap: 14px; justify-items: start; border-radius: 28px; background: var(--paper); padding: clamp(20px, 3vw, 32px); box-shadow: 0 40px 70px -40px rgba(0,0,0,.8) }
+.desk .snip { background: #fff; width: 100% }
+.desk .btns-snip, .desk .tabs-snip { width: auto }
+.desk .tabs-snip img:first-child { margin: 10px }
+.d-fx { position: absolute; top: -46px; left: -16px; --fx: clamp(84px, 8vw, 104px); z-index: 2; transition: scale .5s var(--spring) }
+@media (min-width: 600px) { .desk .d-fx + .snip { margin-left: clamp(52px, 6vw, 70px); width: calc(100% - clamp(52px, 6vw, 70px)) } .desk .d-fx + .tabs-snip { width: auto } }
+@media (max-width: 599px) { .d-fx { left: auto; right: 14px; top: -40px; --fx: 72px } }
+.tcap { color: rgba(255,255,255,.72) }
+@media (max-width: 959px) {
+  .js .tvis[data-off] { display: none }
+  .tstep + .tstep { margin-top: 2px }
+}
+@media (min-width: 960px) {
+  .js .tsteps { grid-template-columns: minmax(0, .86fr) minmax(0, 1.14fr); grid-template-rows: auto auto auto 1fr; column-gap: clamp(40px, 5vw, 72px); row-gap: 12px; align-items: start }
+  .js .tstep { display: contents }
+  .js .tbtn { grid-column: 1 }
+  .js .tstep:nth-child(1) .tbtn { grid-row: 1 } .js .tstep:nth-child(2) .tbtn { grid-row: 2 } .js .tstep:nth-child(3) .tbtn { grid-row: 3 }
+  .js .tvis { grid-column: 2; grid-row: 1 / span 4; padding-top: 0; margin-top: 30px; transition: opacity .45s var(--ease), translate .45s var(--ease), visibility 0s }
+  .js .tvis[data-off] { opacity: 0; visibility: hidden; translate: 0 12px; pointer-events: none; transition: opacity .2s, translate .2s, visibility 0s .2s }
+  .js .tcap { grid-column: 1; grid-row: 4; margin-top: 6px }
+}
+
+/* ---- parents and school leaders ---- */
+.sc-par { background: var(--acc-tint); --soft: #2F5244; --mist: #2F5244 }
+.pl-grid { display: grid; gap: 64px 20px; padding-top: 48px }
+.pl-grid > .cell { display: flex; min-width: 0 }
+.pcard, .lcard { flex: 1; position: relative; border-radius: 32px; padding: clamp(22px, 3vw, 36px) }
+.pcard { background: #fff; display: grid; gap: 26px; align-items: start; box-shadow: 0 30px 50px -36px rgba(14,59,53,.45) }
+.p-fx { position: absolute; top: -46px; right: 22px; --fx: clamp(84px, 8vw, 104px); z-index: 2; transition: scale .5s var(--spring) }
+.pc-t p { margin-top: 10px; color: var(--soft) }
+.nv-h { margin-top: 20px }
+.nv { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 10px }
+.nv li { display: inline-flex; align-items: center; gap: 7px; padding: 7px 11px; border-radius: 10px; background: var(--acc-tint); font-weight: 600; font-size: .875rem }
+.nv .ic { color: var(--acc) }
+.pc-ph { justify-self: center; display: grid; justify-items: center }
+.pc-ph .phone { --w: clamp(200px, 60vw, 232px) }
+.pc-ph .cap-s { max-width: 240px; text-align: center }
+.lcard { background: var(--hero-bg); color: #fff; box-shadow: 0 30px 50px -36px rgba(14,59,53,.6) }
+.lcard .snip { margin-top: 18px; background: #fff }
+.lc-l { display: grid; gap: 2px; margin-top: 18px }
+.lc-l li { display: grid; grid-template-columns: 40px 1fr; gap: 14px; align-items: start; padding: 12px 0; border-top: 1px solid rgba(255,255,255,.14) }
+.lc-l .ic { width: 40px; height: 40px; padding: 9px; border-radius: 12px; background: rgba(255,255,255,.1); color: var(--hi) }
+.lc-l p { color: rgba(255,255,255,.88); font-size: .9688rem; align-self: center }
+.lc-f { margin-top: 14px; font-family: var(--head); font-weight: 800; font-size: 1.25rem; color: var(--hero-soft) }
+@media (min-width: 600px) { .pcard { grid-template-columns: minmax(0, 1fr) auto; align-items: center } }
+@media (min-width: 960px) { .pl-grid { grid-template-columns: minmax(0, 1.2fr) minmax(0, 1fr) } }
+.sc-counts { margin: clamp(56px, 7vw, 96px) 0 0 }
+.sc-counts .cn { line-height: 1 }
+.sc-counts .cn small { font-size: .34em; letter-spacing: -0.01em; margin-left: 8px; font-variation-settings: 'opsz' 24 }
+.sc-counts > div:nth-child(4) { border-color: var(--acc) }
+.sc-counts .cn-w { display: flex; flex-direction: column; align-items: flex-start; gap: 6px; font-size: clamp(1.7rem, 1.1rem + 1.9vw, 2.75rem); letter-spacing: -0.03em }
+.sg-fx { --fx: 1.4em }
+.sc-counts > div p:last-child { color: var(--soft) }
+
+/* ---- the close band ---- */
+.p-schools .close { background: var(--acc) }
+.sc-close .bigc { line-height: 1.04; max-width: 14ch }
+.sc-close .bigc [data-l] { color: #fff }
+.sc-close .bigc em { font-style: normal; color: var(--hi) }
+.sc-close .close-p { color: rgba(255,255,255,.92) }
+.sc-close .close-cta { align-items: center }
+.sc-close .adults { margin-top: 0; color: rgba(255,255,255,.94) }
+.login { margin-top: clamp(40px, 5vw, 64px); max-width: 640px; border-radius: 24px; padding: 22px 24px; background: var(--acc-deep); box-shadow: inset 0 0 0 1px rgba(255,255,255,.12) }
+.login .h3l { display: flex; align-items: center; gap: 10px; flex-wrap: wrap }
+.login .h3l .ic { color: var(--hi) }
+.login p { margin-top: 8px; color: rgba(255,255,255,.88) }
+.ftruth { display: flex; flex-wrap: wrap; gap: 8px }
+.ftruth li { display: inline-flex; align-items: center; gap: 8px; padding: 8px 12px; border-radius: 12px; background: rgba(255,255,255,.08); font-weight: 600; color: #fff }
+.ftruth .ic { color: var(--hi) }
+.flinks { display: flex; flex-wrap: wrap; gap: 0 20px }
+.flinks a { display: inline-flex; align-items: center; min-height: 44px; color: #fff; font-weight: 600; text-decoration: underline; text-decoration-color: rgba(255,255,255,.4) }
+.flinks a:hover { text-decoration-color: #fff }
+
+/* ---- Giúp's card on this page: both lines, as in the app ---- */
+.gd-card .gd-h .en { display: block }
+
+@media (max-width: 720px) {
+  .sc-tiles { gap: 56px 0 }
+  .sc-tiles .thd, .pcard .thd, .lcard .thd { padding-right: 84px }
+  .sc-big { margin-top: -4px }
+}
+@media (prefers-reduced-motion: reduce) {
+  .sc-fx { animation: none }
+  .js .sc-card { opacity: 1; translate: none; animation: none }
+  .t-fx, .d-fx, .p-fx { transition: none }
+}
+.peek .ring-ph .scr { aspect-ratio: 640 / 676 }
+.pcard .thd { padding-right: 0 }
+.nav-in .menu-btn { flex: none }
+@media (max-width: 420px) { .nav-in .lang button { min-width: 44px; padding: 0 9px } }
+@media (max-width: 420px) { .nav-in { gap: 6px } .nav-in .word { font-size: 1.3rem } .nav-in .brand .mark { width: 24px; height: 24px } }
+@media (max-width: 359px) { .nav-in .word span { display: none } }
